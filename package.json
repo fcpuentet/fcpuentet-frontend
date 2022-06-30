@@ -1,0 +1,29 @@
+{
+  "name": "puentet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p ${PORT:-3332}",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3332}",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "graphql": "^16.5.0",
+    "next": "12.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recoil": "^0.7.4",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.0",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0",
+    "prisma": "^4.0.0",
+    "tailwindcss": "^3.1.4",
+    "typescript": "4.7.4"
+  }
+}
