@@ -26,9 +26,12 @@ const Home: NextPage = () => {
             </Link>
 
             <nav className="hidden lg:flex gap-12">
-              <a href="#" className="text-indigo-500 text-lg font-semibold">Home</a>
-              <a href="#"
-                 className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Features</a>
+              <Link href="/">
+                <a className="text-indigo-500 text-lg font-semibold">Home</a>
+              </Link>
+              <Link href="/members">
+                <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Members</a>
+              </Link>
               <a href="#"
                  className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Pricing</a>
               <a href="#"
