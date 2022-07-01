@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -17,10 +18,12 @@ const Home: NextPage = () => {
       <div className="bg-white pb-6 sm:pb-8 lg:pb-12 h-full">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <header className="flex justify-between items-center border-b py-4 md:py-8 mb-8 md:mb-12 xl:mb-16">
-            <a href="/" className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
-               aria-label="logo">
-              <Image src="/emblem.png" width="108" height="64"/>
-            </a>
+            <Link href="/">
+              <a className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
+                 aria-label="logo">
+                <Image src="/emblem.png" width="108" height="64"/>
+              </a>
+            </Link>
 
             <nav className="hidden lg:flex gap-12">
               <a href="#" className="text-indigo-500 text-lg font-semibold">Home</a>
