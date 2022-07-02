@@ -56,7 +56,7 @@ const TopPage: NextPage = () => {
 
           <section className="flex flex-col items-center">
             <div className="max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48">
-              <Image src="/teamname.png" width="701" height="96"/>
+              <Image src="/teamname.svg" alt="FC PUENTET" width={701} height={96} />
 
               <p
                 className="text-blue-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6 my-8"
