@@ -7,7 +7,7 @@ const TopPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Puentet 公式サイト</title>
+        <title>FC PUENTET 公式サイト</title>
         <meta name="description"
               content="サッカー Puentet 公式サイトです。最新のニュース、試合情報、所属選手・スタッフ紹介やチケット/グッズ購入、スタジアムへのアクセス、ホームタウン活動など役立つ情報を日々お届けしています。"/>
         <meta name="keywords" content="Puentet,サッカー"/>
@@ -27,23 +27,23 @@ const TopPage: NextPage = () => {
 
             <nav className="hidden lg:flex gap-12">
               <Link href="/">
-                <a className="text-indigo-500 text-lg font-semibold">Home</a>
+                <a className="text-blue-500 text-lg font-semibold">Home</a>
               </Link>
               <Link href="/members">
-                <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Members</a>
+                <a className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">Members</a>
               </Link>
               <a href="#"
-                 className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Pricing</a>
+                 className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">Pricing</a>
               <a href="#"
-                 className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</a>
+                 className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">About</a>
             </nav>
 
             <a href="#"
-               className="hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Contact
+               className="hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-blue-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Contact
               Sales</a>
 
             <button type="button"
-                    className="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+                    className="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-blue-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd"
                       d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -56,11 +56,10 @@ const TopPage: NextPage = () => {
 
           <section className="flex flex-col items-center">
             <div className="max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48">
-              <h1 className="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12"
-              >Puentet</h1>
+              <Image src="/teamname.png" width="701" height="96"/>
 
               <p
-                className="text-indigo-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6"
+                className="text-blue-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6 my-8"
               >Comming Soon</p>
 
             </div>
