@@ -30,7 +30,7 @@ const Members: NextPage = () => {
               <Link href="/">
                 <a className="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Home</a>
               </Link>
-              <Link href="/members">
+              <Link href="/teams/members">
                 <a className="text-indigo-500 text-lg font-semibold">Members</a>
               </Link>
               <a href="#"

@@ -29,7 +29,7 @@ const TopPage: NextPage = () => {
               <Link href="/">
                 <a className="text-blue-500 text-lg font-semibold">Home</a>
               </Link>
-              <Link href="/members">
+              <Link href="/teams/members">
                 <a className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">Members</a>
               </Link>
               <a href="#"
