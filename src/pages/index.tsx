@@ -15,8 +15,8 @@ const TopPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
 
-      <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
-        <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
+      <div className="h-screen bg-white">
+        <div className="flex flex-col max-w-screen-2xl h-full mx-auto px-4 md:px-8">
           <header className="flex justify-between items-center border-b py-4 md:py-8 mb-8 md:mb-12 xl:mb-16">
             <Link href="/">
               <a className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
@@ -49,13 +49,17 @@ const TopPage: NextPage = () => {
             </button>
           </header>
 
-          <main className="my-48">
-            <section className="flex flex-col items-center align-center">
+          <main className="flex justify-center items-center flex-1">
+            <section className="flex flex-col items-center">
               <div className="max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48">
                 <Image src="/teamname.svg" alt="FC PUENTET" width={701} height={96} />
 
                 <p
-                  className="text-blue-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6 my-8"
+                  className="text-blue-700 text-lg xl:text-xl font-semibold mt-16 mb-8"
+                >人と人との「思い」をつなぐ架け橋<br/>そしてすべての人を「幸せ」にするチームへ</p>
+
+                <p
+                  className="text-blue-500 text-xl xl:text-3xl font-semibold"
                 >Comming Soon</p>
 
               </div>
