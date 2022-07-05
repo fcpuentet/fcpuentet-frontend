@@ -16,43 +16,11 @@ const TopPage: NextPage = () => {
       </Head>
 
       <div className="h-screen bg-white">
-        <div className="flex flex-col max-w-screen-2xl h-full mx-auto px-4 md:px-8">
-          <header className="flex justify-between items-center border-b py-4 md:py-8 mb-8 md:mb-12 xl:mb-16">
-            <Link href="/">
-              <a className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
-                 aria-label="logo">
-                <Image src="/emblem.png" width="108" height="64"/>
-              </a>
-            </Link>
-
-            <nav className="hidden lg:flex gap-12">
-              <Link href="/">
-                <a className="text-blue-500 text-lg font-semibold">Home</a>
-              </Link>
-              <Link href="/teams/members">
-                <a className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">Members</a>
-              </Link>
-              <a href="#"
-                 className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">Pricing</a>
-              <a href="#"
-                 className="text-gray-600 hover:text-blue-500 active:text-blue-700 text-lg font-semibold transition duration-100">About</a>
-            </nav>
-
-            <button type="button"
-                    className="inline-flex items-center bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-blue-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd"
-                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                      clipRule="evenodd"/>
-              </svg>
-              Menu
-            </button>
-          </header>
-
+        <div className="flex flex-col max-w-screen-2xl h-full mx-auto px-4 md:px-8 pb-4 md:pb-8">
           <main className="flex justify-center items-center flex-1">
             <section className="flex flex-col items-center">
               <div className="max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48">
-                <Image src="/teamname.svg" alt="FC PUENTET" width={701} height={96} />
+                <Image src="/emblem.png" width="942" height="557"/>
 
                 <p
                   className="text-blue-700 text-lg xl:text-xl font-semibold mt-16 mb-8"
