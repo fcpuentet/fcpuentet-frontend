@@ -27,39 +27,39 @@ const TopPage: NextPage = () => {
       </Head>
 
       <div className='h-screen bg-white'>
-        <div className='flex flex-col max-w-screen-2xl h-full mx-auto px-4 md:px-8 pb-4 md:pb-8'>
-          <main className='flex justify-center items-center flex-1'>
+        <div className='mx-auto flex h-full max-w-screen-2xl flex-col px-4 pb-4 md:px-8 md:pb-8'>
+          <main className='flex flex-1 items-center justify-center'>
             <section className='flex flex-col items-center'>
-              <div className='max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48'>
+              <div className='flex max-w-xl flex-col items-center pt-8 pb-16 text-center lg:pt-32 lg:pb-48'>
                 <Image
                   src='/emblem.png'
                   width='942'
                   height='557'
                 />
 
-                <p className='text-blue-700 text-lg xl:text-xl font-semibold mt-16 mb-8'>
+                <p className='mt-16 mb-8 text-lg font-semibold text-blue-700 xl:text-xl'>
                   人と人との「思い」をつなぐ架け橋
                   <br />
                   そしてすべての人を「幸せ」にするチームへ
                 </p>
 
-                <p className='text-blue-500 text-xl xl:text-3xl font-semibold'>Comming Soon</p>
+                <p className='text-xl font-semibold text-blue-500 xl:text-3xl'>Comming Soon</p>
               </div>
 
-              <div className='flex justify-center lg:justify-start items-center gap-4'>
-                <span className='text-gray-400 text-sm sm:text-base font-semibold tracking-widest uppercase'>
+              <div className='flex items-center justify-center gap-4 lg:justify-start'>
+                <span className='text-sm font-semibold uppercase tracking-widest text-gray-400 sm:text-base'>
                   Social
                 </span>
-                <span className='w-12 h-px bg-gray-200'></span>
+                <span className='h-px w-12 bg-gray-200'></span>
 
                 <div className='flex gap-4'>
                   <a
                     href='#'
                     target='_blank'
-                    className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                    className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                   >
                     <svg
-                      className='w-5 h-5'
+                      className='h-5 w-5'
                       width='24'
                       height='24'
                       viewBox='0 0 24 24'
@@ -73,10 +73,10 @@ const TopPage: NextPage = () => {
                   <Link href='https://instagram.com/fcpuentet?igshid=YmMyMTA2M2Y='>
                     <a
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -91,10 +91,10 @@ const TopPage: NextPage = () => {
                   <a
                     href='#'
                     target='_blank'
-                    className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                    className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                   >
                     <svg
-                      className='w-5 h-5'
+                      className='h-5 w-5'
                       width='24'
                       height='24'
                       viewBox='0 0 24 24'

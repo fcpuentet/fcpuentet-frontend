@@ -3,7 +3,11 @@
     "next/core-web-vitals",
     "plugin:import/recommended",
     "plugin:import/warnings",
+    "plugin:tailwindcss/recommended",
     "prettier"
+  ],
+  "ignorePatterns": [
+    "*.config.js"
   ],
   "rules": {
     "import/order": [

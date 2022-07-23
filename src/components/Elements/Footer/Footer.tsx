@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className='max-w-screen-2xl mx-auto bg-white pt-4 sm:pt-10 lg:pt-12'>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-t gap-12 lg:gap-8 pt-10 lg:pt-12 mb-16'>
+    <footer className='mx-auto max-w-screen-2xl bg-white pt-4 sm:pt-10 lg:pt-12'>
+      <div className='mb-16 grid grid-cols-2 gap-12 border-t pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12'>
         <div className='col-span-full lg:col-span-2'>
-          <div className='lg:-mt-2 mb-4'>
+          <div className='mb-4 lg:-mt-2'>
             <Link href='/'>
               <a
-                className='inline-flex items-center text-black-800 text-xl md:text-2xl font-bold gap-2'
+                className='text-black-800 inline-flex items-center gap-2 text-xl font-bold md:text-2xl'
                 aria-label='logo'
               >
                 <Image
@@ -22,7 +22,7 @@ export const Footer = () => {
           </div>
 
           <p className='text-gray-500 sm:pr-8'>FC PUENTET の公式サイト</p>
-          <p className='text-gray-500 sm:pr-8 mb-6'>
+          <p className='mb-6 text-gray-500 sm:pr-8'>
             最新のニュース、試合情報、所属選手・スタッフ紹介の情報をお届けしています。
           </p>
 
@@ -30,10 +30,10 @@ export const Footer = () => {
             <a
               href='#'
               target='_blank'
-              className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+              className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
               <svg
-                className='w-5 h-5'
+                className='h-5 w-5'
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
@@ -47,10 +47,10 @@ export const Footer = () => {
             <Link href='https://instagram.com/fcpuentet?igshid=YmMyMTA2M2Y='>
               <a
                 target='_blank'
-                className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
               >
                 <svg
-                  className='w-5 h-5'
+                  className='h-5 w-5'
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
@@ -65,10 +65,10 @@ export const Footer = () => {
             <a
               href='#'
               target='_blank'
-              className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+              className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
               <svg
-                className='w-5 h-5'
+                className='h-5 w-5'
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
@@ -82,13 +82,13 @@ export const Footer = () => {
         </div>
 
         <div>
-          <div className='text-gray-800 font-bold tracking-widest uppercase mb-4'>About</div>
+          <div className='mb-4 font-bold uppercase tracking-widest text-gray-800'>About</div>
 
           <nav className='flex flex-col gap-4'>
             <div>
               <a
                 href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
+                className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
               >
                 FC PUENTET について
               </a>
@@ -97,7 +97,7 @@ export const Footer = () => {
             <div>
               <a
                 href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
+                className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
               >
                 チームメンバー
               </a>
@@ -106,13 +106,13 @@ export const Footer = () => {
         </div>
 
         <div>
-          <div className='text-gray-800 font-bold tracking-widest uppercase mb-4'>Legal</div>
+          <div className='mb-4 font-bold uppercase tracking-widest text-gray-800'>Legal</div>
 
           <nav className='flex flex-col gap-4'>
             <div>
               <a
                 href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
+                className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
               >
                 利用規約
               </a>
@@ -121,7 +121,7 @@ export const Footer = () => {
             <div>
               <a
                 href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
+                className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
               >
                 プライバシーポリシー
               </a>
@@ -130,7 +130,7 @@ export const Footer = () => {
             <div>
               <a
                 href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
+                className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
               >
                 運営会社
               </a>
@@ -139,7 +139,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className='text-gray-400 text-sm text-center border-t py-8'>
+      <div className='border-t py-8 text-center text-sm text-gray-400'>
         © 2022 - FC-PUENTET. ALL RIGHTS RESERVED.
       </div>
     </footer>
