@@ -4,44 +4,44 @@ import { MainLayout } from '@/components/Layout';
 const Members: NextPage = () => {
   return (
     <MainLayout>
-      <div className='bg-white pb-6 sm:pb-8 lg:pb-12 h-full'>
-        <div className='max-w-screen-2xl px-4 md:px-8 mx-auto'>
+      <div className='h-full bg-white pb-6 sm:pb-8 lg:pb-12'>
+        <div className='mx-auto max-w-screen-2xl px-4 md:px-8'>
           <div className='mb-10 md:mb-16'>
-            <h2 className='text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
+            <h2 className='mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl'>
               Meet our Team
             </h2>
 
-            <p className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
+            <p className='mx-auto max-w-screen-md text-center text-gray-500 md:text-lg'>
               This is a section of some simple filler text, also known as placeholder text. It
               shares some characteristics of a real written text but is random or otherwise
               generated.
             </p>
           </div>
 
-          <div className='grid grid-cols-2 md:grid-cols-3 gap-x-4 lg:gap-x-8 gap-y-8 lg:gap-y-12'>
+          <div className='grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-x-8 lg:gap-y-12'>
             <div>
-              <div className='h-48 sm:h-60 md:h-80 bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-2 sm:mb-4'>
+              <div className='mb-2 h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:mb-4 sm:h-60 md:h-80'>
                 <img
                   src='https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=500'
                   loading='lazy'
                   alt='Photo by Radu Florin'
-                  className='w-full h-full object-cover object-center'
+                  className='h-full w-full object-cover object-center'
                 />
               </div>
 
               <div>
-                <div className='text-indigo-500 md:text-lg font-bold'>John McCulling</div>
-                <p className='text-gray-500 text-sm md:text-base mb-3 md:mb-4'>Founder / CEO</p>
+                <div className='font-bold text-indigo-500 md:text-lg'>John McCulling</div>
+                <p className='mb-3 text-sm text-gray-500 md:mb-4 md:text-base'>Founder / CEO</p>
 
                 <div className='flex'>
                   <div className='flex gap-4'>
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -55,10 +55,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -74,28 +74,28 @@ const Members: NextPage = () => {
             </div>
 
             <div>
-              <div className='h-48 sm:h-60 md:h-80 bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-2 sm:mb-4'>
+              <div className='mb-2 h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:mb-4 sm:h-60 md:h-80'>
                 <img
                   src='https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?auto=format&q=75&fit=crop&w=500'
                   loading='lazy'
                   alt='Photo by christian ferrer'
-                  className='w-full h-full object-cover object-center'
+                  className='h-full w-full object-cover object-center'
                 />
               </div>
 
               <div>
-                <div className='text-indigo-500 md:text-lg font-bold'>Kate Berg</div>
-                <p className='text-gray-500 text-sm md:text-base mb-3 md:mb-4'>CFO</p>
+                <div className='font-bold text-indigo-500 md:text-lg'>Kate Berg</div>
+                <p className='mb-3 text-sm text-gray-500 md:mb-4 md:text-base'>CFO</p>
 
                 <div className='flex'>
                   <div className='flex gap-4'>
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -109,10 +109,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -128,28 +128,28 @@ const Members: NextPage = () => {
             </div>
 
             <div>
-              <div className='h-48 sm:h-60 md:h-80 bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-2 sm:mb-4'>
+              <div className='mb-2 h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:mb-4 sm:h-60 md:h-80'>
                 <img
                   src='https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&q=75&fit=crop&w=500'
                   loading='lazy'
                   alt='Photo by Ayo Ogunseinde'
-                  className='w-full h-full object-cover object-center'
+                  className='h-full w-full object-cover object-center'
                 />
               </div>
 
               <div>
-                <div className='text-indigo-500 md:text-lg font-bold'>Greg Jackson</div>
-                <p className='text-gray-500 text-sm md:text-base mb-3 md:mb-4'>CTO</p>
+                <div className='font-bold text-indigo-500 md:text-lg'>Greg Jackson</div>
+                <p className='mb-3 text-sm text-gray-500 md:mb-4 md:text-base'>CTO</p>
 
                 <div className='flex'>
                   <div className='flex gap-4'>
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -163,10 +163,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -182,28 +182,28 @@ const Members: NextPage = () => {
             </div>
 
             <div>
-              <div className='h-48 sm:h-60 md:h-80 bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-2 sm:mb-4'>
+              <div className='mb-2 h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:mb-4 sm:h-60 md:h-80'>
                 <img
                   src='https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?auto=format&q=75&fit=crop&w=500'
                   loading='lazy'
                   alt='Photo by Midas Hofstra'
-                  className='w-full h-full object-cover object-center'
+                  className='h-full w-full object-cover object-center'
                 />
               </div>
 
               <div>
-                <div className='text-indigo-500 md:text-lg font-bold'>Robert Greyson</div>
-                <p className='text-gray-500 text-sm md:text-base mb-3 md:mb-4'>Creative Director</p>
+                <div className='font-bold text-indigo-500 md:text-lg'>Robert Greyson</div>
+                <p className='mb-3 text-sm text-gray-500 md:mb-4 md:text-base'>Creative Director</p>
 
                 <div className='flex'>
                   <div className='flex gap-4'>
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -217,10 +217,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -236,18 +236,18 @@ const Members: NextPage = () => {
             </div>
 
             <div>
-              <div className='h-48 sm:h-60 md:h-80 bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-2 sm:mb-4'>
+              <div className='mb-2 h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:mb-4 sm:h-60 md:h-80'>
                 <img
                   src='https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&q=75&fit=crop&w=500'
                   loading='lazy'
                   alt='Photo by Elizeu Dias'
-                  className='w-full h-full object-cover object-center'
+                  className='h-full w-full object-cover object-center'
                 />
               </div>
 
               <div>
-                <div className='text-indigo-500 md:text-lg font-bold'>John Roberts</div>
-                <p className='text-gray-500 text-sm md:text-base mb-3 md:mb-4'>
+                <div className='font-bold text-indigo-500 md:text-lg'>John Roberts</div>
+                <p className='mb-3 text-sm text-gray-500 md:mb-4 md:text-base'>
                   Investor Relations
                 </p>
 
@@ -256,10 +256,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -273,10 +273,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -292,18 +292,18 @@ const Members: NextPage = () => {
             </div>
 
             <div>
-              <div className='h-48 sm:h-60 md:h-80 bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-2 sm:mb-4'>
+              <div className='mb-2 h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:mb-4 sm:h-60 md:h-80'>
                 <img
                   src='https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&q=75&fit=crop&w=500'
                   loading='lazy'
                   alt='Photo by Matheus Ferrero'
-                  className='w-full h-full object-cover object-center'
+                  className='h-full w-full object-cover object-center'
                 />
               </div>
 
               <div>
-                <div className='text-indigo-500 md:text-lg font-bold'>Judy Amandez</div>
-                <p className='text-gray-500 text-sm md:text-base mb-3 md:mb-4'>
+                <div className='font-bold text-indigo-500 md:text-lg'>Judy Amandez</div>
+                <p className='mb-3 text-sm text-gray-500 md:mb-4 md:text-base'>
                   Senior Art Director
                 </p>
 
@@ -312,10 +312,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
@@ -329,10 +329,10 @@ const Members: NextPage = () => {
                     <a
                       href='#'
                       target='_blank'
-                      className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+                      className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='w-5 h-5'
+                        className='h-5 w-5'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'

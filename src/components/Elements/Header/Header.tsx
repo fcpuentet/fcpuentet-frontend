@@ -5,10 +5,10 @@ import React from 'react';
 export const Header = () => {
   return (
     <>
-      <header className='flex justify-between items-center border-b py-4 md:py-8 mb-8 md:mb-12 xl:mb-16'>
+      <header className='mb-8 flex items-center justify-between border-b py-4 md:mb-12 md:py-8 xl:mb-16'>
         <Link href='/'>
           <a
-            className='inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5'
+            className='text-black-800 inline-flex items-center gap-2.5 text-2xl font-bold md:text-3xl'
             aria-label='logo'
           >
             <Image
@@ -19,24 +19,24 @@ export const Header = () => {
           </a>
         </Link>
 
-        <nav className='hidden lg:flex gap-12'>
+        <nav className='hidden gap-12 lg:flex'>
           <Link href='/'>
-            <a className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'>
+            <a className='text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'>
               Home
             </a>
           </Link>
           <Link href='/teams/members'>
-            <a className='text-indigo-500 text-lg font-semibold'>Members</a>
+            <a className='text-lg font-semibold text-indigo-500'>Members</a>
           </Link>
           <a
             href='#'
-            className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
+            className='text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
           >
             Pricing
           </a>
           <a
             href='#'
-            className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
+            className='text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
           >
             About
           </a>
@@ -44,14 +44,14 @@ export const Header = () => {
 
         <a
           href='#'
-          className='hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3'
+          className='hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block'
         >
           Contact Sales
         </a>
 
         <button
           type='button'
-          className='inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
+          className='inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
