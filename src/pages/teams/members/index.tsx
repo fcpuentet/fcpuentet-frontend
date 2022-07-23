@@ -1,97 +1,11 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+import { MainLayout } from '@/components/Layout';
 
 const Members: NextPage = () => {
   return (
-    <>
-      <Head>
-        <title>Puentet 公式サイト</title>
-        <meta
-          name='description'
-          content='サッカー Puentet 公式サイトです。最新のニュース、試合情報、所属選手・スタッフ紹介やチケット/グッズ購入、スタジアムへのアクセス、ホームタウン活動など役立つ情報を日々お届けしています。'
-        />
-        <meta
-          name='keywords'
-          content='Puentet,サッカー'
-        />
-        <meta
-          name='robots'
-          content='noindex'
-        />
-        <link
-          rel='icon'
-          href='/favicon.ico'
-        />
-      </Head>
-
+    <MainLayout>
       <div className='bg-white pb-6 sm:pb-8 lg:pb-12 h-full'>
         <div className='max-w-screen-2xl px-4 md:px-8 mx-auto'>
-          <header className='flex justify-between items-center border-b py-4 md:py-8 mb-8 md:mb-12 xl:mb-16'>
-            <Link href='/'>
-              <a
-                className='inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5'
-                aria-label='logo'
-              >
-                <Image
-                  src='/emblem.png'
-                  width='108'
-                  height='64'
-                />
-              </a>
-            </Link>
-
-            <nav className='hidden lg:flex gap-12'>
-              <Link href='/'>
-                <a className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'>
-                  Home
-                </a>
-              </Link>
-              <Link href='/teams/members'>
-                <a className='text-indigo-500 text-lg font-semibold'>Members</a>
-              </Link>
-              <a
-                href='#'
-                className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
-              >
-                Pricing
-              </a>
-              <a
-                href='#'
-                className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
-              >
-                About
-              </a>
-            </nav>
-
-            <a
-              href='#'
-              className='hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3'
-            >
-              Contact Sales
-            </a>
-
-            <button
-              type='button'
-              className='inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2'
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6'
-                viewBox='0 0 20 20'
-                fill='currentColor'
-              >
-                <path
-                  fillRule='evenodd'
-                  d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-                  clipRule='evenodd'
-                />
-              </svg>
-              Menu
-            </button>
-          </header>
-
           <div className='mb-10 md:mb-16'>
             <h2 className='text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
               Meet our Team
@@ -435,7 +349,7 @@ const Members: NextPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </MainLayout>
   );
 };
 
