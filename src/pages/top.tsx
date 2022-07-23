@@ -1,30 +1,34 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { MainLayout } from '../components/Layout';
 
-export const Footer = () => {
+const TopScreen: NextPage = () => {
   return (
-    <footer className='max-w-screen-2xl mx-auto bg-white pt-4 sm:pt-10 lg:pt-12'>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-t gap-12 lg:gap-8 pt-10 lg:pt-12 mb-16'>
-        <div className='col-span-full lg:col-span-2'>
-          <div className='lg:-mt-2 mb-4'>
-            <Link href='/'>
-              <a
-                className='inline-flex items-center text-black-800 text-xl md:text-2xl font-bold gap-2'
-                aria-label='logo'
-              >
-                <Image
-                  src='/emblem.png'
-                  width='108'
-                  height='64'
-                />
-              </a>
-            </Link>
-          </div>
+    <MainLayout>
+      <section className='flex flex-col items-center'>
+        <div className='max-w-xl flex flex-col items-center text-center pt-8 lg:pt-32 pb-16 lg:pb-48'>
+          <Image
+            src='/emblem.png'
+            width='942'
+            height='557'
+          />
 
-          <p className='text-gray-500 sm:pr-8'>FC PUENTET の公式サイト</p>
-          <p className='text-gray-500 sm:pr-8 mb-6'>
-            最新のニュース、試合情報、所属選手・スタッフ紹介の情報をお届けしています。
+          <p className='text-blue-700 text-lg xl:text-xl font-semibold mt-16 mb-8'>
+            人と人との「思い」をつなぐ架け橋
+            <br />
+            そしてすべての人を「幸せ」にするチームへ
           </p>
+
+          <p className='text-blue-500 text-xl xl:text-3xl font-semibold'>Comming Soon</p>
+        </div>
+
+        <div className='flex justify-center lg:justify-start items-center gap-4'>
+          <span className='text-gray-400 text-sm sm:text-base font-semibold tracking-widest uppercase'>
+            Social
+          </span>
+          <span className='w-12 h-px bg-gray-200'></span>
 
           <div className='flex gap-4'>
             <a
@@ -80,68 +84,9 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-
-        <div>
-          <div className='text-gray-800 font-bold tracking-widest uppercase mb-4'>About</div>
-
-          <nav className='flex flex-col gap-4'>
-            <div>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
-              >
-                FC PUENTET について
-              </a>
-            </div>
-
-            <div>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
-              >
-                チームメンバー
-              </a>
-            </div>
-          </nav>
-        </div>
-
-        <div>
-          <div className='text-gray-800 font-bold tracking-widest uppercase mb-4'>Legal</div>
-
-          <nav className='flex flex-col gap-4'>
-            <div>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
-              >
-                利用規約
-              </a>
-            </div>
-
-            <div>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
-              >
-                プライバシーポリシー
-              </a>
-            </div>
-
-            <div>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100'
-              >
-                運営会社
-              </a>
-            </div>
-          </nav>
-        </div>
-      </div>
-
-      <div className='text-gray-400 text-sm text-center border-t py-8'>
-        © 2022 - FC-PUENTET. ALL RIGHTS RESERVED.
-      </div>
-    </footer>
+      </section>
+    </MainLayout>
   );
 };
+
+export default TopScreen;
