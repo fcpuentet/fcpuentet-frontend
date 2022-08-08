@@ -1,14 +1,13 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { MainLayout } from '../components/Layout';
-import { TopBanner } from '@/features/top';
+import { MainLayout } from '@/components/Layout';
+import { TopBanner, TopContact, TopFeeds } from '@/features/top';
 
 const TopScreen: NextPage = () => {
   return (
     <MainLayout>
       <TopBanner />
+      <TopFeeds />
+      <TopContact />
     </MainLayout>
   );
 };
