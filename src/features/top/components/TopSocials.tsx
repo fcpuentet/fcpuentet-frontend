@@ -7,7 +7,7 @@ export const TopSocials: React.FC<Props> = () => {
   return (
     <TopContentLayout>
       <section className='flex flex-col'>
-        <h2 className='text-7xl'>Socials</h2>
+        <h2 className='cursor-default text-7xl'>SOCIALS</h2>
         <div className='grid'>
           <div></div>
         </div>
