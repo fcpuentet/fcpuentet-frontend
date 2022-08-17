@@ -10,7 +10,7 @@ const ClubPage: NextPage = () => {
 
   useEffect(() => {
     if (environment.isProduction) {
-      router.replace('/');
+      void router.replace('/');
     }
   }, []);
 

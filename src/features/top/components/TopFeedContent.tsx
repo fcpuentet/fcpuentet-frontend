@@ -1,5 +1,4 @@
 import React from 'react';
-import { TopContentLayout } from '@/features/top';
 
 interface Props {
   title: string;

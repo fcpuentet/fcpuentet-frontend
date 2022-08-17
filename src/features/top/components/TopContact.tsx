@@ -2,12 +2,13 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { TopContentLayout } from '@/features/top';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Props {}
 
 export const TopContact: React.FC<Props> = () => {
   const { push } = useRouter();
   const onContactFormClick = (event?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    push('/contact');
+    void push('/contact');
   };
 
   return (
