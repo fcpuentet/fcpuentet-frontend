@@ -47,7 +47,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
           {/*<Header />*/}
 
           <div className='h-full'>
-            <div className='fixed top-0 right-0 h-full w-16 bg-white'>
+            <div className='invisible fixed top-0 right-0 h-full w-16 bg-white lg:visible'>
               <div className='flex h-full items-center justify-center'>
                 <button
                   className='h-full w-full'
@@ -87,11 +87,11 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
               <header></header>
             </div>
 
-            <div className='pr-16'>
+            <div className='lg:pr-16'>
               <main className=''>{children}</main>
             </div>
 
-            <div className='pr-16'>
+            <div className='lg:pr-16'>
               <Footer />
             </div>
           </div>

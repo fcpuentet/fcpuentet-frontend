@@ -1,6 +1,7 @@
 import React from 'react';
 import { TopContentLayout, TopFeedContent } from '@/features/top';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Props {}
 
 export const TopFeeds: React.FC<Props> = () => {

@@ -12,7 +12,7 @@ export const Header = () => {
             aria-label='logo'
           >
             <Image
-              src='/emblem.png'
+              src='/emblem.webp'
               width='108'
               height='64'
             />
