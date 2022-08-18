@@ -6,11 +6,14 @@ interface Props {}
 
 export const TopBanner: React.FC<Props> = () => {
   return (
-    <div className="h-screen w-full bg-[url('/top-temporary-background.jpg')] bg-cover">
+    <div
+      className='h-screen w-full bg-cover bg-center bg-no-repeat'
+      style={{ backgroundImage: "url('/top-hero-background.webp')" }}
+    >
       <section className='flex h-full items-center justify-center bg-white/40 backdrop-invert backdrop-opacity-20'>
         <h1>
           <Image
-            src='/emblem.png'
+            src='/emblem.webp'
             width='942'
             height='557'
             alt='FC-PUENTET'

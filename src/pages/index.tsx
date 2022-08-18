@@ -32,7 +32,7 @@ const TopPage: NextPage = () => {
             <section className='flex flex-col items-center'>
               <div className='flex max-w-xl flex-col items-center pt-8 pb-16 text-center lg:pt-32 lg:pb-48'>
                 <Image
-                  src='/emblem.png'
+                  src='/emblem.webp'
                   width='942'
                   height='557'
                 />
