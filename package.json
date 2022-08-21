@@ -12,6 +12,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.2.5",
+    "@supabase/auth-helpers-react": "^0.2.3",
+    "@supabase/supabase-js": "^1.35.4",
     "graphql": "^16.6.0",
     "next": "12.2.5",
     "next-seo": "^5.5.0",
