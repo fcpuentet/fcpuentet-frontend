@@ -94,7 +94,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                       className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
                     >
                       <svg
-                        className='mx-auto  my-4 h-8 w-8'
+                        className='mx-auto my-4 h-8 w-8'
                         width='24'
                         height='24'
                         viewBox='0 0 24 24'
