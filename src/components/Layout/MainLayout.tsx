@@ -51,7 +51,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
             <div className='invisible fixed top-0 right-0 h-full w-16 bg-white lg:visible'>
               <div className='flex h-full flex-col items-center justify-center'>
                 <button
-                  className='h-full w-full'
+                  className='h-full w-full select-none text-sm'
                   onClick={(event) => onOpenMenuButtonClick(event)}
                 >
                   <svg
@@ -62,6 +62,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                   >
                     <path d='M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z' />
                   </svg>
+                  Menu
                 </button>
                 <div className='w-full'>
                   <p
