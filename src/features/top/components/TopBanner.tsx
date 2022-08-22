@@ -5,12 +5,15 @@ interface Props {}
 
 export const TopBanner: React.FC<Props> = () => {
   return (
-    <div
-      className='h-screen w-full bg-cover bg-center bg-no-repeat'
-      style={{ backgroundImage: "url('/top-banner.webp')" }}
-    >
+    <div className='w-full'>
       <section className=''>
-        <h1></h1>
+        <h1>
+          <img
+            src='/top-banner.webp'
+            className='object-contain'
+            alt='FC-PUENTET'
+          />
+        </h1>
       </section>
     </div>
   );
