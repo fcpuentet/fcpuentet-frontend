@@ -86,7 +86,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                   </a>
                 </Link>
 
-                <Link href='https://twitter.com/FCPUENTET'>
+                <Link href='https://twitter.com/intent/tweet?text=%E5%85%A8%E3%81%A6%E3%81%AE%E6%9E%B6%E3%81%91%E6%A9%8B%E3%81%B8%E3%80%8CFC-PUENTET%E3%80%8D%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%EF%BC%9Ahttps%3A%2F%2Ffc-puentet.com%2F%20'>
                   <a
                     target='_blank'
                     className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
