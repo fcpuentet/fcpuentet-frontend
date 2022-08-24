@@ -1,7 +1,7 @@
 export type Feed = {
   id: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
   title: string;
   body: string;
 };
