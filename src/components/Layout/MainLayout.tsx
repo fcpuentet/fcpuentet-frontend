@@ -13,13 +13,14 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
 
   const [isMenuVisible, setMenuVisible] = useState(false);
 
-  const onOpenMenuButtonClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    setMenuVisible(true);
-  };
-
-  const onCloseMenuButtonClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    setMenuVisible(false);
-  };
+  const onToggleMenuVisibleButtonClick = () => setMenuVisible(!isMenuVisible);
+  const menuIconPath = isMenuVisible ? (
+    // NOTE: Close
+    <path d='m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z' />
+  ) : (
+    // NOTE: Menu
+    <path d='M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z' />
+  );
 
   return (
     <>
@@ -49,7 +50,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
             <div className='flex h-full flex-col items-center justify-center'>
               <button
                 className='h-full w-full select-none text-sm'
-                onClick={(event) => onOpenMenuButtonClick(event)}
+                onClick={(event) => onToggleMenuVisibleButtonClick()}
               >
                 <svg
                   className='m-auto'
@@ -57,7 +58,7 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                   height='48'
                   width='48'
                 >
-                  <path d='M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z' />
+                  {menuIconPath}
                 </svg>
                 Menu
               </button>
@@ -68,23 +69,6 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                 >
                   Share
                 </p>
-                <Link href='https://instagram.com/fcpuentet'>
-                  <a
-                    target='_blank'
-                    className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
-                  >
-                    <svg
-                      className='mx-auto my-4 h-8 w-8'
-                      width='24'
-                      height='24'
-                      viewBox='0 0 24 24'
-                      fill='currentColor'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z' />
-                    </svg>
-                  </a>
-                </Link>
 
                 <Link href='https://twitter.com/intent/tweet?text=%E5%85%A8%E3%81%A6%E3%81%AE%E6%9E%B6%E3%81%91%E6%A9%8B%E3%81%B8%E3%80%8CFC-PUENTET%E3%80%8D%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%EF%BC%9Ahttps%3A%2F%2Ffc-puentet.com%2F%20'>
                   <a
@@ -103,6 +87,24 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                     </svg>
                   </a>
                 </Link>
+
+                <Link href='https://instagram.com/fcpuentet'>
+                  <a
+                    target='_blank'
+                    className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
+                  >
+                    <svg
+                      className='mx-auto my-4 h-8 w-8'
+                      width='24'
+                      height='24'
+                      viewBox='0 0 24 24'
+                      fill='currentColor'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z' />
+                    </svg>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -113,18 +115,6 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
                 isMenuVisible ? 'visible' : 'invisible'
               }`}
             >
-              <button
-                className='p-12 text-4xl'
-                onClick={(event) => onCloseMenuButtonClick(event)}
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  height='48'
-                  width='48'
-                >
-                  <path d='m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z' />
-                </svg>
-              </button>
               {/*<Header />*/}
             </div>
 
