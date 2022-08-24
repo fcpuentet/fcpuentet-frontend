@@ -2,14 +2,11 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { useFeeds } from '@/features/feed';
+import { FeedHeader, useFeeds } from '@/features/feed';
 import { TopFeedContent } from '@/features/top';
 
 const FeedsScreen: NextPage = () => {
   const { push } = useRouter();
-  const {
-    query: { id },
-  } = useRouter();
   const { feeds } = useFeeds();
 
   const feedItems = feeds?.map((feed) => (
@@ -22,7 +19,10 @@ const FeedsScreen: NextPage = () => {
 
   return (
     <MainLayout>
-      <ContentLayout>{feedItems}</ContentLayout>
+      <ContentLayout className='py-8 lg:pt-16'>
+        <FeedHeader />
+        <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>{feedItems}</div>
+      </ContentLayout>
     </MainLayout>
   );
 };
