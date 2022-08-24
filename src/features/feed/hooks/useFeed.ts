@@ -37,9 +37,9 @@ export const useFeed = (id?: string | string[]): FeedState => {
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access
           id: `${entity.id}`,
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access
-          createdAt: `${entity.created_at}`,
+          createdAt: new Date(`${entity.created_at}`),
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access
-          updatedAt: `${entity.updated_at}`,
+          updatedAt: new Date(`${entity.updated_at}`),
           // eslint-disable-next-line @typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access
           title: `${entity.title}`,
           // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/restrict-template-expressions
