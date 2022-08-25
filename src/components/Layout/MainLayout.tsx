@@ -110,6 +110,22 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
           </div>
 
           <div className='lg:pr-16'>
+            <div className='fixed right-0 bg-white/50 lg:hidden'>
+              <button
+                className='select-none px-4 py-2 text-sm'
+                onClick={(event) => onToggleMenuVisibleButtonClick()}
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  height='48'
+                  width='48'
+                >
+                  <path d='M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z' />
+                </svg>
+                Menu
+              </button>
+            </div>
+
             <div
               className={`fixed inset-x-0 min-h-screen overflow-auto overscroll-y-contain bg-white/50 backdrop-blur-lg lg:right-16 ${
                 isMenuVisible ? 'visible' : 'invisible'
