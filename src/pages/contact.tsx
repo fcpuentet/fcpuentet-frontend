@@ -1,10 +1,17 @@
 import type { NextPage } from 'next';
-import { MainLayout } from '@/components/Layout';
+import React from 'react';
+import { ContentLayout, MainLayout } from '@/components/Layout';
+import { ContactForm, ContactHeader } from '@/features/contact';
 
 const ContactScreen: NextPage = () => {
   return (
     <MainLayout>
-      <div></div>
+      <ContentLayout className='py-8 lg:pt-16'>
+        <ContactHeader />
+        <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
+          <ContactForm />
+        </div>
+      </ContentLayout>
     </MainLayout>
   );
 };
