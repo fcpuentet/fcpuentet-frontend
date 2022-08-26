@@ -13,7 +13,9 @@ export const TopFeedContent: React.FC<Props> = ({ feed, onClick }: Props) => {
       onClick={() => onClick(feed.id)}
     >
       <a>
-        <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>{feed.title}</h5>
+        <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl'>
+          {feed.title}
+        </h5>
         <p className='font-normal text-gray-700'>{feed.body}</p>
       </a>
     </li>
