@@ -17,8 +17,8 @@ const menuItems: MenuItem[] = [
     path: '/feeds',
   },
   {
-    name: 'Team',
-    path: '/teams',
+    name: 'Club',
+    path: '/club',
   },
   {
     name: 'Sponsor',

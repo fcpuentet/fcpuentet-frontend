@@ -1,22 +1,17 @@
 import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import { MainLayout } from '../../components/Layout';
-import { useEnvironment } from '../../hooks';
+import { ContentLayout, MainLayout } from '@/components/Layout';
+import { ClubHeader, ClubSocial, ClubSummary } from '@/features/club';
 
 const ClubPage: NextPage = () => {
-  const router = useRouter();
-  const { environment } = useEnvironment();
-
-  useEffect(() => {
-    if (environment.isProduction) {
-      void router.replace('/');
-    }
-  }, []);
-
   return (
     <MainLayout>
-      <div></div>
+      <ContentLayout className=' py-8 lg:pt-16'>
+        <ClubHeader />
+        <div className='mx-auto flex flex-col gap-4 lg:max-w-3xl'>
+          <ClubSummary />
+          <ClubSocial />
+        </div>
+      </ContentLayout>
     </MainLayout>
   );
 };
