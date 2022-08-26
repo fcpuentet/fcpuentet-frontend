@@ -20,14 +20,14 @@ export const TopFeeds: React.FC<Props> = () => {
   return (
     <TopContentLayout>
       <section className='flex flex-col'>
-        <h2 className='cursor-default text-7xl'>NEWS</h2>
+        <h2 className='cursor-default text-5xl lg:text-7xl'>News</h2>
         <div>
-          <ul className='p-8'>{feedItems}</ul>
+          <ul className='lg:p-8'>{feedItems}</ul>
         </div>
       </section>
       <div className='flex justify-end'>
         <button
-          className='flex select-none flex-row items-center gap-4 px-8 text-2xl'
+          className='flex select-none flex-row items-center gap-4 text-xl lg:px-8 lg:text-2xl'
           onClick={() => void push(`/feeds`)}
         >
           もっとみる
