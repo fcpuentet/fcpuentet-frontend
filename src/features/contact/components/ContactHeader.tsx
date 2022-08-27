@@ -18,7 +18,7 @@ export const ContactHeader: React.FC<Props> = ({ ...divHTMLAttributes }: Props):
         </a>
       </Link>
       <h2 className='mt-8 flex-1 cursor-default select-none text-4xl lg:mt-0 lg:text-7xl'>
-        Contact
+        お問い合わせ
       </h2>
     </div>
   );
