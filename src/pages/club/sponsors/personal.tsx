@@ -1,22 +1,14 @@
 import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import { MainLayout } from '@/components/Layout';
-import { useEnvironment } from '@/hooks';
+import { ContentLayout, MainLayout } from '@/components/Layout';
+import { SponsorContact, SponsorHeader } from '@/features/club';
 
 const PersonalSponsorsPage: NextPage = () => {
-  const router = useRouter();
-  const { environment } = useEnvironment();
-
-  useEffect(() => {
-    if (environment.isProduction) {
-      void router.replace('/');
-    }
-  }, []);
-
   return (
     <MainLayout>
-      <div></div>
+      <ContentLayout className=' py-8 lg:pt-16'>
+        <SponsorHeader title='個人スポンサー紹介' />
+        <SponsorContact />
+      </ContentLayout>
     </MainLayout>
   );
 };
