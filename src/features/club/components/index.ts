@@ -7,3 +7,5 @@ export * from './ClubSocial';
 export * from './ClubSocialItem';
 export * from './ClubSponsors';
 export * from './ClubSummary';
+export * from './SponsorHeader';
+export * from './SponsorContact';
