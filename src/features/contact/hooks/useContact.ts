@@ -27,8 +27,13 @@ export const useContact = (initEmail?: string, initBody?: string): FeedState => 
     setContent(value);
   };
 
+  const reset = () => {
+    setName('');
+    setEmail('');
+    setContent('');
+  };
+
   const onSubmit = () => {
-    // TODO: implementation
     void (async function () {
       await supabaseClient.from('contact').insert(
         {
@@ -38,6 +43,8 @@ export const useContact = (initEmail?: string, initBody?: string): FeedState => 
         },
         { returning: 'minimal' },
       );
+
+      reset();
     })();
   };
 
