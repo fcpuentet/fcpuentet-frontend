@@ -1,15 +1,29 @@
 import { NextPage } from 'next';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { ClubHeader, ClubSocial, ClubSummary } from '@/features/club';
+import {
+  ClubCharacters,
+  ClubHeader,
+  ClubHomeTown,
+  ClubLogo,
+  ClubSlogan,
+  ClubSocial,
+  ClubSponsors,
+  ClubSummary,
+} from '@/features/club';
 
 const ClubPage: NextPage = () => {
   return (
     <MainLayout>
       <ContentLayout className=' py-8 lg:pt-16'>
         <ClubHeader />
-        <div className='mx-auto flex flex-col gap-4 lg:max-w-3xl'>
+        <div className='mx-auto flex flex-col gap-4 md:max-w-2xl'>
           <ClubSummary />
           <ClubSocial />
+          <ClubLogo />
+          <ClubSlogan />
+          <ClubCharacters />
+          <ClubHomeTown />
+          <ClubSponsors />
         </div>
       </ContentLayout>
     </MainLayout>

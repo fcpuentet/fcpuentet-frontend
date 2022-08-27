@@ -17,7 +17,9 @@ export const ClubHeader: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JS
           />
         </a>
       </Link>
-      <h2 className='mt-8 flex-1 cursor-default select-none text-4xl lg:mt-0 lg:text-7xl'>Club</h2>
+      <h2 className='mt-8 flex-1 cursor-default select-none text-4xl lg:mt-0 lg:text-7xl'>
+        クラブ紹介
+      </h2>
     </div>
   );
 };
