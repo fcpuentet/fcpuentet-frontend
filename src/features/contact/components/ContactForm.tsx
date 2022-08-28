@@ -1,17 +1,26 @@
 import React from 'react';
 import { useContact } from '@/features/contact/hooks';
 
-type Props = React.HTMLAttributes<HTMLDivElement>;
+type Props = {
+  category?: string | string[];
+};
 
-export const ContactForm: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JSX.Element => {
-  const { name, onChangeName, email, onChangeEmail, content, onChangeContent, onSubmit } =
-    useContact();
+export const ContactForm: React.FC<Props> = ({ category: categoryId }: Props): JSX.Element => {
+  const {
+    categories,
+    category,
+    onChangeCategory,
+    name,
+    onChangeName,
+    email,
+    onChangeEmail,
+    content,
+    onChangeContent,
+    onSubmit,
+  } = useContact(categoryId);
 
   return (
-    <div
-      {...divHTMLAttributes}
-      className=''
-    >
+    <div className=''>
       <form
         className='flex flex-col gap-8'
         onSubmit={(event) => {
@@ -19,6 +28,32 @@ export const ContactForm: React.FC<Props> = ({ ...divHTMLAttributes }: Props): J
           onSubmit();
         }}
       >
+        <label
+          htmlFor='category'
+          className='block text-base font-medium text-gray-700'
+        >
+          {' '}
+          お問い合わせ種類
+          <select
+            id='category'
+            name='category'
+            required={true}
+            value={category?.id}
+            onChange={(event) => onChangeCategory(event.target.value)}
+            className='mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300'
+          >
+            {categories &&
+              categories.map((category) => (
+                <option
+                  key={category.id}
+                  value={category.id}
+                >
+                  {category.name}
+                </option>
+              ))}
+          </select>
+        </label>
+
         <label
           htmlFor='name'
           className='block text-base font-medium text-gray-700'
