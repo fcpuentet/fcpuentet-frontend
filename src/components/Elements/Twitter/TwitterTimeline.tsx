@@ -1,20 +1,34 @@
-import Script from 'next/script';
+import React, { useEffect } from 'react';
 
-export const TwitterTimeline = (): JSX.Element => {
+type Theme = 'system' | 'light' | 'dark';
+
+type TwitterTimelineProps = {
+  theme?: Theme;
+};
+
+export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
+  theme = 'light',
+}: TwitterTimelineProps): JSX.Element => {
+  useEffect(() => {
+    // scriptを読み込み
+    const script = document.createElement('script');
+    script.src = 'https://platform.twitter.com/widgets.js';
+    document.body.appendChild(script);
+    // アンマウント時に一応scriptタグを消しておく
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <>
       <a
         className='twitter-timeline'
+        data-theme={theme}
         href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
       >
         Tweets by FCPUENTET
       </a>
-      <Script
-        async
-        src='https://platform.twitter.com/widgets.js'
-        strategy='lazyOnload'
-        charSet='utf-8'
-      />
     </>
   );
 };
