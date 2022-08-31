@@ -10,7 +10,11 @@ const FeedScreen: NextPage = () => {
   } = useRouter();
 
   return (
-    <MainLayout>
+    <MainLayout
+      path={typeof id === 'string' ? `/feeds/${id}` : '/feeds'}
+      title='お知らせ'
+      noindex
+    >
       <ContentLayout className='py-8 lg:pt-16'>
         <FeedHeader />
         <FeedContent

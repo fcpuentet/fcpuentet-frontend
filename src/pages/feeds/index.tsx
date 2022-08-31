@@ -18,7 +18,10 @@ const FeedsScreen: NextPage = () => {
   ));
 
   return (
-    <MainLayout>
+    <MainLayout
+      path='/feeds'
+      title='お知らせ'
+    >
       <ContentLayout className='py-8 lg:pt-16'>
         <FeedHeader />
         <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>{feedItems}</div>
