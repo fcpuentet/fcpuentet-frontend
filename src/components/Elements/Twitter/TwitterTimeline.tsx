@@ -1,17 +1,6 @@
-import { useEffect, useState } from 'react';
+import Script from 'next/script';
 
 export const TwitterTimeline = (): JSX.Element => {
-  const [isFinishLoading, setIsFinishLoading] = useState(false);
-
-  useEffect(() => {
-    if (!isFinishLoading) {
-      const timelineScript = document.createElement('script');
-      timelineScript.setAttribute('src', 'https://platform.twitter.com/widgets.js');
-      document.body.appendChild(timelineScript);
-      setIsFinishLoading(true);
-    }
-  }, []);
-
   return (
     <>
       <a
@@ -20,6 +9,12 @@ export const TwitterTimeline = (): JSX.Element => {
       >
         Tweets by FCPUENTET
       </a>
+      <Script
+        async
+        src='https://platform.twitter.com/widgets.js'
+        strategy='lazyOnload'
+        charSet='utf-8'
+      />
     </>
   );
 };
