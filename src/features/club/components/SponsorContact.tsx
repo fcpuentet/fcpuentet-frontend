@@ -14,7 +14,7 @@ export const SponsorContact: React.FC<Props> = (): JSX.Element => {
     <div className='my-6 flex flex-col items-center lg:m-8'>
       <p>スポンサーに関するお問い合わせは下記のフォームよりお送りください</p>
       <button
-        className='my-6 w-full rounded border border-blue-500 bg-transparent py-4 px-16 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white md:w-3/4 lg:my-8 lg:w-3/5'
+        className='my-6 w-full select-none rounded border border-blue-500 bg-transparent py-4 px-16 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white md:w-3/4 lg:my-8 lg:w-3/5'
         onClick={(event) => onContactFormClick(event)}
       >
         お問い合わせフォーム

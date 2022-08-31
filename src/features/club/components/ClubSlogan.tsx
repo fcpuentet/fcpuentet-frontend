@@ -6,7 +6,7 @@ export const ClubSlogan: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JS
   return (
     <div
       {...divHTMLAttributes}
-      className='flex flex-col'
+      className='flex flex-col md:gap-12'
     >
       <div className='my-8 flex flex-col gap-4'>
         <h2 className='text-xl font-semibold'>クラブスローガン</h2>

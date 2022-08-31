@@ -22,6 +22,23 @@ class MyDocument extends Document {
       >
         <Head>
           {/* サイト全体に反映させたいデフォルトの設定を記述する ex) Google Fonts の読み込み */}
+          <link
+            rel='preconnect'
+            href='https://fonts.googleapis.com'
+          />
+          <link
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='true'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Staatliches&display=swap'
+            rel='stylesheet'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap'
+            rel='stylesheet'
+          />
         </Head>
         <body>
           <Main />
