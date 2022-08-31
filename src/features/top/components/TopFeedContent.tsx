@@ -9,7 +9,7 @@ interface Props {
 export const TopFeedContent: React.FC<Props> = ({ feed, onClick }: Props) => {
   return (
     <li
-      className='my-6 block cursor-pointer rounded-lg border border-gray-200 bg-white p-6 shadow-md hover:bg-gray-100'
+      className='my-6 block cursor-pointer select-none rounded-lg border border-gray-200 bg-white p-6 shadow-md hover:bg-gray-100'
       onClick={() => onClick(feed.id)}
     >
       <a>

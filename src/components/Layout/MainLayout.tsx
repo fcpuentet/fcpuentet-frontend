@@ -160,7 +160,7 @@ export const MainLayout: React.FC<Props> = ({
             </div>
 
             <div
-              className={`fixed inset-x-0 min-h-screen overflow-auto overscroll-y-contain bg-white/50 backdrop-blur-lg lg:right-16 ${
+              className={`fixed inset-x-0 min-h-screen select-none overflow-auto overscroll-y-contain bg-white/50 backdrop-blur-lg lg:right-16 ${
                 isMenuVisible ? 'visible' : 'invisible'
               }`}
             >

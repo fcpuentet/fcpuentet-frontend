@@ -23,7 +23,7 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
   return (
     <>
       <a
-        className='twitter-timeline'
+        className='twitter-timeline select-none'
         data-theme={theme}
         href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
       >

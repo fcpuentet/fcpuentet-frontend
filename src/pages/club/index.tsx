@@ -19,7 +19,7 @@ const ClubPage: NextPage = () => {
     >
       <ContentLayout className=' py-8 lg:pt-16'>
         <ClubHeader />
-        <div className='mx-auto flex flex-col gap-4 md:max-w-2xl'>
+        <div className='mx-auto flex flex-col gap-4 md:max-w-4xl md:gap-12'>
           <ClubSummary />
           <ClubSocial />
           <ClubLogo />
