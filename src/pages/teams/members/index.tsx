@@ -3,7 +3,11 @@ import { MainLayout } from '@/components/Layout';
 
 const Members: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout
+      path='/teams/members'
+      title='メンバー紹介'
+      noindex
+    >
       <div className='h-full bg-white pb-6 sm:pb-8 lg:pb-12'>
         <div className='mx-auto max-w-screen-2xl px-4 md:px-8'>
           <div className='mb-10 md:mb-16'>

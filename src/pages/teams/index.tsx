@@ -15,7 +15,11 @@ const TeamPage: NextPage = () => {
   }, []);
 
   return (
-    <MainLayout>
+    <MainLayout
+      path='/teams'
+      title='チーム紹介'
+      noindex
+    >
       <div></div>
     </MainLayout>
   );

@@ -10,7 +10,10 @@ const ContactScreen: NextPage = () => {
   } = useRouter();
 
   return (
-    <MainLayout>
+    <MainLayout
+      path='/contact'
+      title='お問い合わせ'
+    >
       <ContentLayout className='py-8 lg:pt-16'>
         <ContactHeader />
         <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>

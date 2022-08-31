@@ -4,7 +4,12 @@ import { TopBanner, TopContact, TopFeeds, TopSocials } from '@/features/top';
 
 const TopScreen: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout
+      path='/'
+      title='FC-PUENTET 公式サイト'
+      noTitleTemplate
+      isTopPage
+    >
       <TopBanner />
       <TopFeeds />
       <TopSocials />

@@ -1,18 +1,41 @@
-import Head from 'next/head';
+import NextHeadSeo from 'next-head-seo';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Footer, Header } from '@/components/Elements';
 
-interface Props {
-  title?: string;
-  children: React.ReactNode;
-}
+const APP_NAME = 'FC-PUENTET 公式サイト';
+const APP_ROOT_URL = 'https://fc-puentet.com';
+const APP_DEFAULT_DESCRIPTION =
+  'サッカー FC-PUENTET 公式サイトです。最新のニュース、試合情報、所属選手・スタッフ紹介やチケット/グッズ購入、スタジアムへのアクセス、ホームタウン活動など役立つ情報を日々お届けしています。';
+const APP_DEFAULT_OG_IMAGE_PATH = '/emblem.webp';
 
-export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
-  const titleText = title ? `${title} | FC PUENTET 公式サイト` : 'FC PUENTET 公式サイト';
+type Props = {
+  path: string;
+  title: string;
+  description?: string;
+  ogImagePath?: string;
+  noindex?: boolean;
+  noTitleTemplate?: boolean;
+  isTopPage?: boolean;
+  children: React.ReactNode;
+};
+
+export const MainLayout: React.FC<Props> = ({
+  path,
+  title,
+  description = APP_DEFAULT_DESCRIPTION,
+  ogImagePath = APP_DEFAULT_OG_IMAGE_PATH,
+  noindex,
+  noTitleTemplate,
+  isTopPage,
+  children,
+}: Props): JSX.Element => {
+  // ページの絶対パス
+  const pageUrl = APP_ROOT_URL + path;
+  // OG画像の絶対パス
+  const ogImageUrl = APP_ROOT_URL + ogImagePath;
 
   const [isMenuVisible, setMenuVisible] = useState(false);
-
   const onToggleMenuVisibleButtonClick = () => setMenuVisible(!isMenuVisible);
   const menuIconPath = isMenuVisible ? (
     // NOTE: Close
@@ -24,25 +47,35 @@ export const MainLayout: React.FC<Props> = ({ title, children }: Props) => {
 
   return (
     <>
-      <Head>
-        <title>{titleText}</title>
-        <meta
-          name='description'
-          content='サッカー Puentet 公式サイトです。最新のニュース、試合情報、所属選手・スタッフ紹介やチケット/グッズ購入、スタジアムへのアクセス、ホームタウン活動など役立つ情報を日々お届けしています。'
-        />
-        <meta
-          name='keywords'
-          content='Puentet,サッカー'
-        />
-        <meta
-          name='robots'
-          content='noindex'
-        />
-        <link
-          rel='icon'
-          href='/favicon.ico'
-        />
-      </Head>
+      <NextHeadSeo
+        title={noTitleTemplate ? title : `${title} - ${APP_NAME}`}
+        canonical={pageUrl}
+        description={description}
+        robots={noindex ? 'noindex, nofollow' : undefined}
+        og={{
+          title,
+          description,
+          url: pageUrl,
+          image: ogImageUrl,
+          type: isTopPage ? 'website' : 'article',
+          siteName: APP_NAME,
+        }}
+        twitter={{
+          card: 'summary_large_image',
+        }}
+        customMetaTags={[
+          {
+            name: 'keywords',
+            content: 'PUENTET,サッカー',
+          },
+        ]}
+        customLinkTags={[
+          {
+            rel: 'icon',
+            href: '/favicon.ico',
+          },
+        ]}
+      />
 
       <div className='mx-0 my-auto w-full'>
         <div className='h-full'>

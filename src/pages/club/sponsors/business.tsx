@@ -4,7 +4,11 @@ import { SponsorContact, SponsorHeader } from '@/features/club';
 
 const BusinessSponsorsPage: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout
+      path='/sponsors/business'
+      title='ビジネススポンサー紹介'
+      noindex
+    >
       <ContentLayout className=' py-8 lg:pt-16'>
         <SponsorHeader title='ビジネススポンサー紹介' />
         <SponsorContact />
