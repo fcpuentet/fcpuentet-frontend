@@ -21,7 +21,7 @@ export const FeedContent: React.FC<Props> = ({
             <p className='mt-4 lg:mt-0'>更新日: {feed.updatedAt.toLocaleDateString()}</p>
           </div>
           <div
-            className='whitespace-pre-wrap py-8 lg:py-16'
+            className="whitespace-pre-wrap py-8 font-['Noto_Sans_JP'] lg:py-16"
             dangerouslySetInnerHTML={{ __html: marked(feed.body) }}
           />
         </article>
