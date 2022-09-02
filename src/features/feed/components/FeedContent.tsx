@@ -1,3 +1,4 @@
+import { marked } from 'marked';
 import React from 'react';
 import { useFeed } from '@/features/feed';
 
@@ -19,7 +20,10 @@ export const FeedContent: React.FC<Props> = ({
             <h3 className='text-2xl lg:text-3xl'>{feed.title}</h3>
             <p className='mt-4 lg:mt-0'>更新日: {feed.updatedAt.toLocaleDateString()}</p>
           </div>
-          <p className='py-8 lg:py-16'>{feed.body}</p>
+          <div
+            className='whitespace-pre-wrap py-8 lg:py-16'
+            dangerouslySetInnerHTML={{ __html: marked(feed.body) }}
+          />
         </article>
       )}
     </div>
