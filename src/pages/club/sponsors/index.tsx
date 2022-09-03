@@ -1,15 +1,19 @@
 import { NextPage } from 'next';
+import React from 'react';
+import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { SponsorContact, SponsorHeader } from '@/features/club';
+import { SponsorContact } from '@/features/club';
+
+const title = 'スポンサー紹介';
 
 const SponsorsPage: NextPage = () => {
   return (
     <MainLayout
       path='/sponsors'
-      title='スポンサー紹介'
+      title={title}
     >
       <ContentLayout className=' py-8 lg:pt-16'>
-        <SponsorHeader title='スポンサー紹介' />
+        <TitleHeader title={title} />
         <SponsorContact />
       </ContentLayout>
     </MainLayout>

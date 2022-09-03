@@ -1,5 +1,4 @@
 export * from './ClubCharacters';
-export * from './ClubHeader';
 export * from './ClubHomeTown';
 export * from './ClubLogo';
 export * from './ClubSlogan';

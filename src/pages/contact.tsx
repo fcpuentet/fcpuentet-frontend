@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { ContactForm, ContactHeader } from '@/features/contact';
+import { ContactForm } from '@/features/contact';
+
+const title = 'お問い合わせ';
 
 const ContactScreen: NextPage = () => {
   const {
@@ -12,10 +15,10 @@ const ContactScreen: NextPage = () => {
   return (
     <MainLayout
       path='/contact'
-      title='お問い合わせ'
+      title={title}
     >
       <ContentLayout className='py-8 lg:pt-16'>
-        <ContactHeader />
+        <TitleHeader title={title} />
         <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
           <ContactForm category={category} />
         </div>
