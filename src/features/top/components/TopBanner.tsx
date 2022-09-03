@@ -10,7 +10,7 @@ export const TopBanner: React.FC<Props> = () => {
         <div className='block md:hidden'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src='/top-banner.jpg'
+            src='/top-banner.webp'
             className='select-none object-contain'
             alt='FC-PUENTET'
           />
@@ -18,7 +18,7 @@ export const TopBanner: React.FC<Props> = () => {
         <div className='hidden md:block'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src='/top-banner-md.jpg'
+            src='/top-banner-md.webp'
             className='select-none object-contain'
             alt='FC-PUENTET'
           />
