@@ -1,7 +1,11 @@
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
+import React from 'react';
+import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { FeedContent, FeedHeader } from '@/features/feed';
+import { FeedContent } from '@/features/feed';
+
+const title = 'お知らせ';
 
 const FeedScreen: NextPage = () => {
   const {
@@ -12,10 +16,10 @@ const FeedScreen: NextPage = () => {
   return (
     <MainLayout
       path={typeof id === 'string' ? `/feeds/${id}` : '/feeds'}
-      title='お知らせ'
+      title={title}
     >
       <ContentLayout className='py-8 lg:pt-16'>
-        <FeedHeader />
+        <TitleHeader title={title} />
         <FeedContent
           className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'
           feedId={id}
