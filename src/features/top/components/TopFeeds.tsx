@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import { TopContentLayout, TopFeedContent } from '@/features/top';
+import { FeedListContent } from '@/features/feed';
+import { TopContentLayout } from '@/features/top';
 import { useTopFeeds } from '@/features/top';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -10,7 +11,7 @@ export const TopFeeds: React.FC<Props> = () => {
   const { push } = useRouter();
   const { feeds } = useTopFeeds();
   const feedItems = feeds?.map((feed) => (
-    <TopFeedContent
+    <FeedListContent
       key={feed.id}
       feed={feed}
       onClick={() => void push(`/feeds/${feed.id}`)}
