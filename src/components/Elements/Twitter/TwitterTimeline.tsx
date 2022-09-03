@@ -21,14 +21,15 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
   }, []);
 
   return (
-    <>
+    <div className='select-none'>
       <a
-        className='twitter-timeline select-none'
+        className='twitter-timeline'
+        data-height='720'
         data-theme={theme}
         href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
       >
         Tweets by FCPUENTET
       </a>
-    </>
+    </div>
   );
 };
