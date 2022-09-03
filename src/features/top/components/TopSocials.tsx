@@ -1,5 +1,5 @@
 import React from 'react';
-import { TwitterTimeline } from '@/components/Elements/Twitter/TwitterTimeline';
+import { TwitterTimeline } from '@/components/Elements';
 import { TopContentLayout } from '@/features/top';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
