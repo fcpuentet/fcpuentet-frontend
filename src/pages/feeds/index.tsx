@@ -3,8 +3,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { useFeeds } from '@/features/feed';
-import { TopFeedContent } from '@/features/top';
+import { useFeeds, FeedListContent } from '@/features/feed';
 
 const title = 'お知らせ';
 
@@ -13,7 +12,7 @@ const FeedsScreen: NextPage = () => {
   const { feeds } = useFeeds();
 
   const feedItems = feeds?.map((feed) => (
-    <TopFeedContent
+    <FeedListContent
       key={feed.id}
       feed={feed}
       onClick={() => void push(`/feeds/${feed.id}`)}
