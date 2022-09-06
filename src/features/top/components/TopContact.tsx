@@ -15,7 +15,9 @@ export const TopContact: React.FC<Props> = () => {
     <div className=''>
       <TopContentLayout>
         <section className='flex flex-col'>
-          <h2 className='cursor-default text-5xl lg:text-7xl'>Contact</h2>
+          <h2 className='cursor-default text-5xl underline decoration-blue-500 underline-offset-8 lg:text-7xl'>
+            Contact
+          </h2>
           <div className='my-6 flex flex-col items-center lg:m-8'>
             <p>お問い合わせは下記のフォームよりお送りください</p>
             <button

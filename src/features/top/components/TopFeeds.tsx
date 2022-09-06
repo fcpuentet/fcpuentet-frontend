@@ -21,7 +21,9 @@ export const TopFeeds: React.FC<Props> = () => {
   return (
     <TopContentLayout>
       <section className='flex flex-col'>
-        <h2 className='cursor-default text-5xl lg:text-7xl'>News</h2>
+        <h2 className='cursor-default text-5xl underline decoration-blue-500 underline-offset-8 lg:text-7xl'>
+          News
+        </h2>
         <div>
           <ul className='lg:p-8'>{feedItems}</ul>
         </div>

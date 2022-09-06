@@ -9,7 +9,9 @@ export const ClubSocial: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JS
       {...divHTMLAttributes}
       className='flex flex-col'
     >
-      <h2 className='text-xl font-semibold'>公式SNS</h2>
+      <h2 className='mb-4 text-xl font-semibold underline decoration-blue-500 underline-offset-8'>
+        公式SNS
+      </h2>
 
       <div className='my-4 flex flex-row items-center justify-center gap-4'>
         {/* Twitter */}
