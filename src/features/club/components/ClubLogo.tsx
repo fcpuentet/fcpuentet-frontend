@@ -8,7 +8,9 @@ export const ClubLogo: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JSX.
       {...divHTMLAttributes}
       className='my-8 flex flex-col'
     >
-      <h2 className='mb-4 text-xl font-semibold'>ロゴマーク</h2>
+      <h2 className='mb-8 text-xl font-semibold underline decoration-blue-500 underline-offset-8'>
+        ロゴマーク
+      </h2>
 
       <div className='grid grid-cols-2 place-content-center gap-4'>
         <div className='mx-auto flex flex-col gap-4'>

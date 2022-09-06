@@ -12,7 +12,7 @@ export const ClubSummary: React.FC<Props> = ({ ...divHTMLAttributes }: Props): J
         src='/emblem.webp'
         className='mx-8 my-12 w-3/4'
       />
-      <h2 className='text-2xl font-bold md:text-4xl'>FC-PUENTET</h2>
+      <h2 className='mb-4 text-4xl font-bold md:text-5xl'>FC-PUENTET</h2>
       <p className='my-4'>
         PUENT（橋）スペイン語、ET（そして、～と）フランス語
         <br />
