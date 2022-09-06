@@ -66,7 +66,7 @@ export const MainLayout: React.FC<Props> = ({
         customMetaTags={[
           {
             name: 'keywords',
-            content: 'PUENTET,サッカー',
+            content: 'PUENTET,プエンテット,FC,サッカー,吉川,越谷,三郷',
           },
         ]}
         customLinkTags={[
