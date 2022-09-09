@@ -1,6 +1,6 @@
 import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { useCallback, useMemo, useState } from 'react';
-import { ContactCategory, ContactTemplate } from '@/features/contact';
+import { ContactCategory, ContactSendState, ContactTemplate } from '@/features/contact';
 
 type ContactState = {
   categories?: ContactCategory[];
@@ -12,10 +12,13 @@ type ContactState = {
   onChangeEmail: (value: string) => void;
   content: string;
   onChangeContent: (value: string) => void;
+  sendState: ContactSendState;
   onSubmit: () => void;
 };
 
 export const useContact = (initCategoryId?: string | string[]): ContactState => {
+  const [sendState, setSendState] = useState<ContactSendState>('preparing');
+
   const [templates, setTemplates] = useState<ContactTemplate[]>();
   const [categories, setCategories] = useState<ContactCategory[]>();
   const [category, setCategory] = useState<ContactCategory>();
@@ -120,6 +123,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
         return;
       }
       setCategories(categories);
+      setSendState('ready');
       if (categories === undefined || categories.length === 0) {
         return;
       }
@@ -162,6 +166,8 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
   };
 
   const onSubmit = () => {
+    setSendState('sending');
+
     void (async function () {
       await supabaseClient.from('contact').insert(
         {
@@ -172,6 +178,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
         { returning: 'minimal' },
       );
 
+      setSendState('sent');
       reset();
     })();
   };
@@ -186,6 +193,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
     onChangeEmail,
     content,
     onChangeContent,
+    sendState,
     onSubmit,
   };
 };
