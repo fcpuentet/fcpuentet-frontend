@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContactSendState } from '@/features/contact';
 import { useContact } from '@/features/contact/hooks';
 
 type Props = {
@@ -16,8 +17,22 @@ export const ContactForm: React.FC<Props> = ({ category: categoryId }: Props): J
     onChangeEmail,
     content,
     onChangeContent,
+    sendState,
     onSubmit,
   } = useContact(categoryId);
+
+  const resolveSendButtonText: (state: ContactSendState) => string = (state) => {
+    switch (state) {
+      case 'preparing':
+        return 'お問い合わせに必要な情報を取得中です...';
+      case 'ready':
+        return 'お問い合わせを送信する';
+      case 'sending':
+        return 'お問い合わせを送信中です';
+      case 'sent':
+        return 'お問い合わせを送信しました';
+    }
+  };
 
   return (
     <div className=''>
@@ -40,7 +55,7 @@ export const ContactForm: React.FC<Props> = ({ category: categoryId }: Props): J
             required={true}
             value={category?.id}
             onChange={(event) => onChangeCategory(event.target.value)}
-            className='mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300'
+            className="mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 font-['Noto_Sans_JP'] text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
           >
             {categories &&
               categories.map((category) => (
@@ -72,7 +87,7 @@ export const ContactForm: React.FC<Props> = ({ category: categoryId }: Props): J
             title='正しい名前を入力してください。'
             value={name}
             onChange={(event) => onChangeName(event.target.value)}
-            className='mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300'
+            className="mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 font-['Noto_Sans_JP'] text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
           />
         </label>
 
@@ -94,7 +109,7 @@ export const ContactForm: React.FC<Props> = ({ category: categoryId }: Props): J
             title='正しいメールアドレスを入力してください。'
             value={email}
             onChange={(event) => onChangeEmail(event.target.value)}
-            className='mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300'
+            className="mt-4 w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 font-['Noto_Sans_JP'] text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
           />
         </label>
 
@@ -113,15 +128,24 @@ export const ContactForm: React.FC<Props> = ({ category: categoryId }: Props): J
             value={content}
             rows={12}
             onChange={(event) => onChangeContent(event.target.value)}
-            className='mt-4 h-auto w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300'
+            className="mt-4 h-auto w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 font-['Noto_Sans_JP'] text-base text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
           />
         </label>
 
         <button
           type='submit'
-          className='mx-auto mt-8 flex w-full select-none items-center justify-center rounded border-0 bg-blue-500 py-2 px-8 text-lg text-white hover:bg-blue-600 focus:outline-none'
+          className='mx-auto mt-8 flex w-full select-none items-center justify-center rounded border-0 bg-blue-500 py-2 px-8 text-lg text-white transition-all hover:bg-blue-600 focus:outline-none'
         >
-          お問い合わせを送信する
+          <svg
+            className='mr-8'
+            xmlns='http://www.w3.org/2000/svg'
+            height='40'
+            fill='currentColor'
+            width='40'
+          >
+            <path d='M5 33.333V6.667L36.667 20Zm2.792-4.25L29.458 20 7.792 10.833v6.625L17.833 20 7.792 22.5Zm0 0v-18.25V22.5Z' />
+          </svg>
+          {resolveSendButtonText(sendState)}
         </button>
       </form>
     </div>
