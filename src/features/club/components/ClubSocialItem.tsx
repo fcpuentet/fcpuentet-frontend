@@ -11,7 +11,7 @@ export const ClubSocialItem: React.FC<Props> = ({ url, children }: Props): JSX.E
     <Link href={url}>
       <a
         target='_blank'
-        className='group rounded-full border border-gray-500 p-3 hover:border-gray-600 hover:bg-gray-100'
+        className='group rounded-full border border-gray-500 p-3 transition-all hover:border-gray-600 hover:bg-gray-100'
       >
         {children}
       </a>
