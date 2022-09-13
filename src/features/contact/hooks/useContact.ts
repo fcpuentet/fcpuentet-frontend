@@ -172,6 +172,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
       await supabaseClient.from('contact').insert(
         {
           name,
+          category_id: category?.id,
           email,
           content,
         },
