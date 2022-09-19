@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { Footer, Header } from '@/components/Elements';
 
-const APP_NAME = 'FC-PUENTET 公式サイト';
+const APP_NAME = 'FC PUENTET 公式サイト';
 const APP_ROOT_URL = 'https://fc-puentet.com';
 const APP_DEFAULT_DESCRIPTION =
-  'サッカー FC-PUENTET 公式サイトです。最新のニュース、試合情報、所属選手・スタッフ紹介やチケット/グッズ購入、スタジアムへのアクセス、ホームタウン活動など役立つ情報を日々お届けしています。';
+  '社会人サッカーチーム FC PUENTET 公式サイトです。最新のニュース、試合情報、所属選手・スタッフ紹介やチケット/グッズ購入、吉川・越谷・三郷のホームタウン活動など役立つ情報を日々お届けしています。';
 const APP_DEFAULT_OG_IMAGE_PATH = '/emblem.webp';
 
 type Props = {
@@ -69,12 +69,6 @@ export const MainLayout: React.FC<Props> = ({
         twitter={{
           card: 'summary_large_image',
         }}
-        customMetaTags={[
-          {
-            name: 'keywords',
-            content: 'PUENTET,プエンテット,FC,サッカー,社会人,吉川,越谷,三郷',
-          },
-        ]}
         customLinkTags={[
           {
             rel: 'icon',
