@@ -1,7 +1,6 @@
 import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
@@ -14,13 +13,10 @@ interface FeedListScreenProps {
 }
 
 const FeedListScreen: NextPage<FeedListScreenProps> = ({ newsList }) => {
-  const { push } = useRouter();
-
   const feedItems = newsList.map((news) => (
     <FeedListContent
       key={news.id}
       news={news}
-      onClick={() => void push(`/feeds/${news.id}`)}
     />
   ));
 
