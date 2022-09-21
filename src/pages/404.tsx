@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 
-const NotFoundErrorPage: NextPage = () => {
+const NotFoundErrorScreen: NextPage = () => {
   return (
     <section className='flex h-screen items-center p-16 text-gray-600'>
       <div className='container mx-auto my-8 flex flex-col items-center justify-center px-5'>
@@ -27,4 +27,4 @@ const NotFoundErrorPage: NextPage = () => {
   );
 };
 
-export default NotFoundErrorPage;
+export default NotFoundErrorScreen;

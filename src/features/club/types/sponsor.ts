@@ -10,3 +10,12 @@ export interface BusinessSponsor extends Sponsor {
   rank: BusinessSponsorRank;
   logoImageUrl: string;
 }
+
+export interface BusinessSponsors {
+  mainSponsors: BusinessSponsor[];
+  platinumSponsors: BusinessSponsor[];
+  goldSponsors: BusinessSponsor[];
+  silverSponsors: BusinessSponsor[];
+  bronzeSponsors: BusinessSponsor[];
+  partnerSponsors: BusinessSponsor[];
+}

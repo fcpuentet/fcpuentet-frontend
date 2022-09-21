@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
@@ -14,7 +14,10 @@ import {
 
 const title = 'クラブ紹介';
 
-const ClubPage: NextPage = () => {
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface ClubScreenProps {}
+
+const ClubScreen: NextPage = () => {
   return (
     <MainLayout
       path='/club'
@@ -36,4 +39,11 @@ const ClubPage: NextPage = () => {
   );
 };
 
-export default ClubPage;
+export default ClubScreen;
+
+// noinspection JSUnusedGlobalSymbols
+export const getStaticProps: GetStaticProps<ClubScreenProps> = () => {
+  return {
+    props: {},
+  };
+};

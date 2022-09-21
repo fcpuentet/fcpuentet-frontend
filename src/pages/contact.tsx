@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
@@ -7,7 +8,10 @@ import { ContactForm } from '@/features/contact';
 
 const title = 'お問い合わせ';
 
-const ContactScreen: NextPage = () => {
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface ContactScreenProps {}
+
+const ContactScreen: NextPage<ContactScreenProps> = () => {
   const {
     query: { category },
   } = useRouter();
@@ -28,3 +32,10 @@ const ContactScreen: NextPage = () => {
 };
 
 export default ContactScreen;
+
+// noinspection JSUnusedGlobalSymbols
+export const getStaticProps: GetStaticProps<ContactScreenProps> = () => {
+  return {
+    props: {},
+  };
+};
