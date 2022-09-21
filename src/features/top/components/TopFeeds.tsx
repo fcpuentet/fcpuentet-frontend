@@ -1,20 +1,20 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import { FeedListContent } from '@/features/feed';
+import { FeedListContent, News } from '@/features/feed';
 import { TopContentLayout } from '@/features/top';
-import { useTopFeeds } from '@/features/top';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface Props {}
+interface TopFeedsProps {
+  newsList: Array<News>;
+}
 
-export const TopFeeds: React.FC<Props> = () => {
+export const TopFeeds: React.FC<TopFeedsProps> = ({ newsList }) => {
   const { push } = useRouter();
-  const { feeds } = useTopFeeds();
-  const feedItems = feeds?.map((feed) => (
+  const feedItems = newsList?.map((news) => (
     <FeedListContent
-      key={feed.id}
-      feed={feed}
-      onClick={() => void push(`/feeds/${feed.id}`)}
+      key={news.id}
+      news={news}
+      onClick={() => void push(`/feeds/${news.id}`)}
     />
   ));
 

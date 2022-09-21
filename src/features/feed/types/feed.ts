@@ -1,7 +1,7 @@
-export type Feed = {
+export interface News {
   id: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAtString: string;
+  updatedAtString: string;
   title: string;
   body: string;
-};
+}
