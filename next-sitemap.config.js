@@ -20,5 +20,5 @@ const isIgnorePath = (path) => {
 };
 
 const customLastmod = (path) => {
-  return '2022-09-21';
+  return '2022-09-26';
 };

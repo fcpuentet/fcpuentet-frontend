@@ -10,7 +10,7 @@ export const Footer = (): JSX.Element => {
           <Link href='https://twitter.com/FCPUENTET'>
             <a
               target='_blank'
-              className='text-gray-400 duration-100 hover:text-gray-500 active:text-gray-600'
+              className='text-gray-400 duration-100 hover:text-blue-500 active:text-blue-600'
             >
               <svg
                 className='mx-auto my-4 h-6 w-6 transition-all'
@@ -28,7 +28,7 @@ export const Footer = (): JSX.Element => {
           <Link href='https://instagram.com/fcpuentet'>
             <a
               target='_blank'
-              className='text-gray-400 duration-100 hover:text-gray-500 active:text-gray-600'
+              className='text-gray-400 duration-100 hover:text-pink-500 active:text-pink-600'
             >
               <svg
                 className='mx-auto my-4 h-6 w-6 transition-all'
@@ -46,7 +46,7 @@ export const Footer = (): JSX.Element => {
           <Link href='https://www.facebook.com/FCPUENTET'>
             <a
               target='_blank'
-              className='text-gray-400 duration-100 hover:text-gray-500 active:text-gray-600'
+              className='text-gray-400 duration-100 hover:text-blue-700 active:text-blue-800'
             >
               <svg
                 className='mx-auto my-4 h-6 w-6 transition-all'
