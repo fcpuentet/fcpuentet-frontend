@@ -39,6 +39,18 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap'
             rel='stylesheet'
           />
+          <meta
+            key='theme-color-light'
+            name='theme-color'
+            media='(prefers-color-scheme: light)'
+            content='#98c5e9'
+          />
+          <meta
+            key='theme-color-dark'
+            name='theme-color'
+            media='(prefers-color-scheme: dark)'
+            content='#5c8fb8'
+          />
         </Head>
         <body>
           <Main />
