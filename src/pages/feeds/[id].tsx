@@ -1,4 +1,5 @@
 import { supabaseClient } from '@supabase/auth-helpers-nextjs';
+import { motion } from 'framer-motion';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -14,33 +15,39 @@ const FeedScreen: NextPage<FeedScreenProps> = ({ news }) => {
   const { back } = useRouter();
 
   return (
-    <MainLayout
-      path={`/feeds/${news.id}`}
-      title={news.title}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <ContentLayout className='py-8 lg:pt-16'>
-        <TitleHeader title='お知らせ' />
-        <FeedContent
-          className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'
-          news={news}
-        />
-        <div className='mt-8 flex justify-center'>
-          <button
-            className='flex select-none flex-row items-center gap-4 p-8 text-2xl'
-            onClick={() => back()}
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              width='40'
+      <MainLayout
+        path={`/feeds/${news.id}`}
+        title={news.title}
+      >
+        <ContentLayout className='py-8 lg:pt-16'>
+          <TitleHeader title='お知らせ' />
+          <FeedContent
+            className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'
+            news={news}
+          />
+          <div className='mt-8 flex justify-center'>
+            <button
+              className='flex select-none flex-row items-center gap-4 p-8 text-2xl'
+              onClick={() => back()}
             >
-              <path d='M20 33.333 6.667 20 20 6.667l1.958 1.958-10 10h21.375v2.75H11.958l10 10Z' />
-            </svg>
-            BACK
-          </button>
-        </div>
-      </ContentLayout>
-    </MainLayout>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                height='40'
+                width='40'
+              >
+                <path d='M20 33.333 6.667 20 20 6.667l1.958 1.958-10 10h21.375v2.75H11.958l10 10Z' />
+              </svg>
+              BACK
+            </button>
+          </div>
+        </ContentLayout>
+      </MainLayout>
+    </motion.div>
   );
 };
 
