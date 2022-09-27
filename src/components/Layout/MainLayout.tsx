@@ -141,10 +141,10 @@ export const MainLayout: React.FC<Props> = ({
           </div>
 
           <div className='lg:pr-16'>
-            <div className='fixed right-0 bg-white/50 lg:hidden'>
+            <div className='fixed right-0 rounded-bl-3xl bg-white/50 lg:hidden'>
               <button
                 className='select-none px-4 py-2 text-sm'
-                onClick={(event) => onToggleMenuVisibleButtonClick()}
+                onClick={() => onToggleMenuVisibleButtonClick()}
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
