@@ -1,4 +1,5 @@
 import { supabaseClient } from '@supabase/auth-helpers-nextjs';
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { MainLayout } from '@/components/Layout';
@@ -13,17 +14,23 @@ interface TopScreenProps {
 
 const TopScreen: NextPage<TopScreenProps> = ({ topNewsList }) => {
   return (
-    <MainLayout
-      path='/'
-      title='FC-PUENTET 公式サイト'
-      noTitleTemplate
-      isTopPage
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <TopBanner />
-      <TopFeeds newsList={topNewsList} />
-      <TopSocials />
-      <TopContact />
-    </MainLayout>
+      <MainLayout
+        path='/'
+        title='FC-PUENTET 公式サイト'
+        noTitleTemplate
+        isTopPage
+      >
+        <TopBanner />
+        <TopFeeds newsList={topNewsList} />
+        <TopSocials />
+        <TopContact />
+      </MainLayout>
+    </motion.div>
   );
 };
 

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
@@ -17,17 +18,23 @@ const ContactScreen: NextPage<ContactScreenProps> = () => {
   } = useRouter();
 
   return (
-    <MainLayout
-      path='/contact'
-      title={title}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <ContentLayout className='py-8 lg:pt-16'>
-        <TitleHeader title={title} />
-        <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
-          <ContactForm category={category} />
-        </div>
-      </ContentLayout>
-    </MainLayout>
+      <MainLayout
+        path='/contact'
+        title={title}
+      >
+        <ContentLayout className='py-8 lg:pt-16'>
+          <TitleHeader title={title} />
+          <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
+            <ContactForm category={category} />
+          </div>
+        </ContentLayout>
+      </MainLayout>
+    </motion.div>
   );
 };
 

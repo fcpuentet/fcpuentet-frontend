@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { MainLayout } from '@/components/Layout';
 import { useEnvironment } from '@/hooks';
 
@@ -15,13 +16,19 @@ const TeamPage: NextPage = () => {
   }, []);
 
   return (
-    <MainLayout
-      path='/teams'
-      title='チーム紹介'
-      noindex
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <div></div>
-    </MainLayout>
+      <MainLayout
+        path='/teams'
+        title='チーム紹介'
+        noindex
+      >
+        <div></div>
+      </MainLayout>
+    </motion.div>
   );
 };
 

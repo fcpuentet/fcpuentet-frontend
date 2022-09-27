@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { NextPage } from 'next';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
@@ -8,16 +9,22 @@ const title = 'スポンサー紹介';
 
 const PersonalSponsorsPage: NextPage = () => {
   return (
-    <MainLayout
-      path='/sponsors/personal'
-      title={title}
-      noindex
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <ContentLayout className=' py-8 lg:pt-16'>
-        <TitleHeader title={title} />
-        <SponsorContact />
-      </ContentLayout>
-    </MainLayout>
+      <MainLayout
+        path='/sponsors/personal'
+        title={title}
+        noindex
+      >
+        <ContentLayout className=' py-8 lg:pt-16'>
+          <TitleHeader title={title} />
+          <SponsorContact />
+        </ContentLayout>
+      </MainLayout>
+    </motion.div>
   );
 };
 
