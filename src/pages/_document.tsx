@@ -43,13 +43,13 @@ class MyDocument extends Document {
             key='theme-color-light'
             name='theme-color'
             media='(prefers-color-scheme: light)'
-            content='#98c5e9'
+            content='#84B1DF'
           />
           <meta
             key='theme-color-dark'
             name='theme-color'
             media='(prefers-color-scheme: dark)'
-            content='#98c5e9'
+            content='#84B1DF'
           />
         </Head>
         <body>
