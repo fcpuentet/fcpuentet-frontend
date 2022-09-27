@@ -72,7 +72,7 @@ export const MainLayout: React.FC<Props> = ({
         customLinkTags={[
           {
             rel: 'icon',
-            href: '/favicon.ico',
+            href: 'favicons/favicon.ico',
           },
         ]}
       />
