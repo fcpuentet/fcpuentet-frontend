@@ -67,15 +67,11 @@ class MyDocument extends Document {
           />
           <meta
             name='msapplication-TileColor'
-            content='#ffffff'
+            content='#84B1DF'
           />
           <meta
             name='msapplication-config'
             content='/favicons/browserconfig.xml'
-          />
-          <meta
-            name='theme-color'
-            content='#ffffff'
           />
           <meta
             key='theme-color-light'
