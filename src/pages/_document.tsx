@@ -49,7 +49,7 @@ class MyDocument extends Document {
             key='theme-color-dark'
             name='theme-color'
             media='(prefers-color-scheme: dark)'
-            content='#5c8fb8'
+            content='#98c5e9'
           />
         </Head>
         <body>
