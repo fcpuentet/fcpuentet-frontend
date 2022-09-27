@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { News } from '@/features/feed';
+import { formatDate } from '@/utils';
 
 interface FeedListContentProps {
   news: News;
@@ -15,7 +16,7 @@ export const FeedListContent: React.FC<FeedListContentProps> = ({ news }: FeedLi
             {news.title}
           </h5>
           <p className='text-end font-normal text-gray-700'>
-            更新日: {new Date(news.updatedAtString).toLocaleDateString()}
+            更新日: {formatDate(news.updatedAtString)}
           </p>
         </a>
       </Link>
