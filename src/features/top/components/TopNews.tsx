@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import React from 'react';
-import { FeedListContent, News } from '@/features/feed';
+import { NewsListContent, News } from '@/features/news';
 import { TopContentLayout } from '@/features/top';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface TopFeedsProps {
+interface TopNewsProps {
   newsList: Array<News>;
 }
 
-export const TopFeeds: React.FC<TopFeedsProps> = ({ newsList }) => {
-  const feedItems = newsList?.map((news) => (
-    <FeedListContent
+export const TopNews: React.FC<TopNewsProps> = ({ newsList }) => {
+  const newsItems = newsList?.map((news) => (
+    <NewsListContent
       key={news.id}
       news={news}
     />
@@ -23,11 +23,11 @@ export const TopFeeds: React.FC<TopFeedsProps> = ({ newsList }) => {
           News
         </h2>
         <div>
-          <ul className='lg:p-8'>{feedItems}</ul>
+          <ul className='lg:p-8'>{newsItems}</ul>
         </div>
       </section>
       <div className='flex justify-end'>
-        <Link href='/feeds'>
+        <Link href='/news'>
           <a className='flex select-none flex-row items-center gap-4 text-xl lg:px-8 lg:text-2xl'>
             もっとみる
             <svg

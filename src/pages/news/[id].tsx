@@ -5,13 +5,13 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { FeedContent, News } from '@/features/feed';
+import { NewsContent, News } from '@/features/news';
 
-interface FeedScreenProps {
+interface NewsContentScreenProps {
   news: News;
 }
 
-const FeedScreen: NextPage<FeedScreenProps> = ({ news }) => {
+const NewsContentScreen: NextPage<NewsContentScreenProps> = ({ news }) => {
   const { back } = useRouter();
 
   return (
@@ -21,12 +21,12 @@ const FeedScreen: NextPage<FeedScreenProps> = ({ news }) => {
       exit={{ opacity: 0 }}
     >
       <MainLayout
-        path={`/feeds/${news.id}`}
+        path={`/news/${news.id}`}
         title={news.title}
       >
         <ContentLayout className='py-8 lg:pt-16'>
           <TitleHeader title='お知らせ' />
-          <FeedContent
+          <NewsContent
             className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'
             news={news}
           />
@@ -51,27 +51,27 @@ const FeedScreen: NextPage<FeedScreenProps> = ({ news }) => {
   );
 };
 
-export default FeedScreen;
+export default NewsContentScreen;
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await supabaseClient.from('feeds').select('id').is('deleted_at', null);
+  const { data } = await supabaseClient.from('news').select('id').is('deleted_at', null);
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/restrict-template-expressions
-  const paths = data?.map((row) => `/feeds/${row.id}`) ?? [];
+  const paths = data?.map((row) => `/news/${row.id}`) ?? [];
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
 // noinspection JSUnusedGlobalSymbols
-export const getStaticProps: GetStaticProps<FeedScreenProps> = async (context) => {
+export const getStaticProps: GetStaticProps<NewsContentScreenProps> = async (context) => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data: entity, error } = await supabaseClient
-    .from('feeds')
-    .select('id, created_at, updated_at, title, body')
+    .from('news')
+    .select('id, created_at, updated_at, title, content')
     .is('deleted_at', null)
     .eq('id', context.params?.id)
     .single();
@@ -88,7 +88,7 @@ export const getStaticProps: GetStaticProps<FeedScreenProps> = async (context) =
     createdAtString: `${entity.created_at}`,
     updatedAtString: `${entity.updated_at}`,
     title: `${entity.title}`,
-    body: `${entity.body}`,
+    content: `${entity.content}`,
   };
   /* eslint-enable */
 

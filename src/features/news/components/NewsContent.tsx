@@ -1,13 +1,13 @@
 import { marked } from 'marked';
 import React from 'react';
-import { News } from '@/features/feed';
+import { News } from '@/features/news';
 import { formatDateTime } from '@/utils';
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
   news: News;
 };
 
-export const FeedContent: React.FC<Props> = ({
+export const NewsContent: React.FC<Props> = ({
   news,
   ...divHTMLAttributes
 }: Props): JSX.Element => {
@@ -20,7 +20,7 @@ export const FeedContent: React.FC<Props> = ({
         </div>
         <div
           className="whitespace-pre-wrap py-8 font-['Noto_Sans_JP'] leading-relaxed lg:py-16 [&_a]:text-blue-500"
-          dangerouslySetInnerHTML={{ __html: marked(news.body) }}
+          dangerouslySetInnerHTML={{ __html: marked(news.content) }}
         />
       </article>
     </div>
