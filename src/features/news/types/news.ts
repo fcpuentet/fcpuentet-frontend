@@ -3,5 +3,5 @@ export interface News {
   createdAtString: string;
   updatedAtString: string;
   title: string;
-  body: string;
+  content: string;
 }

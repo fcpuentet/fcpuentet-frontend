@@ -5,17 +5,17 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { FeedListContent, News } from '@/features/feed';
+import { NewsListContent, News } from '@/features/news';
 
 const title = 'お知らせ';
 
-interface FeedListScreenProps {
+interface NewsListScreenProps {
   newsList: Array<News>;
 }
 
-const FeedListScreen: NextPage<FeedListScreenProps> = ({ newsList }) => {
-  const feedItems = newsList.map((news) => (
-    <FeedListContent
+const NewsListScreen: NextPage<NewsListScreenProps> = ({ newsList }) => {
+  const newsItems = newsList.map((news) => (
+    <NewsListContent
       key={news.id}
       news={news}
     />
@@ -28,26 +28,26 @@ const FeedListScreen: NextPage<FeedListScreenProps> = ({ newsList }) => {
       exit={{ opacity: 0 }}
     >
       <MainLayout
-        path='/feeds'
+        path='/news'
         title={title}
       >
         <ContentLayout className='py-8 lg:pt-16'>
           <TitleHeader title={title} />
-          <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>{feedItems}</div>
+          <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>{newsItems}</div>
         </ContentLayout>
       </MainLayout>
     </motion.div>
   );
 };
 
-export default FeedListScreen;
+export default NewsListScreen;
 
 // noinspection JSUnusedGlobalSymbols
-export const getStaticProps: GetStaticProps<FeedListScreenProps> = async () => {
+export const getStaticProps: GetStaticProps<NewsListScreenProps> = async () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data } = await supabaseClient
-    .from('feeds')
-    .select('id, created_at, updated_at, title, body')
+    .from('news')
+    .select('id, created_at, updated_at, title, content')
     .is('deleted_at', null)
     .order('created_at', { ascending: false });
 
@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps<FeedListScreenProps> = async () => {
         createdAtString: `${entity.created_at}`,
         updatedAtString: `${entity.updated_at}`,
         title: `${entity.title}`,
-        body: `${entity.body}`,
+        content: `${entity.content}`,
       };
     }) ?? [];
   /* eslint-enable */

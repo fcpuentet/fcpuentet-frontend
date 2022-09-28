@@ -14,7 +14,7 @@ const menuItems: MenuItem[] = [
   },
   {
     name: 'News',
-    path: '/feeds',
+    path: '/news',
   },
   {
     name: 'Club',

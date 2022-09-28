@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { MainLayout } from '@/components/Layout';
-import { News } from '@/features/feed';
-import { TopBanner, TopContact, TopFeeds, TopSocials } from '@/features/top';
+import { News } from '@/features/news';
+import { TopBanner, TopContact, TopNews, TopSocials } from '@/features/top';
 
 const TOP_NEWS_MAX_COUNT = 3;
 
@@ -26,7 +26,7 @@ const TopScreen: NextPage<TopScreenProps> = ({ topNewsList }) => {
         isTopPage
       >
         <TopBanner />
-        <TopFeeds newsList={topNewsList} />
+        <TopNews newsList={topNewsList} />
         <TopSocials />
         <TopContact />
       </MainLayout>
@@ -40,8 +40,8 @@ export default TopScreen;
 export const getStaticProps: GetStaticProps<TopScreenProps> = async () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data } = await supabaseClient
-    .from('feeds')
-    .select('id, created_at, updated_at, title, body')
+    .from('news')
+    .select('id, created_at, updated_at, title, content')
     .is('deleted_at', null)
     .order('created_at', { ascending: false })
     .limit(TOP_NEWS_MAX_COUNT);
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<TopScreenProps> = async () => {
         createdAtString: `${entity.created_at}`,
         updatedAtString: `${entity.updated_at}`,
         title: `${entity.title}`,
-        body: `${entity.body}`,
+        content: `${entity.content}`,
       };
     }) ?? [];
   /* eslint-enable */
