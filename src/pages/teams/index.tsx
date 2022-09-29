@@ -1,20 +1,16 @@
 import { motion } from 'framer-motion';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
-import { MainLayout } from '@/components/Layout';
-import { useEnvironment } from '@/hooks';
+import { GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
+import React from 'react';
+import { TitleHeader } from '@/components/Elements';
+import { ContentLayout, MainLayout } from '@/components/Layout';
 
-const TeamPage: NextPage = () => {
-  const router = useRouter();
-  const { environment } = useEnvironment();
+const title = '選手 / スタッフ紹介';
 
-  useEffect(() => {
-    if (environment.isProduction) {
-      void router.replace('/');
-    }
-  }, []);
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface TeamScreenProps {}
 
+const TeamScreen: NextPage<TeamScreenProps> = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,13 +19,32 @@ const TeamPage: NextPage = () => {
     >
       <MainLayout
         path='/teams'
-        title='チーム紹介'
-        noindex
+        title={title}
       >
-        <div></div>
+        <ContentLayout className='h-[80vh] py-8 lg:pt-16'>
+          <TitleHeader title={title} />
+
+          <div className='flex h-full flex-col items-center justify-center gap-4'>
+            <h2 className=''>Coming Soon...</h2>
+            <p>こちらのページは現在準備中です。</p>
+
+            <Link href='/'>
+              <a className='my-8 w-full max-w-xl rounded border border-blue-500 py-4 text-center font-bold text-blue-500 outline-none transition-all duration-100 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'>
+                トップへもどる
+              </a>
+            </Link>
+          </div>
+        </ContentLayout>
       </MainLayout>
     </motion.div>
   );
 };
 
-export default TeamPage;
+export default TeamScreen;
+
+// noinspection JSUnusedGlobalSymbols
+export const getStaticProps: GetStaticProps<TeamScreenProps> = () => {
+  return {
+    props: {},
+  };
+};
