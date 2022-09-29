@@ -1,3 +1,4 @@
+export * from './supporters';
 export * from './BronzeSponsors';
 export * from './ClubCharacters';
 export * from './ClubHomeTown';

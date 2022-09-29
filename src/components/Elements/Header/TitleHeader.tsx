@@ -18,9 +18,7 @@ export const TitleHeader: React.FC<TitleHeaderProps> = ({
           />
         </a>
       </Link>
-      <h2 className='mt-8 flex-1 cursor-default select-none text-4xl lg:mt-0 lg:text-5xl'>
-        {title}
-      </h2>
+      <h1 className='mt-8 flex-1 cursor-default select-none lg:mt-0 lg:text-5xl'>{title}</h1>
     </div>
   );
 };
