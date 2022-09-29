@@ -1,7 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://fc-puentet.com',
-  outDir: './out', // SSGだとビルド後にoutディレクトリができるので合わせる
   generateRobotsTxt: true,
   transform: async (config, path) => {
     if (isIgnorePath(path)) {
