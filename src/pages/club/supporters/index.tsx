@@ -24,7 +24,7 @@ const SupportersScreen: NextPage<SupportersScreenProps> = ({
       exit={{ opacity: 0 }}
     >
       <MainLayout
-        path='/sponsors'
+        path='/supporters'
         title={title}
       >
         <ContentLayout className='py-8 lg:pt-16'>
@@ -64,11 +64,6 @@ export default SupportersScreen;
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<SupportersScreenProps> = async () => {
-  // リリース時に遷移可能にする
-  return {
-    notFound: true,
-  };
-
   const { data } = await supabaseClient
     .from('supporters')
     .select('id, name, rank, url, icon_image_url')

@@ -21,8 +21,16 @@ const menuItems: MenuItem[] = [
     path: '/club',
   },
   {
+    name: 'Team',
+    path: '/teams',
+  },
+  {
     name: 'Sponsor',
     path: '/club/sponsors',
+  },
+  {
+    name: 'Supporter',
+    path: '/club/supporters',
   },
   {
     name: 'Contact',
