@@ -37,3 +37,8 @@ yarn-error.log*
 # IDE
 .idea
 .vscode
+
+# Public
+public/robots.txt
+public/sitemap.xml
+public/sitemap-0.xml
