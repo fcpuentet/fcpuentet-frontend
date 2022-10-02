@@ -17,7 +17,7 @@ export const PartnerSponsors: React.FC<PartnerSponsorsProps> = ({
   const partnerSponsorItems = partnerSponsors.map((sponsor) => {
     return (
       <div
-        className='w-[10%]'
+        className='w-full md:w-[10%]'
         key={sponsor.id}
       >
         <Link href={sponsor.url}>

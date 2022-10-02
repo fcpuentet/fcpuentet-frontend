@@ -17,7 +17,7 @@ export const SilverSponsors: React.FC<SilverSponsorsProps> = ({
   const silverSponsorItems = silverSponsors.map((sponsor) => {
     return (
       <div
-        className='w-1/4'
+        className='w-full md:w-1/4'
         key={sponsor.id}
       >
         <Link href={sponsor.url}>

@@ -17,7 +17,7 @@ export const PlatinumSponsors: React.FC<PlatinumSponsorsProps> = ({
   const platinumSponsorItems = platinumSponsors.map((sponsor) => {
     return (
       <div
-        className='w-1/2'
+        className='w-full md:w-1/2'
         key={sponsor.id}
       >
         <Link href={sponsor.url}>
