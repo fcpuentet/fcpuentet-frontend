@@ -17,7 +17,7 @@ export const BronzeSponsors: React.FC<BronzeSponsorsProps> = ({
   const bronzeSponsorItems = bronzeSponsors.map((sponsor) => {
     return (
       <div
-        className='w-1/5'
+        className='w-full md:w-1/5'
         key={sponsor.id}
       >
         <Link href={sponsor.url}>
