@@ -61,6 +61,12 @@ export const Footer = (): JSX.Element => {
         </div>
 
         <p className='text-center text-sm text-gray-400'>
+          <Link href='/privacy'>
+            <a>プライバシーポリシー</a>
+          </Link>
+        </p>
+
+        <p className='text-center text-sm text-gray-400'>
           © 2022 - FC-PUENTET. ALL RIGHTS RESERVED.
         </p>
       </ContentLayout>
