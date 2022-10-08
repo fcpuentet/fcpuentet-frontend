@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    -webkit-tap-highlight-color: transparent;
-}
-
 @layer base {
     body {
         @apply leading-relaxed tracking-wider;
@@ -27,5 +23,14 @@ html {
     }
     h6 {
         @apply text-base lg:text-lg
+    }
+    a, button {
+        @apply tap-highlight-color-transparent
+    }
+}
+
+@layer utilities {
+    .tap-highlight-color-transparent {
+        -webkit-tap-highlight-color: transparent;
     }
 }
