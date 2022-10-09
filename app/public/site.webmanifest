@@ -1,6 +1,7 @@
 {
     "name": "FC PUENTET",
     "short_name": "FC PUENTET",
+    "start_url": ".",
     "icons": [
         {
             "src": "/favicons/android-chrome-192x192.png",
