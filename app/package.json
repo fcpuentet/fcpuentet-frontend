@@ -1,5 +1,5 @@
 {
-  "name": "puentet",
+  "name": "fc-puentet",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "next lint --dir src",
     "lint:fix": "next lint --dir src --fix",
     "format": "prettier --write --ignore-path .gitignore './src/**/*.{js,jsx,ts,tsx,json}'",
-    "prepare": "husky install"
+    "prepare": "cd .. && husky install app/.husky"
   },
   "dependencies": {
     "@slack/web-api": "^6.7.2",
