@@ -1,4 +1,3 @@
-import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { motion } from 'framer-motion';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
@@ -6,6 +5,7 @@ import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { NewsContent, News } from '@/features/news';
+import { supabase } from '@/utils';
 
 interface NewsContentScreenProps {
   news: News;
@@ -55,7 +55,7 @@ export default NewsContentScreen;
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await supabaseClient.from('news').select('id').is('deleted_at', null);
+  const { data } = await supabase.from('news').select('id').is('deleted_at', null);
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/restrict-template-expressions
   const paths = data?.map((row) => `/news/${row.id}`) ?? [];
@@ -69,7 +69,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<NewsContentScreenProps> = async (context) => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const { data: entity, error } = await supabaseClient
+  const { data: entity, error } = await supabase
     .from('news')
     .select('id, created_at, updated_at, title, content')
     .is('deleted_at', null)

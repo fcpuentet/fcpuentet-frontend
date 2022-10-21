@@ -1,4 +1,3 @@
-import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
@@ -6,6 +5,7 @@ import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { NewsListContent, News } from '@/features/news';
+import { supabase } from '@/utils';
 
 const title = 'お知らせ';
 
@@ -45,7 +45,7 @@ export default NewsListScreen;
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<NewsListScreenProps> = async () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const { data } = await supabaseClient
+  const { data } = await supabase
     .from('news')
     .select('id, created_at, updated_at, title, content')
     .is('deleted_at', null)

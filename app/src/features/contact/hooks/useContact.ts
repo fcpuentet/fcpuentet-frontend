@@ -1,6 +1,6 @@
-import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { useCallback, useMemo, useState } from 'react';
 import { ContactCategory, ContactSendState, ContactTemplate } from '@/features/contact';
+import { supabase } from '@/utils';
 
 type ContactState = {
   categories?: ContactCategory[];
@@ -51,7 +51,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
   };
 
   const fetchTemplates = async () => {
-    const { data: templateList, error } = await supabaseClient
+    const { data: templateList, error } = await supabase
       .from('contact_templates')
       .select('id, content')
       .is('deleted_at', null);
@@ -79,7 +79,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
   };
 
   const fetchCategories = async () => {
-    const { data: categoryList, error } = await supabaseClient
+    const { data: categoryList, error } = await supabase
       .from('contact_categories')
       .select('id, name, template_id')
       .is('deleted_at', null)
@@ -169,7 +169,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
     setSendState('sending');
 
     void (async function () {
-      await supabaseClient.from('contact').insert(
+      await supabase.from('contact').insert(
         {
           name,
           category_id: category?.id,
