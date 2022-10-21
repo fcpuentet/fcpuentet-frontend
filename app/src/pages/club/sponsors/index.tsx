@@ -1,4 +1,3 @@
-import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
 import React from 'react';
@@ -16,6 +15,7 @@ import {
   SilverSponsors,
   SponsorContact,
 } from '@/features/club';
+import { supabase } from '@/utils';
 
 const title = 'スポンサー紹介';
 
@@ -64,7 +64,7 @@ export default SponsorsScreen;
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<SponsorsScreenProps> = async () => {
-  const { data: businessSponsors } = await supabaseClient
+  const { data: businessSponsors } = await supabase
     .from('business_sponsors')
     .select('id, name, rank, url, logo_image_url')
     .is('deleted_at', null)

@@ -1,10 +1,10 @@
-import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { MainLayout } from '@/components/Layout';
 import { News } from '@/features/news';
 import { TopBanner, TopContact, TopNews, TopSocials } from '@/features/top';
+import { supabase } from '@/utils';
 
 const TOP_NEWS_MAX_COUNT = 3;
 
@@ -39,7 +39,7 @@ export default TopScreen;
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<TopScreenProps> = async () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const { data } = await supabaseClient
+  const { data } = await supabase
     .from('news')
     .select('id, created_at, updated_at, title, content')
     .is('deleted_at', null)

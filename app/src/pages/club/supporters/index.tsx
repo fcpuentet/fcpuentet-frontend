@@ -1,10 +1,10 @@
-import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { SupporterRank, Supporter, Supporters, SupporterContentItems } from '@/features/club';
+import { supabase } from '@/utils';
 
 const title = 'SUPPORTER CLUB';
 
@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps<SupportersScreenProps> = async () =>
     notFound: true,
   };
 
-  const { data } = await supabaseClient
+  const { data } = await supabase
     .from('supporters')
     .select('id, name, rank, url, icon_image_url')
     .is('deleted_at', null)
