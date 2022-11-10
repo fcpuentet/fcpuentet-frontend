@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: 改善案を作成する
+about: バグの改善案を作成する
 title: "[Bug]: "
 labels: bug, welcome contribute
 assignees: ''
