@@ -16,7 +16,7 @@
     "@slack/web-api": "6.7.2",
     "@supabase/auth-helpers-nextjs": "0.5.2",
     "@supabase/auth-helpers-react": "0.3.1",
-    "@supabase/supabase-js": "1.35.7",
+    "@supabase/supabase-js": "2.1.1",
     "@types/marked": "4.0.7",
     "dayjs": "1.11.6",
     "framer-motion": "7.6.12",

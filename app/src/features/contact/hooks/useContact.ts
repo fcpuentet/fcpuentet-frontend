@@ -169,15 +169,12 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
     setSendState('sending');
 
     void (async function () {
-      await supabase.from('contact').insert(
-        {
-          name,
-          category_id: category?.id,
-          email,
-          content,
-        },
-        { returning: 'minimal' },
-      );
+      await supabase.from('contact').insert({
+        name,
+        category_id: category?.id,
+        email,
+        content,
+      });
 
       setSendState('sent');
       reset();
