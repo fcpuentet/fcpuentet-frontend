@@ -15,14 +15,13 @@ export const Instagram: React.FC<InstagramProps> = ({}: InstagramProps): JSX.Ele
           <span>日々の活動やクラブについて</span>
           <span>写真と動画で発信しています！</span>
         </p>
-        <Link href='https://instagram.com/fcpuentet'>
-          <a
-            target='_blank'
-            className='mx-auto mt-4 flex select-none flex-row gap-2 rounded-md border border-black py-2 px-8 duration-100 hover:bg-black hover:text-white focus:bg-black focus:text-white'
-          >
-            Instagram を見る
-            <OpenInNew />
-          </a>
+        <Link
+          href='https://instagram.com/fcpuentet'
+          target='_blank'
+          className='mx-auto mt-4 flex select-none flex-row gap-2 rounded-md border border-black py-2 px-8 duration-100 hover:bg-black hover:text-white focus:bg-black focus:text-white'
+        >
+          Instagram を見る
+          <OpenInNew />
         </Link>
       </div>
     </section>

@@ -20,15 +20,16 @@ export const SilverSponsors: React.FC<SilverSponsorsProps> = ({
         className='w-full md:w-1/4'
         key={sponsor.id}
       >
-        <Link href={sponsor.url}>
-          <a target='_blank'>
-            <div className='grid h-full w-full place-content-center'>
-              <img
-                src={sponsor.logoImageUrl}
-                alt={sponsor.name}
-              />
-            </div>
-          </a>
+        <Link
+          href={sponsor.url}
+          target='_blank'
+        >
+          <div className='grid h-full w-full place-content-center'>
+            <img
+              src={sponsor.logoImageUrl}
+              alt={sponsor.name}
+            />
+          </div>
         </Link>
       </div>
     );
