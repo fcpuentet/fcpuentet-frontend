@@ -24,8 +24,11 @@ export const SupporterItem: React.FC<SupporterItemProps> = ({
   );
 
   const coreElement = supporter.url ? (
-    <Link href={supporter.url}>
-      <a target='_blank'>{mustElement}</a>
+    <Link
+      href={supporter.url}
+      target='_blank'
+    >
+      {mustElement}
     </Link>
   ) : (
     mustElement

@@ -72,10 +72,11 @@ export const SupporterContentItems: React.FC<SupportersProps> = (): JSX.Element 
 
         <div className='flex flex-col items-center gap-8 pt-8 md:pt-16'>
           <p className='text-center'>サポーターの申込みは下記のフォームよりお送りください</p>
-          <Link href='/contact'>
-            <a className='w-full max-w-xl rounded border border-blue-500 py-4 text-center font-bold text-blue-500 outline-none transition-all duration-100 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'>
-              お問い合わせフォーム
-            </a>
+          <Link
+            href='/contact'
+            className='w-full max-w-xl rounded border border-blue-500 py-4 text-center font-bold text-blue-500 outline-none transition-all duration-100 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'
+          >
+            お問い合わせフォーム
           </Link>
         </div>
       </div>

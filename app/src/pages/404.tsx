@@ -13,13 +13,12 @@ const NotFoundErrorScreen: NextPage = () => {
           <p className='mt-4 mb-8 text-base dark:text-gray-400 md:text-lg'>
             お探しのページは一時的にアクセスができない状況にあるか、移動もしくは削除された可能性があります。
           </p>
-          <Link href='/'>
-            <a
-              rel='noopener noreferrer'
-              className='rounded border border-blue-500 px-8 py-3 px-8 py-3 font-bold uppercase text-blue-500 outline-none transition-all duration-150 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'
-            >
-              トップへ戻る
-            </a>
+          <Link
+            href='/'
+            rel='noopener noreferrer'
+            className='rounded border border-blue-500 px-8 py-3 font-bold uppercase text-blue-500 outline-none transition-all duration-150 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'
+          >
+            トップへ戻る
           </Link>
         </div>
       </div>

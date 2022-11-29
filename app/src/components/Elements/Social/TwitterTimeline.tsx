@@ -31,25 +31,23 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
           <span>最新情報をお届けします！</span>
         </p>
 
-        <Link href='https://twitter.com/FCPUENTET'>
-          <a
-            target='_blank'
-            className='mx-auto mt-4 flex select-none flex-row gap-2 rounded-md border border-black py-2 px-8 duration-100 hover:bg-black hover:text-white focus:bg-black focus:text-white'
-          >
-            Twitter を見る
-            <OpenInNew />
-          </a>
+        <Link
+          href='https://twitter.com/FCPUENTET'
+          target='_blank'
+          className='mx-auto mt-4 flex select-none flex-row gap-2 rounded-md border border-black py-2 px-8 duration-100 hover:bg-black hover:text-white focus:bg-black focus:text-white'
+        >
+          Twitter を見る
+          <OpenInNew />
         </Link>
 
         <div className='mt-8 select-none text-center'>
-          <Link href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'>
-            <a
-              className='twitter-timeline'
-              data-height='480'
-              data-theme={theme}
-            >
-              Tweet を読み込んでいます...
-            </a>
+          <Link
+            href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
+            className='twitter-timeline'
+            data-height='480'
+            data-theme={theme}
+          >
+            Tweet を読み込んでいます...
           </Link>
         </div>
       </div>

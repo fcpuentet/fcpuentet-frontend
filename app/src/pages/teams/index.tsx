@@ -28,10 +28,11 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
             <h2 className=''>Coming Soon...</h2>
             <p>こちらのページは現在準備中です。</p>
 
-            <Link href='/'>
-              <a className='my-8 w-full max-w-xl rounded border border-blue-500 py-4 text-center font-bold text-blue-500 outline-none transition-all duration-100 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'>
-                トップへもどる
-              </a>
+            <Link
+              href='/'
+              className='my-8 w-full max-w-xl rounded border border-blue-500 py-4 text-center font-bold text-blue-500 outline-none transition-all duration-100 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'
+            >
+              トップへもどる
             </Link>
           </div>
         </ContentLayout>

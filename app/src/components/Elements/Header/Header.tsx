@@ -35,10 +35,9 @@ export const Header = (): JSX.Element => {
     <Link
       key={menuItem.name}
       href={menuItem.path}
+      className='text-4xl font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
     >
-      <a className='text-4xl font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'>
-        {menuItem.name}
-      </a>
+      {menuItem.name}
     </Link>
   ));
 
@@ -46,13 +45,14 @@ export const Header = (): JSX.Element => {
     <ContentLayout className='block min-h-screen md:grid md:place-content-center'>
       <header className='grid grid-cols-1 md:grid-cols-2'>
         <div className='flex items-center justify-center'>
-          <Link href='/'>
-            <a aria-label='logo'>
-              <img
-                src='/emblem.webp'
-                className='mx-auto w-3/4 md:w-full'
-              />
-            </a>
+          <Link
+            href='/'
+            aria-label='logo'
+          >
+            <img
+              src='/emblem.webp'
+              className='mx-auto w-3/4 md:w-full'
+            />
           </Link>
         </div>
 

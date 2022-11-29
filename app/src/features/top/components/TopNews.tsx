@@ -27,17 +27,18 @@ export const TopNews: React.FC<TopNewsProps> = ({ newsList }) => {
         </div>
       </section>
       <div className='flex justify-end'>
-        <Link href='/news'>
-          <a className='flex select-none flex-row items-center gap-4 text-xl lg:px-8 lg:text-2xl'>
-            もっとみる
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              width='40'
-            >
-              <path d='m20 33.333-1.958-1.958 9.958-10H6.667v-2.75H28l-9.958-10L20 6.667 33.333 20Z' />
-            </svg>
-          </a>
+        <Link
+          href='/news'
+          className='flex select-none flex-row items-center gap-4 text-xl lg:px-8 lg:text-2xl'
+        >
+          もっとみる
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            height='40'
+            width='40'
+          >
+            <path d='m20 33.333-1.958-1.958 9.958-10H6.667v-2.75H28l-9.958-10L20 6.667 33.333 20Z' />
+          </svg>
         </Link>
       </div>
     </TopContentLayout>
