@@ -21,9 +21,18 @@ const menuItems: MenuItem[] = [
     path: '/club',
   },
   {
+    name: 'Team',
+    path: '/teams',
+  },
+  {
     name: 'Sponsor',
     path: '/club/sponsors',
   },
+  // TODO: サポーターページを公開するタイミングでメニューに追加する
+  // {
+  //   name: 'Supporter',
+  //   path: '/club/supporters',
+  // },
   {
     name: 'Contact',
     path: '/contact',
