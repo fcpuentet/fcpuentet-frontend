@@ -56,7 +56,7 @@ export const Header = (): JSX.Element => {
           </Link>
         </div>
 
-        <nav className='grid gap-8 px-8 py-16 md:place-content-center'>{menuItemElements}</nav>
+        <nav className='grid gap-4 p-8 md:place-content-center'>{menuItemElements}</nav>
       </header>
     </ContentLayout>
   );
