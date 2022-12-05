@@ -45,6 +45,11 @@ export default MatchResultsScreen;
 
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<MatchResultsScreenProps> = () => {
+  // TODO: リリース時に遷移可能にする
+  return {
+    notFound: true,
+  };
+
   return {
     props: {},
   };
