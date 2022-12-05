@@ -25,7 +25,7 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
           <TitleHeader title={title} />
 
           <div className='flex h-full flex-col items-center justify-center gap-4'>
-            <h2 className=''>Coming Soon...</h2>
+            <h2 className='cursor-default'>Coming Soon...</h2>
             <p>こちらのページは現在準備中です。</p>
 
             <Link

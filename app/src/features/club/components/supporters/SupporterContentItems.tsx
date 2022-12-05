@@ -7,7 +7,7 @@ interface SupportersProps {}
 export const SupporterContentItems: React.FC<SupportersProps> = (): JSX.Element => {
   return (
     <section className=''>
-      <h2 className='mt-8 mb-6 underline decoration-blue-500 underline-offset-[12px]'>
+      <h2 className='mt-8 mb-6 cursor-default underline decoration-blue-500 underline-offset-[12px]'>
         Want to be a supporter?
       </h2>
       <p className='mb-6'>
@@ -21,7 +21,7 @@ export const SupporterContentItems: React.FC<SupportersProps> = (): JSX.Element 
           {/* JACK */}
           <div className='block flex-1 rounded-lg border border-gray-200 bg-white p-6 shadow-sm'>
             <h3 className='mb-2 cursor-default text-center tracking-tight text-gray-900'>JACK</h3>
-            <p className='my-6 text-center'>1 万円</p>
+            <p className='my-6 text-center text-lg'>1 万円</p>
             <ul className='list-inside list-disc space-y-2'>
               <li>アクリルキーホルダー</li>
               <li>スポンサー企業商品券 2,000 円分</li>
@@ -31,12 +31,12 @@ export const SupporterContentItems: React.FC<SupportersProps> = (): JSX.Element 
           {/* QUEEN */}
           <div className='block flex-1 rounded-lg border border-gray-200 bg-white p-6 shadow-sm'>
             <h3 className='mb-2 cursor-default text-center tracking-tight text-gray-900'>QUEEN</h3>
-            <p className='my-6 text-center'>3 万円</p>
+            <p className='my-6 text-center text-lg'>3 万円</p>
             <ul className='list-inside list-disc space-y-2'>
               <li className=''>
-                オリジナルTシャツプレゼント
+                オリジナル T シャツプレゼント
                 <ul className='list-inside list-disc pl-5'>
-                  <li>背番号12番</li>
+                  <li>背番号 12 番</li>
                 </ul>
               </li>
               <li>アクリルキーホルダー</li>
@@ -47,7 +47,7 @@ export const SupporterContentItems: React.FC<SupportersProps> = (): JSX.Element 
           {/* KING */}
           <div className='block flex-1 rounded-lg border border-gray-200 bg-white p-6 shadow-sm'>
             <h3 className='mb-2 cursor-default text-center tracking-tight text-gray-900'>KING</h3>
-            <p className='my-6 text-center'>5 万円</p>
+            <p className='my-6 text-center text-lg'>5 万円</p>
             <ul className='list-inside list-disc space-y-2'>
               <li>
                 オーセンティックユニフォーム
@@ -67,7 +67,7 @@ export const SupporterContentItems: React.FC<SupportersProps> = (): JSX.Element 
         {/* JOKER */}
         <div className='block flex-1 rounded-lg border border-gray-200 bg-white p-6 shadow-sm'>
           <h3 className='mb-2 cursor-default text-center tracking-tight text-gray-900'>JOKER</h3>
-          <p className='my-6 text-center'>1,000 円からの寄付</p>
+          <p className='my-6 text-center text-lg'>1,000 円からの寄付</p>
         </div>
 
         <div className='flex flex-col items-center gap-8 pt-8 md:pt-16'>
