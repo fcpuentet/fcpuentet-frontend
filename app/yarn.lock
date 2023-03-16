@@ -287,52 +287,52 @@
   resolved "https://registry.yarnpkg.com/@supabase/auth-helpers-shared/-/auth-helpers-shared-0.2.3.tgz#da2cd1144f016c61b30ee6ac0da0f3dac7ccc99e"
   integrity sha512-Xwnd2UQ/VTjTKIuVg1Xl/ryrElbSccOJhC11jbVPHOs7Y6yxzy9APxQs//jj4IpbDH4uOEDCdpMIJ0tzRxj9DQ==
 
-"@supabase/functions-js@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@supabase/functions-js/-/functions-js-2.0.0.tgz#4ba0c9e6dff031e17666bef6779c48eff290a8a0"
-  integrity sha512-ozb7bds2yvf5k7NM2ZzUkxvsx4S4i2eRKFSJetdTADV91T65g4gCzEs9L3LUXSrghcGIkUaon03VPzOrFredqg==
-  dependencies:
-    cross-fetch "^3.1.5"
-
-"@supabase/gotrue-js@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@supabase/gotrue-js/-/gotrue-js-2.5.0.tgz#2e7517a2885e1bb7a8785e5beb268060d873d1b2"
-  integrity sha512-Aw5/WL0+JVjQjX2ZOQvOzoquMg1IMa4l1cA0eHVseAjujgUPpztjdhDwy3xP/c7OQsF+RK0ARxjsmIm2iaILlg==
-  dependencies:
-    cross-fetch "^3.1.5"
-
-"@supabase/postgrest-js@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@supabase/postgrest-js/-/postgrest-js-1.1.0.tgz#c820eb51a7c98543de6617f5b782757771f8f6db"
-  integrity sha512-qkY8TqIu5sJuae8gjeDPjEqPrefzcTraW9PNSVJQHq4TEv98ZmwaXGwBGz0bVL63bqrGA5hqREbQHkANUTXrvA==
-  dependencies:
-    cross-fetch "^3.1.5"
-
-"@supabase/realtime-js@^2.1.0":
+"@supabase/functions-js@^2.1.0":
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@supabase/realtime-js/-/realtime-js-2.1.0.tgz#699ac012bc1c721cd6446ad93226085be348e998"
-  integrity sha512-iplLCofTeYjnx9FIOsIwHLhMp0+7UVyiA4/sCeq40VdOgN9eTIhjEno9Tgh4dJARi4aaXoKfRX1DTxgZaOpPAw==
+  resolved "https://registry.yarnpkg.com/@supabase/functions-js/-/functions-js-2.1.0.tgz#60e304c6f56b2a56f051277e00b0c9eb5453cfcb"
+  integrity sha512-vRziB+AqRXRaGHjEFHwBo0kuNDTuAxI7VUeqU24Fe86ISoD8YEQm0dGdpleJEcqgDGWaO6pxT1tfj1BRY5PwMg==
+  dependencies:
+    cross-fetch "^3.1.5"
+
+"@supabase/gotrue-js@^2.12.0":
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/@supabase/gotrue-js/-/gotrue-js-2.14.0.tgz#4d6734cd5a0dd206d8b275248b8d6354151cd678"
+  integrity sha512-FI6q4n4iZ2zrEt1BnBYYe8HQ1k9t5CpBcDQxVXa8PeMwygXpzR0AcdfAsZ5Yba42C8YsBA132ti01f+RINS3UQ==
+  dependencies:
+    cross-fetch "^3.1.5"
+
+"@supabase/postgrest-js@^1.1.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@supabase/postgrest-js/-/postgrest-js-1.4.1.tgz#08edf17543fc2d807ae74fa66882f42d7a2b8e66"
+  integrity sha512-aruqwV/aTggkM7OVv2JinCeXmRMKHJCZpkuS1nuoa0NgLw7g3NyILSyWOKYTBJ/PxE/zXtWsBhdxFzaaNz5uxg==
+  dependencies:
+    cross-fetch "^3.1.5"
+
+"@supabase/realtime-js@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@supabase/realtime-js/-/realtime-js-2.7.0.tgz#7acce7b575932864556b05a596ad40c64d77ecef"
+  integrity sha512-wg35ofiCpIemycmPZvvZk3jM9c9z8VvnPUBbSP9ZZN2vSOEJ9C7DZuLiiZMXsyNUzjVgIn62A1tN99T5+9O8Aw==
   dependencies:
     "@types/phoenix" "^1.5.4"
     websocket "^1.0.34"
 
-"@supabase/storage-js@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@supabase/storage-js/-/storage-js-2.0.0.tgz#9fceefa31e16b13525b44f886135cf1a5f320389"
-  integrity sha512-7kXThdRt/xqnOOvZZxBqNkeX1CFNUWc0hYBJtNN/Uvt8ok9hD14foYmroWrHn046wEYFqUrB9U35JYsfTrvltA==
+"@supabase/storage-js@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@supabase/storage-js/-/storage-js-2.3.1.tgz#fb557c416d2eeaa2422b2c961c7f08133234d755"
+  integrity sha512-BaPIvyvjuZW1V0CnfGKUZyzpBUXnsh0XD8eqTOYd+MdiGPmIPI0vtwnT4fAoK8mipp1vpcN62EVQaqeUnWXPtQ==
   dependencies:
     cross-fetch "^3.1.5"
 
-"@supabase/supabase-js@2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-2.1.4.tgz#7b63081d371bc5bc0e4bbd03eb9dc1032736bba8"
-  integrity sha512-i+BAiE472hMIIz6/nM5Pt/6riljjQYJrReyd0LsYsNtis4vcey7SuMX7sYiG9kMo4ivPlB1odYSOJnRbNyqRbQ==
+"@supabase/supabase-js@2.11.0":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-2.11.0.tgz#0f76760fa247cda6cdc38e70a480d6c8d5ff985f"
+  integrity sha512-FkaPZjVx1oY4boS02kAoNhmdyy5hrezxGlY8lZdQwKvk7ee5NPiXzjjsGruc6JOS1QNeuWIUAw1L7uKVYI30dA==
   dependencies:
-    "@supabase/functions-js" "^2.0.0"
-    "@supabase/gotrue-js" "^2.5.0"
-    "@supabase/postgrest-js" "^1.1.0"
-    "@supabase/realtime-js" "^2.1.0"
-    "@supabase/storage-js" "^2.0.0"
+    "@supabase/functions-js" "^2.1.0"
+    "@supabase/gotrue-js" "^2.12.0"
+    "@supabase/postgrest-js" "^1.1.1"
+    "@supabase/realtime-js" "^2.7.0"
+    "@supabase/storage-js" "^2.3.1"
     cross-fetch "^3.1.5"
 
 "@swc/helpers@0.4.14":
