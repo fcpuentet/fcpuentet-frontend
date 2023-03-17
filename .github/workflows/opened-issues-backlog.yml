@@ -11,5 +11,5 @@ jobs:
     steps:
       - uses: actions/add-to-project@v0.4.1
         with:
-          project-url: https://github.com/users/puentet-dev/projects/3
+          project-url: https://github.com/orgs/fcpuentet/projects/1
           github-token: ${{ secrets.FCPT_ISSUES_INTO_PROJECTS_TOKEN }}
