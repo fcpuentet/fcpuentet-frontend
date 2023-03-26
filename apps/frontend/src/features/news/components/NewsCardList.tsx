@@ -1,3 +1,5 @@
+import { Icon } from '@/components/Elements/Icon/Icon';
+import { faArrowLeftLong, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { News } from '../types';
@@ -44,18 +46,18 @@ export const NewsCardList: React.FC<NewsCardProps> = ({ newsList }) => {
 
       <div className='flex justify-between items-center mt-8 px-4 max-w-[1000px] m-auto'>
         <div className='flex text-secondary font-semibold text-5xl'>
-          <div
-            className='mr-8 cursor-pointer'
+          <Icon
+            icon={faArrowLeftLong}
+            className='w-12 mr-8 cursor-pointer'
+            color='secondary'
             onClick={handlePrevClick}
-          >
-            ←
-          </div>
-          <div
-            className='cursor-pointer'
+          />
+          <Icon
+            icon={faArrowRightLong}
+            className='w-12 cursor-pointer'
+            color='secondary'
             onClick={handleNextClick}
-          >
-            →
-          </div>
+          />
         </div>
 
         <Link

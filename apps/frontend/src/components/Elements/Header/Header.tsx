@@ -25,7 +25,10 @@ export const Header = ({ onClick }: HeaderProps): JSX.Element => {
         <span className='hidden sm:block'>MEMBERS</span>
       </div>
 
-      <Link href={'/'}>
+      <Link
+        href={'/'}
+        className='sm:-translate-x-1/2'
+      >
         <img
           src='/emblem.webp'
           alt='emblem'
