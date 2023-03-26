@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 import { Icon } from '../Icon/Icon';
 
 interface MenuItem {
@@ -40,8 +40,8 @@ interface HamburgerMenuProps {
 
 export const HamburgerMenu = ({ onClose }: HamburgerMenuProps): JSX.Element => {
   return (
-    <div className='w-full h-full fixed z-[100] bg-white/50 backdrop-blur-lg overscroll-contain p-4 flex flex-col'>
-      <div className='text- mb-4 flex justify-end cursor-pointer'>
+    <div className='fixed z-[100] flex h-full w-full flex-col overscroll-contain bg-white/50 p-4 backdrop-blur-lg'>
+      <div className='mb-4 flex cursor-pointer justify-end'>
         <Icon
           icon={faXmark}
           onClick={onClose}
@@ -50,7 +50,7 @@ export const HamburgerMenu = ({ onClose }: HamburgerMenuProps): JSX.Element => {
         />
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 max-w-6xl m-auto'>
+      <div className='m-auto grid max-w-6xl grid-cols-1 md:grid-cols-2'>
         <Link
           href='/'
           className='flex items-center justify-center'
@@ -70,7 +70,7 @@ export const HamburgerMenu = ({ onClose }: HamburgerMenuProps): JSX.Element => {
                   href={item.path}
                   key={index}
                 >
-                  <li className='text-4xl font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 cursor-pointer py-4'>
+                  <li className='cursor-pointer py-4 text-4xl font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'>
                     <span className=''>{item.name}</span>
                   </li>
                 </Link>

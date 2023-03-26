@@ -10,6 +10,7 @@ export const ClubSummary: React.FC<Props> = ({ ...divHTMLAttributes }: Props): J
     >
       <img
         src='/emblem.webp'
+        alt='emblem'
         className='mx-8 my-12 w-3/4'
       />
       <h2 className='mb-4 text-4xl font-bold md:text-5xl'>FC-PUENTET</h2>

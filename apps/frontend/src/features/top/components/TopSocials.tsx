@@ -7,8 +7,8 @@ interface Props {}
 export const TopSocials: React.FC<Props> = () => {
   return (
     <>
-      <h2 className='text-8xl md:text-9xl text-primary/30'>SOCIAL</h2>
-      <div className='grid grid-cols-1 gap-12 md:grid-cols-2 -mt-12'>
+      <h2 className='text-8xl text-primary/30 md:text-9xl'>SOCIAL</h2>
+      <div className='-mt-12 grid grid-cols-1 gap-12 md:grid-cols-2'>
         <TwitterTimeline />
         <Instagram />
       </div>

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React, { useEffect } from 'react';
-import { OpenInNew } from '@/components/Elements';
 
 type Theme = 'system' | 'light' | 'dark';
 
@@ -24,7 +23,7 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
 
   return (
     <div className='w-full'>
-      <h3 className='text-4xl mb-2'>Twitter</h3>
+      <h3 className='mb-2 text-4xl'>Twitter</h3>
       <p className='mb-8'>各種イベントや試合など最新情報をお届けします👍</p>
       <Link
         href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'

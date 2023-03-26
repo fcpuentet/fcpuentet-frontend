@@ -14,7 +14,7 @@ interface SupportersScreenProps {
 }
 
 const SupportersScreen: NextPage<SupportersScreenProps> = ({
-  hasSupporters,
+  // eslint-disable-next-line unused-imports/no-unused-vars
   supporters: { kingSupporters, queenSupporters, jackSupporters, jokerSupporters },
 }) => {
   return (

@@ -23,6 +23,7 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["off"],
     "@typescript-eslint/explicit-module-boundary-types": "warn",
+    "@next/next/no-img-element": "off",
     "import/order": [
       "error",
       {
@@ -35,7 +36,7 @@
       { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
     ],
     "tailwindcss/classnames-order": "warn",
-    "tailwindcss/no-custom-classname": "warn",
+    "tailwindcss/no-custom-classname": "off",
     "tailwindcss/no-contradicting-classname": "error"
   }
 }

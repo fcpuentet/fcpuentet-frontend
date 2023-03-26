@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps<NewsListScreenProps> = async () => {
     .is('deleted_at', null)
     .order('created_at', { ascending: false });
 
-  /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access */
+  /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-explicit-any */
   const newsList: Array<News> =
     data?.map((entity: any) => {
       return {

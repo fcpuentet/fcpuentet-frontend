@@ -17,6 +17,7 @@ export const ClubLogo: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JSX.
           <h3 className='text-center md:font-semibold'>チームエンブレム</h3>
           <img
             src='/emblem.webp'
+            alt='emblem'
             className='mx-auto md:w-3/4'
           />
         </div>
@@ -25,6 +26,7 @@ export const ClubLogo: React.FC<Props> = ({ ...divHTMLAttributes }: Props): JSX.
           <h3 className='text-center md:font-semibold'>チームロゴ</h3>
           <img
             src='/teamname.svg'
+            alt='team-name'
             className='m-auto md:w-3/4'
           />
         </div>

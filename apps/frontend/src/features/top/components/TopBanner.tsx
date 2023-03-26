@@ -3,7 +3,7 @@ import React from 'react';
 export const TopBanner: React.FC = () => {
   return (
     <section>
-      <div className='h-screen bg-primary flex flex-col items-center justify-center'>
+      <div className='flex h-screen flex-col items-center justify-center bg-primary'>
         <img
           src='emblem.webp'
           alt='emblem'
@@ -12,10 +12,10 @@ export const TopBanner: React.FC = () => {
         <img
           src='teamname.svg'
           alt='teamname'
-          className='w-[300px] sm:w-[400px] mt-8'
+          className='mt-8 w-[300px] sm:w-[400px]'
         />
       </div>
-      <div className='bg-gradient-to-b from-primary h-[200px] mt-[-1px]'></div>
+      <div className='mt-[-1px] h-[200px] bg-gradient-to-b from-primary'></div>
     </section>
   );
 };

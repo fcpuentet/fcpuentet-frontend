@@ -11,6 +11,7 @@ export const SponsorHeader: React.FC<Props> = ({ title }: Props): JSX.Element =>
       <Link href='/'>
         <img
           src='/teamname.svg'
+          alt='team-name'
           className='h-8 max-w-fit select-none lg:h-12'
         />
       </Link>

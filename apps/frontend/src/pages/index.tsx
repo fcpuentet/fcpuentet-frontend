@@ -1,8 +1,8 @@
-import { MainLayout } from '@/components/Layout';
 import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
-import { TopBanner, TopContact, TopSocials } from '@/features/top';
+import { MainLayout } from '@/components/Layout';
 import { News, NewsCardList } from '@/features/news';
+import { TopBanner, TopContact, TopSocials } from '@/features/top';
 import { supabase } from '@/utils';
 
 const TOP_NEWS_MAX_COUNT = 10;
@@ -30,11 +30,11 @@ const TopScreen: NextPage<TopScreenProps> = ({ topNewsList }) => {
           <NewsCardList newsList={topNewsList} />
         </section>
 
-        <section className='max-w-[1000px] m-auto px-6 sm:px-4 mb-32'>
+        <section className='m-auto mb-32 max-w-[1000px] px-6 sm:px-4'>
           <TopSocials />
         </section>
 
-        <section className='max-w-[1000px] m-auto px-6 sm:px-4 mb-32'>
+        <section className='m-auto mb-32 max-w-[1000px] px-6 sm:px-4'>
           <TopContact />
         </section>
       </MainLayout>
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<TopScreenProps> = async () => {
     .order('created_at', { ascending: false })
     .limit(TOP_NEWS_MAX_COUNT);
 
-  /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access */
+  /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/restrict-template-expressions,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-explicit-any */
   const topNewsList: Array<News> =
     data?.map((entity: any) => {
       return {

@@ -6,7 +6,7 @@ type RouteChangeCompleteEventOptions = {
   shallow: boolean;
 };
 
-export const usePageView = () => {
+export const usePageView = (): void => {
   const router = useRouter();
 
   useEffect(() => {

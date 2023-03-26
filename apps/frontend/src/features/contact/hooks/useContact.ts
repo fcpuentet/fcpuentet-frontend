@@ -140,7 +140,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
         setContent(template.content);
       }
     })();
-  }, []);
+  }, [initCategoryId]);
 
   useCallback(() => {
     if (!categories) {
@@ -157,7 +157,7 @@ export const useContact = (initCategoryId?: string | string[]): ContactState => 
     if (template) {
       setContent(template.content);
     }
-  }, [initCategoryId]);
+  }, [initCategoryId, categories, templates]);
 
   const reset = () => {
     setName('');

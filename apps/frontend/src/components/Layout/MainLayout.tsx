@@ -1,9 +1,7 @@
 import NextHeadSeo from 'next-head-seo';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { Footer, Header } from '@/components/Elements';
 import { HamburgerMenu } from '../Elements/Header/HamburgerMenu';
+import { Footer, Header } from '@/components/Elements';
 
 const APP_NAME = 'FC PUENTET 公式サイト';
 const APP_ROOT_URL = 'https://fc-puentet.com';
@@ -32,25 +30,12 @@ export const MainLayout: React.FC<Props> = ({
   isTopPage,
   children,
 }: Props): JSX.Element => {
-  const { route } = useRouter();
-  const encodedCurrentUrl = encodeURI(`https://fc-puentet.com${route}`);
-  const tweetShareUrl = `https://twitter.com/intent/tweet?text=%E5%85%A8%E3%81%A6%E3%81%AE%E6%9E%B6%E3%81%91%E6%A9%8B%E3%81%B8%E3%80%8CFC-PUENTET%E3%80%8D%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%EF%BC%9A${encodedCurrentUrl}`;
-  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedCurrentUrl}`;
-
   // ページの絶対パス
   const pageUrl = APP_ROOT_URL + path;
   // OG画像の絶対パス
   const ogImageUrl = APP_ROOT_URL + ogImagePath;
 
   const [isMenuVisible, setMenuVisible] = useState(false);
-  const onToggleMenuVisibleButtonClick = () => setMenuVisible(!isMenuVisible);
-  const menuIconPath = isMenuVisible ? (
-    // NOTE: Close
-    <path d='m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z' />
-  ) : (
-    // NOTE: Menu
-    <path d='M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z' />
-  );
 
   return (
     <>

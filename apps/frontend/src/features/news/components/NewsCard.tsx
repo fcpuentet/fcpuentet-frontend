@@ -1,29 +1,27 @@
-import { formatDate } from '@/utils';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { News } from '../types';
+import { formatDate } from '@/utils';
 
 interface NewsCardProps {
   news: News;
 }
 
 export const NewsCard: React.FC<NewsCardProps> = ({ news }) => {
-  const router = useRouter();
-
   return (
-    <div
-      onClick={() => router.push(`/news/${news.id}`)}
-      className='w-[300px] h-[400px] relative shadow-xl cursor-pointer'
+    <Link
+      href={`/news/${news.id}`}
+      className='relative block h-[400px] w-[300px] cursor-pointer shadow-xl'
     >
       {/* TODO: DBにサムネイルカラムが追加後に対応 */}
       <img
         src='/gray-scale.svg'
         alt={news.title}
-        className='object-cover w-[300px] h-[400px]'
+        className='h-[400px] w-[300px] object-cover'
       />
-      <div className='h-[100px] bg-black/50 backdrop-blur-lg absolute bottom-0 w-full flex flex-col justify-between p-2 text-white'>
+      <div className='absolute bottom-0 flex h-[100px] w-full flex-col justify-between bg-black/50 p-2 text-white backdrop-blur-lg'>
         <p className='line-clamp-2'>{news.title}</p>
         <p className='text-right'>{formatDate(news.updatedAtString)}</p>
       </div>
-    </div>
+    </Link>
   );
 };

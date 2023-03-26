@@ -12,9 +12,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Message>,
 ): Promise<void> {
+  /* eslint-disable @typescript-eslint/no-non-null-assertion */
   if (req.headers.authorization !== `Bearer ${process.env.WEBHOOK_SUPABASE_CONTACT_TABLE_TOKEN!}`) {
     return res.status(401).json({ message: 'Your secret is invalid !' });
   }
+  /* eslint-enable */
 
   try {
     /* eslint-disable @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */

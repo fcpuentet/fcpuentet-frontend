@@ -15,6 +15,7 @@ export const ClubCharacters: React.FC<Props> = ({ ...divHTMLAttributes }: Props)
       <div className='flex flex-col'>
         <img
           src='/mascot-character.webp'
+          alt='mascot-character'
           className='mx-auto'
         />
       </div>

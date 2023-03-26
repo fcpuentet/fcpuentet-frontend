@@ -1,7 +1,7 @@
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
-import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const COLORS = {
   primary: 'text-primary',

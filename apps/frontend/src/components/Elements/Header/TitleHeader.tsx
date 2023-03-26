@@ -13,6 +13,7 @@ export const TitleHeader: React.FC<TitleHeaderProps> = ({
       <Link href='/'>
         <img
           src='/teamname.svg'
+          alt='teamname'
           className='h-8 max-w-fit select-none lg:h-12'
         />
       </Link>
