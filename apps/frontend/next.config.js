@@ -1,4 +1,12 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["ui"],
+  experimental: {
+    scrollRestoration: true,
+  },
+  images: {
+    domains: ['yxyqlflqvbnkyhamwrfj.supabase.co'],
+  },
 };
+
+module.exports = nextConfig;
