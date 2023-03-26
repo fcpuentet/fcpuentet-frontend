@@ -7,7 +7,22 @@ module.exports = {
     fontFamily: {
       sans: ['Staatliches', 'Noto Sans JP', ...defaultTheme.fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      colors: {
+        // TODO: テーマカラー追加
+        theme: {},
+        // メインカラー
+        primary: {
+          DEFAULT: '#86B0DE',
+        },
+        // TODO: サブカラー追加
+        secondary: {
+          DEFAULT: '#1A2F63',
+        },
+        // TODO: サードカラー追加
+        tertiary: {},
+      },
+    },
   },
   plugins: [],
 };
