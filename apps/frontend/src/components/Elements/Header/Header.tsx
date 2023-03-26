@@ -1,72 +1,45 @@
 import Link from 'next/link';
 import React from 'react';
 import { ContentLayout } from '@/components/Layout';
+import { Icon } from '../Icon/Icon';
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 
 interface MenuItem {
   name: string;
   path: string;
 }
 
-const menuItems: MenuItem[] = [
-  {
-    name: 'Top',
-    path: '/',
-  },
-  {
-    name: 'News',
-    path: '/news',
-  },
-  {
-    name: 'Club',
-    path: '/club',
-  },
-  {
-    name: 'Team',
-    path: '/teams',
-  },
-  {
-    name: 'Sponsor',
-    path: '/club/sponsors',
-  },
-  // TODO: サポーターページを公開するタイミングでメニューに追加する
-  // {
-  //   name: 'Supporter',
-  //   path: '/club/supporters',
-  // },
-  {
-    name: 'Contact',
-    path: '/contact',
-  },
-];
+interface HeaderProps {
+  onClick: () => void;
+}
 
-export const Header = (): JSX.Element => {
-  const menuItemElements = menuItems.map((menuItem) => (
-    <Link
-      key={menuItem.name}
-      href={menuItem.path}
-      className='text-4xl font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
-    >
-      {menuItem.name}
-    </Link>
-  ));
-
+export const Header = ({ onClick }: HeaderProps): JSX.Element => {
   return (
-    <ContentLayout className='block min-h-screen md:grid md:place-content-center'>
-      <header className='grid grid-cols-1 md:grid-cols-2'>
-        <div className='flex items-center justify-center'>
-          <Link
-            href='/'
-            aria-label='logo'
-          >
-            <img
-              src='/emblem.webp'
-              className='mx-auto w-3/4 md:w-full'
-            />
-          </Link>
-        </div>
+    <div className='fixed w-full p-4 bg-white/50 backdrop-blur-lg flex justify-between items-center z-50'>
+      <div className='text-xl text-secondary flex cursor-pointer'>
+        <Icon
+          icon={faUser}
+          color='secondary'
+          className='w-6 sm:w-4 mr-2'
+        />
+        <span className='hidden sm:block'>MEMBERS</span>
+      </div>
 
-        <nav className='grid gap-4 p-8 md:place-content-center'>{menuItemElements}</nav>
-      </header>
-    </ContentLayout>
+      <Link href={'/'}>
+        <img
+          src='/emblem.webp'
+          alt='emblem'
+          className='h-12 '
+        />
+      </Link>
+
+      <div onClick={onClick}>
+        <Icon
+          icon={faBars}
+          color='secondary'
+          className='w-6 cursor-pointer'
+        />
+      </div>
+    </div>
   );
 };

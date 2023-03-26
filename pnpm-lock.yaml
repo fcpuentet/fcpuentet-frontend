@@ -14,6 +14,11 @@ importers:
 
   apps/frontend:
     specifiers:
+      '@fortawesome/fontawesome-svg-core': 6.3.0
+      '@fortawesome/free-brands-svg-icons': 6.3.0
+      '@fortawesome/free-regular-svg-icons': 6.3.0
+      '@fortawesome/free-solid-svg-icons': 6.3.0
+      '@fortawesome/react-fontawesome': 0.2.0
       '@slack/web-api': 6.7.2
       '@supabase/auth-helpers-nextjs': 0.5.2
       '@supabase/auth-helpers-react': 0.3.1
@@ -26,6 +31,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.45.1
       '@typescript-eslint/parser': 5.45.1
       autoprefixer: 10.4.13
+      clsx: ^1.2.1
       dayjs: 1.11.7
       eslint: 8.28.0
       eslint-config-next: 13.0.7
@@ -51,6 +57,11 @@ importers:
       tailwindcss: 3.2.4
       typescript: 4.9.4
     dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.3.0
+      '@fortawesome/free-brands-svg-icons': 6.3.0
+      '@fortawesome/free-regular-svg-icons': 6.3.0
+      '@fortawesome/free-solid-svg-icons': 6.3.0
+      '@fortawesome/react-fontawesome': 0.2.0_d5rbrisxfyemehbvmdbryvgjte
       '@slack/web-api': 6.7.2
       '@supabase/auth-helpers-nextjs': 0.5.2_udh2a3xdxou35zbw2tgezyay3e
       '@supabase/auth-helpers-react': 0.3.1_udh2a3xdxou35zbw2tgezyay3e
@@ -73,6 +84,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.45.1_eksgb5vnkhcw7x36o6idqc6v6q
       '@typescript-eslint/parser': 5.45.1_wy4udjehnvkneqnogzx5kughki
       autoprefixer: 10.4.13_postcss@8.4.20
+      clsx: 1.2.1
       eslint: 8.28.0
       eslint-config-next: 13.0.7_wy4udjehnvkneqnogzx5kughki
       eslint-config-prettier: 8.5.0_eslint@8.28.0
@@ -186,6 +198,55 @@ packages:
   /@eslint/js/8.36.0:
     resolution: {integrity: sha512-lxJ9R5ygVm8ZWgYdUweoq5ownDlJ4upvoWmO4eLxBYHdMo+vZ/Rx0EN6MbKWDJOSUGrqJy2Gt+Dyv/VKml0fjg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fortawesome/fontawesome-common-types/6.3.0:
+    resolution: {integrity: sha512-4BC1NMoacEBzSXRwKjZ/X/gmnbp/HU5Qqat7E8xqorUtBFZS+bwfGH5/wqOC2K6GV0rgEobp3OjGRMa5fK9pFg==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.3.0:
+    resolution: {integrity: sha512-uz9YifyKlixV6AcKlOX8WNdtF7l6nakGyLYxYaCa823bEBqyj/U2ssqtctO38itNEwXb8/lMzjdoJ+aaJuOdrw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/free-brands-svg-icons/6.3.0:
+    resolution: {integrity: sha512-xI0c+a8xnKItAXCN8rZgCNCJQiVAd2Y7p9e2ND6zN3J3ekneu96qrePieJ7yA7073C1JxxoM3vH1RU7rYsaj8w==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/free-regular-svg-icons/6.3.0:
+    resolution: {integrity: sha512-cZnwiVHZ51SVzWHOaNCIA+u9wevZjCuAGSvSYpNlm6A4H4Vhwh8481Bf/5rwheIC3fFKlgXxLKaw8Xeroz8Ntg==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/free-solid-svg-icons/6.3.0:
+    resolution: {integrity: sha512-x5tMwzF2lTH8pyv8yeZRodItP2IVlzzmBuD1M7BjawWgg9XAvktqJJ91Qjgoaf8qJpHQ8FEU9VxRfOkLhh86QA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/react-fontawesome/0.2.0_d5rbrisxfyemehbvmdbryvgjte:
+    resolution: {integrity: sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      react: '>=16.3'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.3.0
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -1066,6 +1127,11 @@ packages:
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
     dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: true
 
   /color-convert/2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
