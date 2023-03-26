@@ -39,7 +39,7 @@ importers:
       eslint: 8.36.0
       eslint-config-custom: workspace:*
       eslint-config-next: 13.0.7
-      eslint-config-prettier: 8.5.0
+      eslint-config-prettier: 8.8.0
       eslint-plugin-import: 2.26.0
       eslint-plugin-tailwindcss: 3.7.1
       eslint-plugin-unused-imports: 2.0.0
@@ -96,7 +96,7 @@ importers:
       eslint: 8.36.0
       eslint-config-custom: link:../../packages/eslint-config-custom
       eslint-config-next: 13.0.7_j4766f7ecgqbon3u7zlxn5zszu
-      eslint-config-prettier: 8.5.0_eslint@8.36.0
+      eslint-config-prettier: 8.8.0_eslint@8.36.0
       eslint-plugin-import: 2.26.0_xbwldnod7uiqjjfpzd3i5di5xm
       eslint-plugin-tailwindcss: 3.7.1
       eslint-plugin-unused-imports: 2.0.0_roctv5boy5ads4wa3etytbr54i
@@ -1683,15 +1683,6 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-config-prettier/8.5.0_eslint@8.36.0:
-    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-    dependencies:
-      eslint: 8.36.0
-    dev: true
-
   /eslint-config-prettier/8.6.0_eslint@8.36.0:
     resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
     hasBin: true
@@ -1700,6 +1691,15 @@ packages:
     dependencies:
       eslint: 8.36.0
     dev: false
+
+  /eslint-config-prettier/8.8.0_eslint@8.36.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.36.0
+    dev: true
 
   /eslint-config-turbo/0.0.10_eslint@8.36.0:
     resolution: {integrity: sha512-o4ULFZYM1OihSd63eDGEuy9rt6tW4ma6xnW9grnr44BoJwKaGQko2aka9kfqQs0vtmwD1++Os3ThPHETmzkFzA==}
