@@ -24,11 +24,11 @@ importers:
       '@slack/web-api': 6.7.2
       '@supabase/auth-helpers-nextjs': 0.5.2
       '@supabase/auth-helpers-react': 0.3.1
-      '@supabase/supabase-js': 2.1.4
+      '@supabase/supabase-js': 2.12.1
       '@tailwindcss/line-clamp': ^0.4.2
       '@types/gtag.js': 0.0.12
       '@types/marked': 4.0.8
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
       '@typescript-eslint/eslint-plugin': 5.45.1
@@ -39,7 +39,7 @@ importers:
       eslint: 8.36.0
       eslint-config-custom: workspace:*
       eslint-config-next: 13.0.7
-      eslint-config-prettier: 8.5.0
+      eslint-config-prettier: 8.8.0
       eslint-plugin-import: 2.27.5
       eslint-plugin-tailwindcss: 3.7.1
       eslint-plugin-unused-imports: 2.0.0
@@ -69,9 +69,9 @@ importers:
       '@fortawesome/react-fontawesome': 0.2.0_d5rbrisxfyemehbvmdbryvgjte
       '@next/env': 13.1.1
       '@slack/web-api': 6.7.2
-      '@supabase/auth-helpers-nextjs': 0.5.2_udh2a3xdxou35zbw2tgezyay3e
-      '@supabase/auth-helpers-react': 0.3.1_udh2a3xdxou35zbw2tgezyay3e
-      '@supabase/supabase-js': 2.1.4
+      '@supabase/auth-helpers-nextjs': 0.5.2_pz5pnydt2nehkak4aetyy3l46i
+      '@supabase/auth-helpers-react': 0.3.1_pz5pnydt2nehkak4aetyy3l46i
+      '@supabase/supabase-js': 2.12.1
       '@types/marked': 4.0.8
       dayjs: 1.11.7
       framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
@@ -86,7 +86,7 @@ importers:
       '@babel/core': 7.21.3
       '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.6
       '@types/gtag.js': 0.0.12
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
       '@typescript-eslint/eslint-plugin': 5.45.1_nwx35egd5gdk7slgdxf25jcltm
@@ -96,7 +96,7 @@ importers:
       eslint: 8.36.0
       eslint-config-custom: link:../../packages/eslint-config-custom
       eslint-config-next: 13.0.7_j4766f7ecgqbon3u7zlxn5zszu
-      eslint-config-prettier: 8.5.0_eslint@8.36.0
+      eslint-config-prettier: 8.8.0_eslint@8.36.0
       eslint-plugin-import: 2.27.5_xbwldnod7uiqjjfpzd3i5di5xm
       eslint-plugin-tailwindcss: 3.7.1
       eslint-plugin-unused-imports: 2.0.0_roctv5boy5ads4wa3etytbr54i
@@ -689,7 +689,7 @@ packages:
     resolution: {integrity: sha512-DTuBFbqu4gGfajREEMrkq5jBhcnskinhr4+AnfJEk48zhVeEv3XnUKGIX98B74kxhYsIMfApGGySTn7V3b5yBA==}
     engines: {node: '>= 12.13.0', npm: '>= 6.12.0'}
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
     dev: false
 
   /@slack/types/2.8.0:
@@ -704,7 +704,7 @@ packages:
       '@slack/logger': 3.0.0
       '@slack/types': 2.8.0
       '@types/is-stream': 1.1.0
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
       axios: 0.27.2
       eventemitter3: 3.1.2
       form-data: 2.5.1
@@ -716,29 +716,29 @@ packages:
       - debug
     dev: false
 
-  /@supabase/auth-helpers-nextjs/0.5.2_udh2a3xdxou35zbw2tgezyay3e:
+  /@supabase/auth-helpers-nextjs/0.5.2_pz5pnydt2nehkak4aetyy3l46i:
     resolution: {integrity: sha512-B+sQFVEImAYOJKyyNX1DWqTF2qVf9SocOM1GD4eGHon6ulvLOo2a8V+v1jZAuLOBF6yzVIYnZucuYKZCiNP/Eg==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/auth-helpers-shared': 0.2.3_udh2a3xdxou35zbw2tgezyay3e
-      '@supabase/supabase-js': 2.1.4
+      '@supabase/auth-helpers-shared': 0.2.3_pz5pnydt2nehkak4aetyy3l46i
+      '@supabase/supabase-js': 2.12.1
     dev: false
 
-  /@supabase/auth-helpers-react/0.3.1_udh2a3xdxou35zbw2tgezyay3e:
+  /@supabase/auth-helpers-react/0.3.1_pz5pnydt2nehkak4aetyy3l46i:
     resolution: {integrity: sha512-g3SFv08Dz9FapNif/ZY1b7qKGlMJDyTLSayHBz3kb3FuYxg7aLWgQtydDhm5AGbc0XtvpIBuhGTIOVevwpdosA==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/supabase-js': 2.1.4
+      '@supabase/supabase-js': 2.12.1
     dev: false
 
-  /@supabase/auth-helpers-shared/0.2.3_udh2a3xdxou35zbw2tgezyay3e:
+  /@supabase/auth-helpers-shared/0.2.3_pz5pnydt2nehkak4aetyy3l46i:
     resolution: {integrity: sha512-Xwnd2UQ/VTjTKIuVg1Xl/ryrElbSccOJhC11jbVPHOs7Y6yxzy9APxQs//jj4IpbDH4uOEDCdpMIJ0tzRxj9DQ==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/supabase-js': 2.1.4
+      '@supabase/supabase-js': 2.12.1
     dev: false
 
   /@supabase/functions-js/2.1.0:
@@ -783,8 +783,8 @@ packages:
       - encoding
     dev: false
 
-  /@supabase/supabase-js/2.1.4:
-    resolution: {integrity: sha512-i+BAiE472hMIIz6/nM5Pt/6riljjQYJrReyd0LsYsNtis4vcey7SuMX7sYiG9kMo4ivPlB1odYSOJnRbNyqRbQ==}
+  /@supabase/supabase-js/2.12.1:
+    resolution: {integrity: sha512-sni5tYUCjLd57xuFbL8iGP/hAq2rS/Bxh3StrGjO0v78bMcS+WPh6E/WV5SstvOrxS78RKI8fASm3jk8/UjVXA==}
     dependencies:
       '@supabase/functions-js': 2.1.0
       '@supabase/gotrue-js': 2.16.0
@@ -818,7 +818,7 @@ packages:
   /@types/is-stream/1.1.0:
     resolution: {integrity: sha512-jkZatu4QVbR60mpIzjINmtS1ZF4a/FqdTUTBeQDVOQ2PYyidtwFKr0B5G6ERukKwliq+7mIXvxyppwzG5EgRYg==}
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
     dev: false
 
   /@types/json-schema/7.0.11:
@@ -832,8 +832,8 @@ packages:
     resolution: {integrity: sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw==}
     dev: false
 
-  /@types/node/18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node/18.15.10:
+    resolution: {integrity: sha512-9avDaQJczATcXgfmMAW3MIWArOO7A+m90vuCFLr8AotWf8igO/mRoYukrk2cqZVtv38tHs33retzHEilM7FpeQ==}
 
   /@types/phoenix/1.5.5:
     resolution: {integrity: sha512-1eWWT19k0L4ZiTvdXjAvJ9KvW0B8SdiVftQmFPJGTEx78Q4PCSIQDpz+EfkFVR1N4U9gREjlW4JXL8YCIlY0bw==}
@@ -872,7 +872,7 @@ packages:
   /@types/websocket/1.0.5:
     resolution: {integrity: sha512-NbsqiNX9CnEfC1Z0Vf4mE1SgAJ07JnRYcNex7AJ9zAVzmiGHmjKFEk7O4TJIsgv2B1sLEb6owKFZrACwdYngsQ==}
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 18.15.10
     dev: false
 
   /@typescript-eslint/eslint-plugin/5.45.1_nwx35egd5gdk7slgdxf25jcltm:
@@ -1684,15 +1684,6 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-config-prettier/8.5.0_eslint@8.36.0:
-    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-    dependencies:
-      eslint: 8.36.0
-    dev: true
-
   /eslint-config-prettier/8.6.0_eslint@8.36.0:
     resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
     hasBin: true
@@ -1701,6 +1692,15 @@ packages:
     dependencies:
       eslint: 8.36.0
     dev: false
+
+  /eslint-config-prettier/8.8.0_eslint@8.36.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.36.0
+    dev: true
 
   /eslint-config-turbo/0.0.10_eslint@8.36.0:
     resolution: {integrity: sha512-o4ULFZYM1OihSd63eDGEuy9rt6tW4ma6xnW9grnr44BoJwKaGQko2aka9kfqQs0vtmwD1++Os3ThPHETmzkFzA==}
