@@ -12,23 +12,28 @@ export const TopContact: React.FC<Props> = () => {
   };
 
   return (
-    <div className=''>
-      <TopContentLayout>
-        <section className='flex flex-col'>
-          <h2 className='cursor-default text-5xl underline decoration-blue-500 underline-offset-8 lg:text-7xl'>
-            Contact
-          </h2>
-          <div className='my-6 flex flex-col items-center lg:m-8'>
+    <div className='w-full md:w-1/2 md:ml-auto'>
+      <h2 className='text-8xl md:text-9xl text-primary/30'>CONTACT</h2>
+      <div className='-mt-12 flex justify-between'>
+        <div className='flex flex-col justify-between'>
+          <div>
+            <h3 className='text-4xl mb-2 font-bold'>Form</h3>
             <p>お問い合わせは下記のフォームよりお送りください</p>
-            <button
-              className='my-6 w-full select-none rounded border border-blue-500 bg-transparent py-4 px-16 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white md:w-3/4 lg:my-8 lg:w-3/5'
-              onClick={(event) => onContactFormClick(event)}
-            >
-              お問い合わせフォーム
-            </button>
           </div>
-        </section>
-      </TopContentLayout>
+          <button
+            className='w-full px-6 py-4 rounded-full border-secondary border-2 text-secondary font-bold hover:bg-secondary hover:text-white'
+            onClick={(event) => onContactFormClick(event)}
+          >
+            お問い合わせ
+          </button>
+        </div>
+
+        <img
+          src='/mascot-character.webp'
+          alt='mascot-character'
+          className='w-44'
+        />
+      </div>
     </div>
   );
 };

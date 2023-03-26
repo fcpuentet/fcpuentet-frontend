@@ -1,12 +1,11 @@
-import { motion } from 'framer-motion';
-import type { NextPage } from 'next';
-import { GetStaticProps } from 'next';
 import { MainLayout } from '@/components/Layout';
-import { News } from '@/features/news';
-import { TopBanner, TopContact, TopNews, TopSocials } from '@/features/top';
+import { motion } from 'framer-motion';
+import { GetStaticProps, NextPage } from 'next';
+import { TopBanner, TopContact, TopSocials } from '@/features/top';
+import { News, NewsCardList } from '@/features/news';
 import { supabase } from '@/utils';
 
-const TOP_NEWS_MAX_COUNT = 3;
+const TOP_NEWS_MAX_COUNT = 10;
 
 interface TopScreenProps {
   topNewsList: Array<News>;
@@ -26,9 +25,18 @@ const TopScreen: NextPage<TopScreenProps> = ({ topNewsList }) => {
         isTopPage
       >
         <TopBanner />
-        <TopNews newsList={topNewsList} />
-        <TopSocials />
-        <TopContact />
+
+        <section className='-mt-52 mb-32'>
+          <NewsCardList newsList={topNewsList} />
+        </section>
+
+        <section className='max-w-[1000px] m-auto px-6 sm:px-4 mb-32'>
+          <TopSocials />
+        </section>
+
+        <section className='max-w-[1000px] m-auto px-6 sm:px-4 mb-32'>
+          <TopContact />
+        </section>
       </MainLayout>
     </motion.div>
   );
