@@ -7,16 +7,12 @@ interface Props {}
 
 export const TopSocials: React.FC<Props> = () => {
   return (
-    <TopContentLayout>
-      <section className='flex flex-col'>
-        <h2 className='cursor-default text-5xl underline decoration-blue-500 underline-offset-8 lg:text-7xl'>
-          Socials
-        </h2>
-        <div className='my-6 grid items-center gap-6 lg:m-8'>
-          <Instagram />
-          <TwitterTimeline />
-        </div>
-      </section>
-    </TopContentLayout>
+    <>
+      <h2 className='text-9xl text-primary/30'>SOCIAL</h2>
+      <div className='grid grid-cols-1 gap-12 md:grid-cols-2 -mt-12'>
+        <TwitterTimeline />
+        <Instagram />
+      </div>
+    </>
   );
 };

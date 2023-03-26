@@ -23,34 +23,18 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
   }, []);
 
   return (
-    <section className='bg-blue-400 p-2'>
-      <div className='flex flex-col bg-white/80 p-4'>
-        <h3 className='mx-auto mb-6 mt-4 cursor-default'>Twitter</h3>
-        <p className='mx-auto flex flex-col md:flex-row'>
-          <span>各種イベントや試合など</span>
-          <span>最新情報をお届けします！</span>
-        </p>
-
-        <Link
-          href='https://twitter.com/FCPUENTET'
-          target='_blank'
-          className='mx-auto mt-4 flex select-none flex-row gap-2 rounded-md border border-black py-2 px-8 duration-100 hover:bg-black hover:text-white focus:bg-black focus:text-white'
-        >
-          Twitter を見る
-          <OpenInNew />
-        </Link>
-
-        <div className='mt-8 select-none text-center'>
-          <Link
-            href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
-            className='twitter-timeline'
-            data-height='480'
-            data-theme={theme}
-          >
-            Tweet を読み込んでいます...
-          </Link>
-        </div>
-      </div>
-    </section>
+    <div className='w-full'>
+      <h3 className='text-4xl mb-2'>Twitter</h3>
+      <p className='mb-8'>各種イベントや試合など最新情報をお届けします👍</p>
+      <Link
+        href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
+        className='twitter-timeline'
+        data-chrome='noborders'
+        data-height='480'
+        data-theme={theme}
+      >
+        Tweet を読み込んでいます...
+      </Link>
+    </div>
   );
 };

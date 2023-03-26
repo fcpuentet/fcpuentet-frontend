@@ -1,7 +1,7 @@
 import { MainLayout } from '@/components/Layout';
 import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
-import { TopBanner } from '@/features/top';
+import { TopBanner, TopSocials } from '@/features/top';
 import { News, NewsCardList } from '@/features/news';
 import { supabase } from '@/utils';
 
@@ -26,8 +26,12 @@ const Top: NextPage<TopProps> = ({ topNewsList }) => {
       >
         <TopBanner />
 
-        <section className='-mt-52'>
+        <section className='-mt-52 mb-32'>
           <NewsCardList newsList={topNewsList} />
+        </section>
+
+        <section className='max-w-[1000px] m-auto px-4'>
+          <TopSocials />
         </section>
       </MainLayout>
     </motion.div>
