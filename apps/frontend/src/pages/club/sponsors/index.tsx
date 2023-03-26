@@ -43,7 +43,7 @@ const SponsorsScreen: NextPage<SponsorsScreenProps> = ({
         path='/sponsors'
         title={title}
       >
-        <ContentLayout className='py-8 lg:pt-16'>
+        <ContentLayout className='pt-32 pb-8'>
           <TitleHeader title={title} />
           <div className='my-8 md:my-16'>
             <MainSponsors mainSponsors={mainSponsors} />

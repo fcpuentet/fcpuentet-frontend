@@ -33,6 +33,7 @@
     "recoil": "0.7.6"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/gtag.js": "0.0.12",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",

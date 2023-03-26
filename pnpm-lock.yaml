@@ -23,6 +23,7 @@ importers:
       '@supabase/auth-helpers-nextjs': 0.5.2
       '@supabase/auth-helpers-react': 0.3.1
       '@supabase/supabase-js': 2.1.4
+      '@tailwindcss/line-clamp': ^0.4.2
       '@types/gtag.js': 0.0.12
       '@types/marked': 4.0.8
       '@types/node': 18.11.18
@@ -77,6 +78,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       recoil: 0.7.6_biqbaboplfbrettd7655fr4n2y
     devDependencies:
+      '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
       '@types/gtag.js': 0.0.12
       '@types/node': 18.11.18
       '@types/react': 18.0.26
@@ -600,6 +602,14 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: false
+
+  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.2.4_postcss@8.4.20
+    dev: true
 
   /@types/gtag.js/0.0.12:
     resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==}

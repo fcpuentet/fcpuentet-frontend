@@ -43,7 +43,7 @@ const ClubScreen: NextPage = () => {
         path='/club'
         title={title}
       >
-        <ContentLayout className=' py-8 lg:pt-16'>
+        <ContentLayout className='pt-32 pb-8'>
           <TitleHeader title={title} />
           <div className='mx-auto flex flex-col gap-4 md:max-w-4xl md:gap-12'>
             <motion.div

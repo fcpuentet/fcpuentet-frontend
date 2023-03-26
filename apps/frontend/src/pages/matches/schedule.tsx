@@ -21,7 +21,7 @@ const MatchScheduleScreen: NextPage<MatchScheduleScreenProps> = () => {
         path='/matches/schedule'
         title={title}
       >
-        <ContentLayout className='h-[80vh] py-8 lg:pt-16'>
+        <ContentLayout className='h-[80vh] pt-32 pb-8'>
           <TitleHeader title={title} />
 
           <div className='flex h-full flex-col items-center justify-center gap-4'>

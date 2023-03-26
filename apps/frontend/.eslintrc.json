@@ -14,9 +14,7 @@
     "plugin:tailwindcss/recommended"
   ],
   "plugins": ["@typescript-eslint", "import", "unused-imports", "tailwindcss"],
-  "ignorePatterns": [
-    "*.config.js"
-  ],
+  "ignorePatterns": ["*.config.js"],
   "rules": {
     "semi": "error",
     "no-console": "error",

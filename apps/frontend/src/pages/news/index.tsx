@@ -31,7 +31,7 @@ const NewsListScreen: NextPage<NewsListScreenProps> = ({ newsList }) => {
         path='/news'
         title={title}
       >
-        <ContentLayout className='py-8 lg:pt-16'>
+        <ContentLayout className='pt-32 pb-8'>
           <TitleHeader title={title} />
           <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>{newsItems}</div>
         </ContentLayout>

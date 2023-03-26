@@ -19,7 +19,7 @@ const PrivacyPolicyScreen: NextPage<PrivacyPolicyScreenProps> = () => {
         path='/privacy'
         title={title}
       >
-        <ContentLayout className='py-8 leading-loose lg:pt-16'>
+        <ContentLayout className='pt-32 pb-8 leading-loose'>
           <TitleHeader title={title} />
           <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
             <p>
