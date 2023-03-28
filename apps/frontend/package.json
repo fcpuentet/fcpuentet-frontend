@@ -24,7 +24,7 @@
     "@supabase/supabase-js": "2.12.1",
     "@types/marked": "4.0.8",
     "dayjs": "1.11.7",
-    "framer-motion": "7.10.3",
+    "framer-motion": "10.9.1",
     "marked": "4.3.0",
     "next": "13.2.4",
     "next-head-seo": "0.1.3",
