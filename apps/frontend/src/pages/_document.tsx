@@ -21,7 +21,7 @@ class MyDocument extends Document {
         dir='ltr'
       >
         <Head>
-          {/* サイト全体に反映させたいデフォルトの設定を記述する ex) Google Fonts の読み込み */}
+          {/* サイト全体に反映させたいデフォルトの設定を記述する ex) Google Fonts の読み込み */ }
           <link
             rel='preconnect'
             href='https://fonts.googleapis.com'
@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <link
             rel='preconnect'
             href='https://fonts.gstatic.com'
-            crossOrigin='true'
+            crossOrigin=''
           />
           <link
             href='https://fonts.googleapis.com/css2?family=Staatliches&display=swap'
@@ -87,8 +87,8 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <Main />
-          <NextScript />
+        <Main/>
+        <NextScript/>
         </body>
       </Html>
     );

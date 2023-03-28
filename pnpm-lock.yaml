@@ -22,18 +22,18 @@ importers:
       '@fortawesome/react-fontawesome': 0.2.0
       '@next/env': '*'
       '@slack/web-api': 6.7.2
-      '@supabase/auth-helpers-nextjs': 0.5.2
+      '@supabase/auth-helpers-nextjs': 0.5.6
       '@supabase/auth-helpers-react': 0.3.1
       '@supabase/supabase-js': 2.12.1
       '@tailwindcss/line-clamp': ^0.4.2
       '@types/gtag.js': 0.0.12
       '@types/marked': 4.0.8
       '@types/node': 18.15.10
-      '@types/react': 18.0.26
-      '@types/react-dom': 18.0.10
+      '@types/react': 18.0.30
+      '@types/react-dom': 18.0.11
       '@typescript-eslint/eslint-plugin': 5.57.0
       '@typescript-eslint/parser': 5.57.0
-      autoprefixer: 10.4.13
+      autoprefixer: 10.4.14
       clsx: ^1.2.1
       dayjs: 1.11.7
       eslint: 8.36.0
@@ -44,21 +44,21 @@ importers:
       eslint-plugin-tailwindcss: 3.10.1
       eslint-plugin-unused-imports: 2.0.0
       framer-motion: 10.9.1
-      husky: 8.0.2
+      husky: 8.0.3
       lint-staged: 13.2.0
       marked: 4.3.0
       next: 13.2.4
       next-head-seo: 0.1.3
       next-sitemap: 4.0.6
       postcss: ^8.4.21
-      postcss-nested: 6.0.0
-      prettier: 2.8.1
-      prettier-plugin-tailwindcss: 0.2.1
+      postcss-nested: 6.0.1
+      prettier: 2.8.7
+      prettier-plugin-tailwindcss: 0.2.5
       prisma: 4.11.0
       react: 18.2.0
       react-dom: 18.2.0
-      recoil: 0.7.6
-      tailwindcss: 3.2.6
+      recoil: 0.7.7
+      tailwindcss: 3.2.7
       tsconfig: workspace:*
       typescript: ^5.0.0
     dependencies:
@@ -69,7 +69,7 @@ importers:
       '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
       '@next/env': 13.1.1
       '@slack/web-api': 6.7.2
-      '@supabase/auth-helpers-nextjs': 0.5.2_pz5pnydt2nehkak4aetyy3l46i
+      '@supabase/auth-helpers-nextjs': 0.5.6_pz5pnydt2nehkak4aetyy3l46i
       '@supabase/auth-helpers-react': 0.3.1_pz5pnydt2nehkak4aetyy3l46i
       '@supabase/supabase-js': 2.12.1
       '@types/marked': 4.0.8
@@ -81,33 +81,33 @@ importers:
       next-sitemap: 4.0.6_aova3ac7aqjuqshe4fvoeovgyi
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      recoil: 0.7.6_biqbaboplfbrettd7655fr4n2y
+      recoil: 0.7.7_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@babel/core': 7.21.3
-      '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.6
+      '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
       '@types/gtag.js': 0.0.12
       '@types/node': 18.15.10
-      '@types/react': 18.0.26
-      '@types/react-dom': 18.0.10
+      '@types/react': 18.0.30
+      '@types/react-dom': 18.0.11
       '@typescript-eslint/eslint-plugin': 5.57.0_p7xo4zbf6rlx7pmjonhlydeowm
       '@typescript-eslint/parser': 5.57.0_j4766f7ecgqbon3u7zlxn5zszu
-      autoprefixer: 10.4.13_postcss@8.4.21
+      autoprefixer: 10.4.14_postcss@8.4.21
       clsx: 1.2.1
       eslint: 8.36.0
       eslint-config-custom: link:../../packages/eslint-config-custom
       eslint-config-next: 13.2.4_j4766f7ecgqbon3u7zlxn5zszu
       eslint-config-prettier: 8.8.0_eslint@8.36.0
       eslint-plugin-import: 2.27.5_74llxljztmzze2ez7aakaiqyti
-      eslint-plugin-tailwindcss: 3.10.1_tailwindcss@3.2.6
+      eslint-plugin-tailwindcss: 3.10.1_tailwindcss@3.2.7
       eslint-plugin-unused-imports: 2.0.0_bh3gacn4tk2wj6fu7gisfablcy
-      husky: 8.0.2
+      husky: 8.0.3
       lint-staged: 13.2.0
       postcss: 8.4.21
-      postcss-nested: 6.0.0_postcss@8.4.21
-      prettier: 2.8.1
-      prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
+      postcss-nested: 6.0.1_postcss@8.4.21
+      prettier: 2.8.7
+      prettier-plugin-tailwindcss: 0.2.5_prettier@2.8.7
       prisma: 4.11.0
-      tailwindcss: 3.2.6_postcss@8.4.21
+      tailwindcss: 3.2.7_postcss@8.4.21
       tsconfig: link:../../packages/tsconfig
       typescript: 5.0.2
 
@@ -666,12 +666,12 @@ packages:
       - debug
     dev: false
 
-  /@supabase/auth-helpers-nextjs/0.5.2_pz5pnydt2nehkak4aetyy3l46i:
-    resolution: {integrity: sha512-B+sQFVEImAYOJKyyNX1DWqTF2qVf9SocOM1GD4eGHon6ulvLOo2a8V+v1jZAuLOBF6yzVIYnZucuYKZCiNP/Eg==}
+  /@supabase/auth-helpers-nextjs/0.5.6_pz5pnydt2nehkak4aetyy3l46i:
+    resolution: {integrity: sha512-NiUGGnO9vRycMDnl/DzFbHCJhNV9DdH1vH61T1Fzgp2aRW8LfLRVlBQeGCg2AzyvAe0MiLbbRsGNcJmAmJPs9A==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/auth-helpers-shared': 0.2.3_pz5pnydt2nehkak4aetyy3l46i
+      '@supabase/auth-helpers-shared': 0.3.0_pz5pnydt2nehkak4aetyy3l46i
       '@supabase/supabase-js': 2.12.1
     dev: false
 
@@ -683,8 +683,8 @@ packages:
       '@supabase/supabase-js': 2.12.1
     dev: false
 
-  /@supabase/auth-helpers-shared/0.2.3_pz5pnydt2nehkak4aetyy3l46i:
-    resolution: {integrity: sha512-Xwnd2UQ/VTjTKIuVg1Xl/ryrElbSccOJhC11jbVPHOs7Y6yxzy9APxQs//jj4IpbDH4uOEDCdpMIJ0tzRxj9DQ==}
+  /@supabase/auth-helpers-shared/0.3.0_pz5pnydt2nehkak4aetyy3l46i:
+    resolution: {integrity: sha512-6lKhVMBZnGdFelpZyvQDBQSOY+pglS6a5U4ieAqfKQ/rx3rSjRASR3UGh7V+el1re3xYe3ddVBWXw16rdVAzrQ==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
@@ -753,12 +753,12 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.6:
+  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.7:
     resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.6_postcss@8.4.21
+      tailwindcss: 3.2.7_postcss@8.4.21
     dev: true
 
   /@types/gtag.js/0.0.12:
@@ -793,14 +793,14 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react-dom/18.0.10:
-    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
+  /@types/react-dom/18.0.11:
+    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.26
+      '@types/react': 18.0.30
     dev: true
 
-  /@types/react/18.0.26:
-    resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
+  /@types/react/18.0.30:
+    resolution: {integrity: sha512-AnME2cHDH11Pxt/yYX6r0w448BfTwQOLEhQEjCdwB7QskEI7EKtxhGUsExTQe/MsY3D9D5rMtu62WRocw9A8FA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -1103,15 +1103,15 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: false
 
-  /autoprefixer/10.4.13_postcss@8.4.21:
-    resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
+  /autoprefixer/10.4.14_postcss@8.4.21:
+    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001451
+      caniuse-lite: 1.0.30001472
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -1166,7 +1166,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001451
+      caniuse-lite: 1.0.30001472
       electron-to-chromium: 1.4.294
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
@@ -1196,6 +1196,10 @@ packages:
 
   /caniuse-lite/1.0.30001451:
     resolution: {integrity: sha512-XY7UbUpGRatZzoRft//5xOa69/1iGJRBlrieH6QYrkKLIFn3m7OVEJ81dSrKoy2BnKsdbX5cLrOispZNYo9v2w==}
+    dev: false
+
+  /caniuse-lite/1.0.30001472:
+    resolution: {integrity: sha512-xWC/0+hHHQgj3/vrKYY0AAzeIUgr7L9wlELIcAvZdDUHlhL/kNxMdnQLOSOQfP8R51ZzPhmHdyMkI0MMpmxCfg==}
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1847,7 +1851,7 @@ packages:
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
 
-  /eslint-plugin-tailwindcss/3.10.1_tailwindcss@3.2.6:
+  /eslint-plugin-tailwindcss/3.10.1_tailwindcss@3.2.7:
     resolution: {integrity: sha512-NLPZ6b6nd/8CgGNMQ6NDiPUfBLQpSGu/u9RyX3MCZOwzNs2dFt1OamNAiRuo3Ixh7Gv4t5UcAcdNt8z74UDJkA==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -1855,7 +1859,7 @@ packages:
     dependencies:
       fast-glob: 3.2.12
       postcss: 8.4.21
-      tailwindcss: 3.2.6_postcss@8.4.21
+      tailwindcss: 3.2.7_postcss@8.4.21
     dev: true
 
   /eslint-plugin-turbo/1.8.6_eslint@8.36.0:
@@ -2306,8 +2310,8 @@ packages:
     engines: {node: '>=14.18.0'}
     dev: true
 
-  /husky/8.0.2:
-    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -2579,11 +2583,6 @@ packages:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
-
-  /lilconfig/2.0.6:
-    resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
-    engines: {node: '>=10'}
-    dev: true
 
   /lilconfig/2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -3099,6 +3098,16 @@ packages:
       postcss-selector-parser: 6.0.11
     dev: true
 
+  /postcss-nested/6.0.1_postcss@8.4.21:
+    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
+    dev: true
+
   /postcss-selector-parser/6.0.11:
     resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
     engines: {node: '>=4'}
@@ -3133,19 +3142,59 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.1:
-    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
+  /prettier-plugin-tailwindcss/0.2.5_prettier@2.8.7:
+    resolution: {integrity: sha512-vZ/iKieyCx0WTxHbkf5E1rBlv/ybFk8WTT4hL5W2jlVxum2Zbe0jMUpuQdDrpa4z2vnPiJ5KIWCqL/kd16fKYg==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-php': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@shufo/prettier-plugin-blade': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
       prettier: '>=2.2.0'
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+      prettier-plugin-twig-melody: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-php':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@shufo/prettier-plugin-blade':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      prettier-plugin-twig-melody:
+        optional: true
     dependencies:
-      prettier: 2.8.1
-    dev: true
-
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
+      prettier: 2.8.7
     dev: true
 
   /prettier/2.8.7:
@@ -3215,8 +3264,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /recoil/0.7.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-hsBEw7jFdpBCY/tu2GweiyaqHKxVj6EqF2/SfrglbKvJHhpN57SANWvPW+gE90i3Awi+A5gssOd3u+vWlT+g7g==}
+  /recoil/0.7.7_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-8Og5KPQW9LwC577Vc7Ug2P0vQshkv1y3zG3tSSkWMqkWSwHmE+by06L8JtnGocjW6gcCvfwB3YtrJG6/tWivNQ==}
     peerDependencies:
       react: '>=16.13.1'
       react-dom: '*'
@@ -3506,8 +3555,8 @@ packages:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
 
-  /tailwindcss/3.2.6_postcss@8.4.21:
-    resolution: {integrity: sha512-BfgQWZrtqowOQMC2bwaSNe7xcIjdDEgixWGYOd6AL0CbKHJlvhfdbINeAW76l1sO+1ov/MJ93ODJ9yluRituIw==}
+  /tailwindcss/3.2.7_postcss@8.4.21:
+    resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -3522,7 +3571,7 @@ packages:
       fast-glob: 3.2.12
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      lilconfig: 2.0.6
+      lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-hash: 3.0.0
