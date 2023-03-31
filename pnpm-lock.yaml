@@ -82,7 +82,7 @@ importers:
         version: 7.21.3
       '@tailwindcss/line-clamp':
         specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@3.3.0)
+        version: 0.4.2(tailwindcss@3.3.1)
       '@types/gtag.js':
         specifier: 0.0.12
         version: 0.0.12
@@ -124,7 +124,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.57.0)(eslint-import-resolver-typescript@3.5.3)(eslint@8.36.0)
       eslint-plugin-tailwindcss:
         specifier: 3.10.1
-        version: 3.10.1(tailwindcss@3.3.0)
+        version: 3.10.1(tailwindcss@3.3.1)
       eslint-plugin-unused-imports:
         specifier: 2.0.0
         version: 2.0.0(@typescript-eslint/eslint-plugin@5.57.0)(eslint@8.37.0)
@@ -150,8 +150,8 @@ importers:
         specifier: 4.12.0
         version: 4.12.0
       tailwindcss:
-        specifier: 3.3.0
-        version: 3.3.0(postcss@8.4.21)
+        specifier: 3.3.1
+        version: 3.3.1(postcss@8.4.21)
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -837,12 +837,12 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@tailwindcss/line-clamp@0.4.2(tailwindcss@3.3.0):
+  /@tailwindcss/line-clamp@0.4.2(tailwindcss@3.3.1):
     resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.3.0(postcss@8.4.21)
+      tailwindcss: 3.3.1(postcss@8.4.21)
     dev: true
 
   /@types/gtag.js@0.0.12:
@@ -2039,7 +2039,7 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-tailwindcss@3.10.1(tailwindcss@3.3.0):
+  /eslint-plugin-tailwindcss@3.10.1(tailwindcss@3.3.1):
     resolution: {integrity: sha512-NLPZ6b6nd/8CgGNMQ6NDiPUfBLQpSGu/u9RyX3MCZOwzNs2dFt1OamNAiRuo3Ixh7Gv4t5UcAcdNt8z74UDJkA==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -2047,7 +2047,7 @@ packages:
     dependencies:
       fast-glob: 3.2.12
       postcss: 8.4.21
-      tailwindcss: 3.3.0(postcss@8.4.21)
+      tailwindcss: 3.3.1(postcss@8.4.21)
     dev: true
 
   /eslint-plugin-turbo@1.8.8(eslint@8.36.0):
@@ -3850,8 +3850,8 @@ packages:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
 
-  /tailwindcss@3.3.0(postcss@8.4.21):
-    resolution: {integrity: sha512-hOXlFx+YcklJ8kXiCAfk/FMyr4Pm9ck477G0m/us2344Vuj355IpoEDB5UmGAsSpTBmr+4ZhjzW04JuFXkb/fw==}
+  /tailwindcss@3.3.1(postcss@8.4.21):
+    resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
