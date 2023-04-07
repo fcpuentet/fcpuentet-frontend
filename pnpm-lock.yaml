@@ -38,8 +38,8 @@ importers:
         specifier: 6.7.2
         version: 6.7.2
       '@supabase/auth-helpers-nextjs':
-        specifier: 0.5.7
-        version: 0.5.7(@supabase/supabase-js@2.14.0)
+        specifier: 0.5.9
+        version: 0.5.9(@supabase/supabase-js@2.14.0)
       '@supabase/auth-helpers-react':
         specifier: 0.3.1
         version: 0.3.1(@supabase/supabase-js@2.14.0)
@@ -132,8 +132,8 @@ importers:
         specifier: 8.0.3
         version: 8.0.3
       lint-staged:
-        specifier: 13.2.0
-        version: 13.2.0
+        specifier: 13.2.1
+        version: 13.2.1
       postcss:
         specifier: ^8.4.21
         version: 8.4.21
@@ -750,12 +750,12 @@ packages:
       - debug
     dev: false
 
-  /@supabase/auth-helpers-nextjs@0.5.7(@supabase/supabase-js@2.14.0):
-    resolution: {integrity: sha512-OZPP88XzHduK3qkyP13aHslFfqRCN79OW5lhe1ETYZ/qCFPzUeVmPHW01r7Nbl9ewBCPpC2NvYhAPFT6kxYM3g==}
+  /@supabase/auth-helpers-nextjs@0.5.9(@supabase/supabase-js@2.14.0):
+    resolution: {integrity: sha512-OBmltVuPNFbtznBAgQgOFaWh3dO6rRmU7i77TVzEkbViZoK2ylzlKPIORg9Wh+4ZgYbP2QMsI5GzEtAz+aNTvA==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/auth-helpers-shared': 0.3.1(@supabase/supabase-js@2.14.0)
+      '@supabase/auth-helpers-shared': 0.3.3(@supabase/supabase-js@2.14.0)
       '@supabase/supabase-js': 2.14.0
     dev: false
 
@@ -767,12 +767,13 @@ packages:
       '@supabase/supabase-js': 2.14.0
     dev: false
 
-  /@supabase/auth-helpers-shared@0.3.1(@supabase/supabase-js@2.14.0):
-    resolution: {integrity: sha512-knN6QU16x4L6uWZSKUDDqwQvlOUegLmXtUOM9hlCOazez6vkTEgYzsmqhYm8FvSf2qr4Rhh04DEFKuikJFYVOA==}
+  /@supabase/auth-helpers-shared@0.3.3(@supabase/supabase-js@2.14.0):
+    resolution: {integrity: sha512-ZwZGffApfyz9MiT3knnZoF1DMWE56H/Q0Mrsn22J9ubhss7/+e7TP3dChxxwlUYqtDmjmLV6OV8W0BANENfUew==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
       '@supabase/supabase-js': 2.14.0
+      js-base64: 3.7.5
     dev: false
 
   /@supabase/functions-js@2.1.0:
@@ -2793,6 +2794,10 @@ packages:
     hasBin: true
     dev: true
 
+  /js-base64@3.7.5:
+    resolution: {integrity: sha512-3MEt5DTINKqfScXKfJFrRbxkrnk2AxPWGBL/ycjz4dK8iqiSJ06UxD8jh8xuh6p10TX4t2+7FsBYVxxQbMg+qA==}
+    dev: false
+
   /js-sdsl@4.3.0:
     resolution: {integrity: sha512-mifzlm2+5nZ+lEcLJMoBK0/IH/bDg8XnJfd/Wq6IP+xoCjLZsTOnV2QpxlVbX9bMnkl5PdEjNtBJ9Cj1NjifhQ==}
 
@@ -2858,8 +2863,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged@13.2.0:
-    resolution: {integrity: sha512-GbyK5iWinax5Dfw5obm2g2ccUiZXNGtAS4mCbJ0Lv4rq6iEtfBSjOYdcbOtAIFtM114t0vdpViDDetjVTSd8Vw==}
+  /lint-staged@13.2.1:
+    resolution: {integrity: sha512-8gfzinVXoPfga5Dz/ZOn8I2GOhf81Wvs+KwbEXQn/oWZAvCVS2PivrXfVbFJc93zD16uC0neS47RXHIjXKYZQw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
