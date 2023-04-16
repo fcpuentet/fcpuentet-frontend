@@ -11,6 +11,22 @@ export function formatDateTime(date: string): string {
   return dayjs(date).format('YYYY/MM/DD HH:mm:ss');
 }
 
-export function formatDate(date: string): string {
-  return dayjs(date).format('YYYY/MM/DD');
+export function formatDate(date: string, format = 'YYYY/MM/DD'): string {
+  return dayjs(date).format(format);
+}
+
+export function formatDayOfWeek(date: string): string {
+  return dayjs(date).format('ddd');
+}
+
+export function formatTime(date: string): string {
+  return dayjs(date).format('HH:mm');
+}
+
+export function isAfterDate(date: string): boolean {
+  return dayjs(date).isAfter(dayjs());
+}
+
+export function getTheYear(): number {
+  return dayjs().year();
 }
