@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { getTheYear } from '@/utils';
 import { useState } from 'react';
+import { getTheYear } from '@/utils';
 
 interface MatchesSeasonFilterProps {
   seasons: string[];
