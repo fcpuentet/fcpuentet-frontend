@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { MatchesList } from '@/features/matches/components';
+import { MatchesFilter, MatchesList } from '@/features/matches/components';
 import { matchData } from '@/features/matches/data';
 
 const title = '試合日程';
@@ -24,6 +24,11 @@ const MatchesScreen: NextPage<MatchesScreenProps> = () => {
         <ContentLayout className='pt-32 pb-8 leading-loose'>
           <TitleHeader title={title} />
           <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
+            {/* // TODO: 2023, 2022, 2021を動的に取得する */}
+            <MatchesFilter
+              seasons={['2023', '2022', '2021']}
+              classNames='mb-4'
+            />
             <MatchesList matchesData={matchData} />
           </div>
         </ContentLayout>
