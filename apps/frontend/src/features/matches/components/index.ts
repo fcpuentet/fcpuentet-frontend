@@ -1,2 +1,2 @@
 export * from './MatchesList';
-export * from './MatchesFilter';
+export * from './MatchesSeasonFilter';

@@ -26,3 +26,7 @@ export function formatTime(date: string): string {
 export function isAfterDate(date: string): boolean {
   return dayjs(date).isAfter(dayjs());
 }
+
+export function getTheYear(): number {
+  return dayjs().year();
+}

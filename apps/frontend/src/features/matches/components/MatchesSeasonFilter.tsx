@@ -1,16 +1,19 @@
+import { getTheYear } from '@/utils';
 import clsx from 'clsx';
 
-interface MatchesFilterProps {
+interface MatchesSeasonFilterProps {
   seasons: string[];
   classNames?: string;
   onChange?: (selectValue: string) => void;
 }
 
-export const MatchesFilter: React.FC<MatchesFilterProps> = ({
+export const MatchesSeasonFilter: React.FC<MatchesSeasonFilterProps> = ({
   seasons,
   classNames,
   onChange,
-}: MatchesFilterProps) => {
+}: MatchesSeasonFilterProps) => {
+  const currentSeason = seasons.find((season) => Number(season) === getTheYear());
+
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     onChange && onChange(event.target.value);
   };
@@ -21,6 +24,7 @@ export const MatchesFilter: React.FC<MatchesFilterProps> = ({
         classNames,
         'w-full rounded-lg border border-transparent bg-gray-50 px-5 py-3 text-2xl text-neutral-600 transition duration-500 ease-in-out placeholder:text-gray-300 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300',
       )}
+      value={currentSeason}
       onChange={handleChange}
     >
       {seasons.map((season, index) => (
