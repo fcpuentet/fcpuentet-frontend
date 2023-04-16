@@ -1,6 +1,6 @@
-import { isAfterDate } from '@/utils';
 import { MatchData } from '../data';
 import { MatchesListItem } from './MatchesListItem';
+import { isAfterDate } from '@/utils';
 
 interface MatchesListProps {
   matchesData: MatchData[];

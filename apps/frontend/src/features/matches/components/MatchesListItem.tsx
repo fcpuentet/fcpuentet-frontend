@@ -1,6 +1,6 @@
-import { formatDate, formatDayOfWeek, formatTime } from '@/utils';
-import { MatchData } from '../data';
 import clsx from 'clsx';
+import { MatchData } from '../data';
+import { formatDate, formatDayOfWeek, formatTime } from '@/utils';
 
 interface MatchesListItemProps {
   matchData: MatchData;

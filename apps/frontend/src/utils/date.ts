@@ -11,7 +11,7 @@ export function formatDateTime(date: string): string {
   return dayjs(date).format('YYYY/MM/DD HH:mm:ss');
 }
 
-export function formatDate(date: string, format: string = 'YYYY/MM/DD'): string {
+export function formatDate(date: string, format = 'YYYY/MM/DD'): string {
   return dayjs(date).format(format);
 }
 

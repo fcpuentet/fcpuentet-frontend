@@ -1,5 +1,5 @@
-import { getTheYear } from '@/utils';
 import clsx from 'clsx';
+import { getTheYear } from '@/utils';
 
 interface MatchesSeasonFilterProps {
   seasons: string[];
