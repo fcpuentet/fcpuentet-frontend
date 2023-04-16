@@ -22,3 +22,7 @@ export function formatDayOfWeek(date: string): string {
 export function formatTime(date: string): string {
   return dayjs(date).format('HH:mm');
 }
+
+export function isAfterDate(date: string): boolean {
+  return dayjs(date).isAfter(dayjs());
+}

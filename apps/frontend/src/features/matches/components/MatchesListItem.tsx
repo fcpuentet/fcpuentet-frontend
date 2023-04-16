@@ -1,19 +1,22 @@
 import { formatDate, formatDayOfWeek, formatTime } from '@/utils';
 import { MatchData } from '../data';
+import clsx from 'clsx';
 
 interface MatchesListItemProps {
   matchData: MatchData;
+  isNextMatch?: boolean;
 }
 
 export const MatchesListItem: React.FC<MatchesListItemProps> = ({
   matchData,
+  isNextMatch,
 }: MatchesListItemProps) => {
   const date = formatDate(matchData.matchDate, 'M/D');
   const day = formatDayOfWeek(matchData.matchDate);
   const gameStartTime = formatTime(matchData.matchDate);
 
   return (
-    <li className='py-4 px-2 border-b-2 '>
+    <li className={clsx(isNextMatch && 'bg-primary/20', 'py-4 px-2 border-b-2')}>
       <div className='text-sm text-gray-600'>{matchData.matchVenue}</div>
 
       <div className='flex flex-wrap items-end'>
