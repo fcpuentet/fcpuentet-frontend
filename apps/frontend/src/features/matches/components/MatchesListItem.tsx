@@ -17,6 +17,9 @@ export const MatchesListItem: React.FC<MatchesListItemProps> = ({
 
   return (
     <li className={clsx(isNextMatch && 'bg-primary/20', 'py-4 px-2 border-b-2')}>
+      {isNextMatch && (
+        <div className='mb-2 px-2 bg-secondary text-white text-sm w-fit'>NEXT MATCH</div>
+      )}
       <div className='text-sm text-gray-600'>{matchData.matchVenue}</div>
 
       <div className='flex flex-wrap items-end'>
