@@ -2,12 +2,21 @@ import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import React from 'react';
 import { Icon } from '../Icon/Icon';
+import { FEATURE_FLAGS } from '@/utils';
 
 interface HeaderProps {
   onClick: () => void;
 }
 
 export const Header = ({ onClick }: HeaderProps): JSX.Element => {
+  if (FEATURE_FLAGS.MEMBERS) {
+    return HasMemberHeader({ onClick });
+  } else {
+    return NoMemberHeader({ onClick });
+  }
+};
+
+const HasMemberHeader = ({ onClick }: HeaderProps): JSX.Element => {
   return (
     <div className='fixed z-50 flex w-full items-center justify-between bg-white/50 p-4 backdrop-blur-lg'>
       <div className='flex cursor-pointer text-xl text-secondary'>
@@ -26,7 +35,34 @@ export const Header = ({ onClick }: HeaderProps): JSX.Element => {
         <img
           src='/emblem.webp'
           alt='emblem'
-          className='h-12 '
+          className='h-12'
+        />
+      </Link>
+
+      <div onClick={onClick}>
+        <Icon
+          icon={faBars}
+          color='secondary'
+          className='w-6 cursor-pointer'
+        />
+      </div>
+    </div>
+  );
+};
+
+const NoMemberHeader = ({ onClick }: HeaderProps): JSX.Element => {
+  return (
+    <div className='fixed z-50 flex w-full items-center justify-between bg-white/50 p-4 backdrop-blur-lg'>
+      <div className='flex cursor-pointer text-xl text-secondary' />
+
+      <Link
+        href={'/'}
+        className='translate-x-4'
+      >
+        <img
+          src='/emblem.webp'
+          alt='emblem'
+          className='h-12'
         />
       </Link>
 
