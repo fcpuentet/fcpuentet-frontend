@@ -26,7 +26,7 @@ const TopScreen: NextPage<TopScreenProps> = ({ topNewsList }) => {
       >
         <TopBanner />
 
-        <section className='-mt-52 mb-32'>
+        <section className='mb-32 mt-8'>
           <NewsCardList newsList={topNewsList} />
         </section>
 
