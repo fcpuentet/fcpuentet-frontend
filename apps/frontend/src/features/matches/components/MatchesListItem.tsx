@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { formatDate, formatDayOfWeek, formatTime } from '@/utils';
 import { Match } from '../types';
+import { formatDate, formatDayOfWeek, formatTime } from '@/utils';
 
 interface MatchesListItemProps {
   match: Match;
@@ -16,23 +16,23 @@ export const MatchesListItem: React.FC<MatchesListItemProps> = ({
   const gameStartTime = formatTime(match.kickedOffAt);
 
   return (
-    <li className={clsx(isNextMatch && 'bg-primary/20', 'py-4 px-2 border-b-2')}>
+    <li className={clsx(isNextMatch && 'bg-primary/20', 'border-b-2 px-2 py-4')}>
       {isNextMatch && (
-        <div className='mb-2 px-2 bg-secondary text-white text-sm w-fit'>NEXT MATCH</div>
+        <div className='mb-2 w-fit bg-secondary px-2 text-sm text-white'>NEXT MATCH</div>
       )}
       <div className='text-sm text-gray-600'>{match.venue}</div>
 
       <div className='flex flex-wrap items-end'>
-        <div className='mr-6 flex items-end min-w-[180px]'>
+        <div className='mr-6 flex min-w-[180px] items-end'>
           <div className='min-w-[80px]'>
             <span className='text-3xl'>{date}</span>
             <span className='text-1xl ml-2'>{day}</span>
           </div>
-          <span className='text-3xl ml-4'>{gameStartTime}</span>
+          <span className='ml-4 text-3xl'>{gameStartTime}</span>
         </div>
 
-        <div className='flex items-end min-w-[300px] mt-1'>
-          <span className='text-2xl mr-1'>vs</span>
+        <div className='mt-1 flex min-w-[300px] items-end'>
+          <span className='mr-1 text-2xl'>vs</span>
           <span className='text-3xl'>{match.team}</span>
         </div>
       </div>
