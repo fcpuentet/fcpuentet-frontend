@@ -25,10 +25,9 @@ const MatchesScreen: NextPage<MatchesScreenProps> = ({ matches }) => {
         title={title}
       >
         <ContentLayout className='pb-8 pt-32 leading-loose'>
-          {matches[0].id}
           <TitleHeader title={title} />
           <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
-            {/* // TODO: 2024, 2023, 2022, 2021を動的に取得する */}
+            {/* TODO: 2024, 2023, 2022, 2021を動的に取得する */}
             {/* <MatchesSeasonFilter
               seasons={['2024', '2023', '2022', '2021']}
               classNames='mb-4'
