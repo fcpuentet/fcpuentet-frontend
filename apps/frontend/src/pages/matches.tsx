@@ -3,7 +3,6 @@ import { GetStaticProps, NextPage } from 'next';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { MatchesSeasonFilter, MatchesList } from '@/features/matches/components';
-import { matchData } from '@/features/matches/data';
 import { supabase } from '@/utils';
 import { Match } from '@/features/matches/types';
 
@@ -30,10 +29,10 @@ const MatchesScreen: NextPage<MatchesScreenProps> = ({ matches }) => {
           <TitleHeader title={title} />
           <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
             {/* // TODO: 2024, 2023, 2022, 2021を動的に取得する */}
-            <MatchesSeasonFilter
+            {/* <MatchesSeasonFilter
               seasons={['2024', '2023', '2022', '2021']}
               classNames='mb-4'
-            />
+            /> */}
             <MatchesList matches={matches} />
           </div>
         </ContentLayout>
