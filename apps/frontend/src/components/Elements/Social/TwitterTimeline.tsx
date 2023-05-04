@@ -25,15 +25,17 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
     <div className='w-full'>
       <h3 className='mb-2 text-4xl'>Twitter</h3>
       <p className='mb-8'>各種イベントや試合など最新情報をお届けします👍</p>
-      <Link
-        href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
-        className='twitter-timeline'
-        data-chrome='noborders'
-        data-height='480'
-        data-theme={theme}
-      >
-        Tweet を読み込んでいます...
-      </Link>
+      <div className='border overflow-hidden rounded-sm'>
+        <Link
+          href='https://twitter.com/FCPUENTET?ref_src=twsrc%5Etfw'
+          className='twitter-timeline'
+          data-chrome='noborders'
+          data-height='480'
+          data-theme={theme}
+        >
+          Tweet を読み込んでいます...
+        </Link>
+      </div>
     </div>
   );
 };
