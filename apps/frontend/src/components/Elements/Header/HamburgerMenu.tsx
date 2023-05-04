@@ -44,7 +44,7 @@ interface HamburgerMenuProps {
 
 export const HamburgerMenu = ({ onClose }: HamburgerMenuProps): JSX.Element => {
   return (
-    <div className='fixed z-[100] flex h-full w-full flex-col overscroll-contain bg-white/50 p-4 backdrop-blur-lg'>
+    <div className='fixed z-[100] flex h-full w-full flex-col overscroll-contain overflow-y-scroll bg-white/50 p-4 backdrop-blur-lg'>
       <div className='mb-4 flex cursor-pointer justify-end'>
         <Icon
           icon={faXmark}
