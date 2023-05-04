@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { MatchesSeasonFilter, MatchesList } from '@/features/matches/components';
-import { supabase } from '@/utils';
+import { MatchesList } from '@/features/matches/components';
 import { Match } from '@/features/matches/types';
+import { supabase } from '@/utils';
 
 const title = '試合日程';
 
@@ -24,7 +24,7 @@ const MatchesScreen: NextPage<MatchesScreenProps> = ({ matches }) => {
         path='/matches'
         title={title}
       >
-        <ContentLayout className='pt-32 pb-8 leading-loose'>
+        <ContentLayout className='pb-8 pt-32 leading-loose'>
           {matches[0].id}
           <TitleHeader title={title} />
           <div className='pt-12 lg:px-8 lg:pb-8 lg:pt-24'>
