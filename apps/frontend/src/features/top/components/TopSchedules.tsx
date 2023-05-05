@@ -12,7 +12,7 @@ export const TopSchedules: React.FC<Props> = ({ matches }) => {
     <>
       <h2 className='text-8xl text-primary/30 md:text-9xl'>Schedule</h2>
       <div className='-mt-12'>
-        <h3 className='mb-2 text-4xl'>Matches</h3>
+        <h3 className='mb-2 text-5xl'>Matches</h3>
         <MatchesList matches={matches} />
 
         <div className='mt-4 flex justify-end'>
@@ -26,13 +26,19 @@ export const TopSchedules: React.FC<Props> = ({ matches }) => {
       </div>
 
       <div className='mt-8'>
-        <h3 className='mb-2 text-4xl'>Standings</h3>
-        <img src='/assets/image/standings.webp' />
+        <h3 className='mb-2 text-5xl'>Standings</h3>
+        <img
+          src='/assets/image/standings.webp'
+          alt='standings'
+        />
       </div>
 
       <div className='mt-8'>
-        <h3 className='mb-2 text-4xl'>Events</h3>
-        <img src='/assets/image/events.webp' />
+        <h3 className='mb-2 text-5xl'>Events</h3>
+        <img
+          src='/assets/image/events.webp'
+          alt='events'
+        />
       </div>
     </>
   );

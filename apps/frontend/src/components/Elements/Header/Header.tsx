@@ -35,7 +35,7 @@ const HasMemberHeader = ({ onClick }: HeaderProps): JSX.Element => {
         <img
           src='/emblem.webp'
           alt='emblem'
-          className='h-12'
+          className='h-16'
         />
       </Link>
 
@@ -62,7 +62,7 @@ const NoMemberHeader = ({ onClick }: HeaderProps): JSX.Element => {
         <img
           src='/emblem.webp'
           alt='emblem'
-          className='h-12'
+          className='h-14'
         />
       </Link>
 
@@ -70,7 +70,7 @@ const NoMemberHeader = ({ onClick }: HeaderProps): JSX.Element => {
         <Icon
           icon={faBars}
           color='secondary'
-          className='w-6 cursor-pointer'
+          className='w-8 cursor-pointer'
         />
       </div>
     </div>

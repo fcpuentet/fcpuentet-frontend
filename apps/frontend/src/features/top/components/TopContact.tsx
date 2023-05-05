@@ -16,7 +16,7 @@ export const TopContact: React.FC<Props> = () => {
       <div className='-mt-12 flex justify-between'>
         <div className='flex flex-col justify-between'>
           <div>
-            <h3 className='mb-2 text-4xl font-bold'>Form</h3>
+            <h3 className='mb-2 text-5xl font-bold'>Form</h3>
             <p>お問い合わせは下記のフォームよりお送りください</p>
           </div>
           <button
