@@ -50,7 +50,7 @@ export const HamburgerMenu = ({ onClose }: HamburgerMenuProps): JSX.Element => {
           icon={faXmark}
           onClick={onClose}
           color='secondary'
-          className='w-6'
+          className='w-8'
         />
       </div>
 
