@@ -5,7 +5,7 @@ import { OpenInNew } from '@/components/Elements';
 export const Instagram: React.FC = (): JSX.Element => {
   return (
     <div className='w-full'>
-      <h3 className='mb-2 text-4xl'>Instagram</h3>
+      <h3 className='mb-2 text-5xl'>Instagram</h3>
       <p className='mb-8'>日々の活動やクラブについて写真と動画で発信しています✨</p>
       <div className='relative'>
         <img

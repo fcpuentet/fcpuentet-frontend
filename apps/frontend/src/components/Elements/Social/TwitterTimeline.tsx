@@ -23,7 +23,7 @@ export const TwitterTimeline: React.FC<TwitterTimelineProps> = ({
 
   return (
     <div className='w-full'>
-      <h3 className='mb-2 text-4xl'>Twitter</h3>
+      <h3 className='mb-2 text-5xl'>Twitter</h3>
       <p className='mb-8'>各種イベントや試合など最新情報をお届けします👍</p>
       <div className='border overflow-hidden rounded-sm'>
         <Link
