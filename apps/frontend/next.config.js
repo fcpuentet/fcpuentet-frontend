@@ -5,7 +5,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    domains: ['yxyqlflqvbnkyhamwrfj.supabase.co'],
+    domains: [process.env.NEXT_PUBLIC_SUPABASE_URL.replace('https://', '')],
   },
 };
 
