@@ -3,8 +3,8 @@ import { GetStaticProps, NextPage } from 'next';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { playersData } from '@/features/players/data';
 import { PlayerCardList } from '@/features/players/components';
+import { playersData } from '@/features/players/data';
 import { StaffCardList } from '@/features/staffs/components';
 import { staffsData } from '@/features/staffs/data';
 
