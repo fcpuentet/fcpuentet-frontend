@@ -4,7 +4,7 @@ import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { playersData } from '@/features/players/data';
-import { PlayerList } from '@/features/players/components/PlayerList';
+import { PlayerCardList } from '@/features/players/components';
 
 const title = '選手 / スタッフ紹介';
 
@@ -27,7 +27,7 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
 
           <section className='mt-16'>
             <h3 className='text-5xl font-bold mb-4'>Players</h3>
-            <PlayerList players={playersData} />
+            <PlayerCardList players={playersData} />
           </section>
 
           <section className='mt-16'>
