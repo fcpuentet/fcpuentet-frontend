@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
-import Link from 'next/link';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
+import { playersData } from '@/features/players/data';
+import { PlayerList } from '@/features/players/components/PlayerList';
 
 const title = '選手 / スタッフ紹介';
 
@@ -21,20 +22,18 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
         path='/teams'
         title={title}
       >
-        <ContentLayout className='h-[80vh] pt-32 pb-8'>
+        <ContentLayout className='pt-32 pb-8'>
           <TitleHeader title={title} />
 
-          <div className='flex h-full flex-col items-center justify-center gap-4'>
-            <h2 className='cursor-default'>Coming Soon...</h2>
-            <p>こちらのページは現在準備中です。</p>
+          <section className='mt-16'>
+            <h3 className='text-5xl font-bold mb-4'>Players</h3>
+            <PlayerList players={playersData} />
+          </section>
 
-            <Link
-              href='/'
-              className='my-8 w-full max-w-xl rounded border border-blue-500 py-4 text-center font-bold text-blue-500 outline-none transition-all duration-100 ease-linear hover:bg-blue-500 hover:text-white focus:outline-none active:bg-blue-600'
-            >
-              トップへもどる
-            </Link>
-          </div>
+          <section className='mt-16'>
+            <h3 className='text-5xl font-bold mb-4'>Staffs & MASCOTS</h3>
+            {/* TODO: StaffList追加 */}
+          </section>
         </ContentLayout>
       </MainLayout>
     </motion.div>
