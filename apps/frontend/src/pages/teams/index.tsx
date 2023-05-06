@@ -5,6 +5,8 @@ import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { playersData } from '@/features/players/data';
 import { PlayerCardList } from '@/features/players/components';
+import { StaffCardList } from '@/features/staffs/components';
+import { staffsData } from '@/features/staffs/data';
 
 const title = '選手 / スタッフ紹介';
 
@@ -32,7 +34,7 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
 
           <section className='mt-16'>
             <h3 className='text-5xl font-bold mb-4'>Staffs & MASCOTS</h3>
-            {/* TODO: StaffList追加 */}
+            <StaffCardList staffs={staffsData} />
           </section>
         </ContentLayout>
       </MainLayout>
