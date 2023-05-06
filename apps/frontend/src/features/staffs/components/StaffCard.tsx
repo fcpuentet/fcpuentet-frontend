@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { Staff } from '../types';
 import { shimmer, toBase64 } from '@/utils';
 
-interface StaffsCardProps {
+interface StaffCardProps {
   staff: Staff;
 }
 
-export const StaffsCard: React.FC<StaffsCardProps> = ({ staff }) => {
+export const StaffCard: React.FC<StaffCardProps> = ({ staff }) => {
   return (
     <div className='w-full h-full overflow-hidden rounded-md relative shadow-md m-auto bg-secondary'>
       <Image
