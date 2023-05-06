@@ -33,7 +33,7 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
           </section>
 
           <section className='mt-16'>
-            <h3 className='text-5xl font-bold mb-4'>Staffs & MASCOTS</h3>
+            <h3 className='text-5xl font-bold mb-4'>Staffs & Mascots</h3>
             <StaffCardList staffs={staffsData} />
           </section>
         </ContentLayout>

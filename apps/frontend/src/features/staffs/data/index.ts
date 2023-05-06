@@ -11,7 +11,7 @@ export const staffsData: Staff[] = [
   {
     id: 2,
     position: 'マスコット',
-    name: 'ティティ',
+    name: 'テッティ',
     image: 'https://tnlhhovsfegeksvjbfup.supabase.co/storage/v1/object/public/staffs/titi.webp',
   },
 ];
