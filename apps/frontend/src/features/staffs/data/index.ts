@@ -31,7 +31,7 @@ export const staffsData: Staff[] = [
     id: 5,
     position: '運営',
     name: '阿部賢',
-    name_en: 'ABE Ken',
+    name_en: 'ABE Satoshi',
   },
   {
     id: 6,
