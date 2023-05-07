@@ -9,18 +9,32 @@ interface PlayerCardProps {
 export const PlayerCard: React.FC<PlayerCardProps> = ({ player }) => {
   return (
     <div className='w-full h-full overflow-hidden rounded-md relative shadow-md m-auto'>
-      <Image
-        src={player.image}
-        alt={player.name}
-        width={1800}
-        height={2200}
-        placeholder={'blur'}
-        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1800, 2200))}`}
-      />
+      {player.image ? (
+        <Image
+          src={player.image}
+          alt={player.name}
+          width={1800}
+          height={2200}
+          placeholder={'blur'}
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1800, 2200))}`}
+        />
+      ) : (
+        <Image
+          src='/person_empty.webp'
+          alt='empty'
+          width={1800}
+          height={2200}
+          placeholder={'blur'}
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1800, 2200))}`}
+        />
+      )}
 
-      <p className='text-white text-xl text-center w-full bg-secondary py-2'>
-        {player.uniformNumber}. {player.name}
-      </p>
+      <div className='text-white text-center w-full bg-secondary py-2'>
+        <p className='text-xl'>
+          {player.uniformNumber}. {player.name}
+        </p>
+        <p className='opacity-70'>{player.name_en}</p>
+      </div>
     </div>
   );
 };

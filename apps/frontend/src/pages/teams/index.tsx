@@ -3,7 +3,7 @@ import { GetStaticProps, NextPage } from 'next';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { PlayerCardList } from '@/features/players/components';
+import { PlayersContent } from '@/features/players/components';
 import { playersData } from '@/features/players/data';
 import { StaffCardList } from '@/features/staffs/components';
 import { staffsData } from '@/features/staffs/data';
@@ -28,8 +28,8 @@ const TeamScreen: NextPage<TeamScreenProps> = () => {
           <TitleHeader title={title} />
 
           <section className='mt-16'>
-            <h3 className='text-5xl font-bold mb-4'>Players</h3>
-            <PlayerCardList players={playersData} />
+            <h3 className='text-5xl font-bold mb-6'>Players</h3>
+            <PlayersContent players={playersData} />
           </section>
 
           <section className='mt-16'>

@@ -1,1 +1,1 @@
-export * from './PlayerCardList';
+export * from './PlayersContent';
