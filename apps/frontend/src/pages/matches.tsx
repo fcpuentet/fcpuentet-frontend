@@ -46,8 +46,8 @@ export default MatchesScreen;
 // noinspection JSUnusedGlobalSymbols
 export const getStaticProps: GetStaticProps<any> = async () => {
   const { data } = await supabase
-    .from('fixtures')
-    .select('id, kicked_off_at, team:team_id(name), venue:venue_id(name)')
+    .from('matches')
+    .select('id, kicked_off_at, team:team_id(name), locales:locale_id(name)')
     .is('deleted_at', null)
     .order('kicked_off_at', { ascending: true });
 
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps<any> = async () => {
         id: `${entity.id}`,
         kickedOffAt: `${entity.kicked_off_at}`,
         team: `${entity.team.name}`,
-        venue: `${entity.venue.name}`,
+        venue: `${entity.locales.name}`,
       };
     }) ?? [];
   /* eslint-enable */
