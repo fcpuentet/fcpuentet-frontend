@@ -56,8 +56,8 @@ importers:
         specifier: 10.12.8
         version: 10.12.8(react-dom@18.2.0)(react@18.2.0)
       marked:
-        specifier: 4.3.0
-        version: 4.3.0
+        specifier: 5.0.1
+        version: 5.0.1
       next:
         specifier: 13.4.1
         version: 13.4.1(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0)
@@ -2925,9 +2925,9 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /marked@4.3.0:
-    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
-    engines: {node: '>= 12'}
+  /marked@5.0.1:
+    resolution: {integrity: sha512-Nn9peC4lvIZdcfp8Uze6xk4ZYowkcj/K6+e/6rLHadhtjqeip/bYRxMgt3124IGGJ3RPs2uX5YVmAGbUutY18g==}
+    engines: {node: '>= 18'}
     hasBin: true
     dev: false
 
