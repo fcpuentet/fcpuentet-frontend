@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { News } from '../types';
 import { formatDate } from '@/utils';
-import Image from 'next/image';
 
 interface NewsCardProps {
   news: News;
