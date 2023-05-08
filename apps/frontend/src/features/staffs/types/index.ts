@@ -1,7 +1,12 @@
 export interface Staff {
-  id: number;
-  position: string;
+  id: string;
   name: string;
   name_en: string;
-  image?: string;
+  position: string;
+  profile_image?: {
+    src: string;
+    file_name: string;
+    height: number;
+    width: number;
+  };
 }
