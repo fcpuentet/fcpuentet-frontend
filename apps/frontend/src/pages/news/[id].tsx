@@ -4,11 +4,11 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
-import { NewsContent, News } from '@/features/news';
+import { NewsContent, NewsDetail } from '@/features/news';
 import { supabase } from '@/utils';
 
 interface NewsContentScreenProps {
-  news: News;
+  news: NewsDetail;
 }
 
 const NewsContentScreen: NextPage<NewsContentScreenProps> = ({ news }) => {
@@ -21,7 +21,7 @@ const NewsContentScreen: NextPage<NewsContentScreenProps> = ({ news }) => {
       exit={{ opacity: 0 }}
     >
       <MainLayout
-        path={`/news/${news.id}`}
+        path={`/news/${news.slug}`}
         title={news.title}
       >
         <ContentLayout className='pt-32 pb-8'>
@@ -71,7 +71,7 @@ export const getStaticProps: GetStaticProps<NewsContentScreenProps> = async (con
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data: entity, error } = await supabase
     .from('news')
-    .select('id, created_at, updated_at, title, content')
+    .select('id, created_at, updated_at, title, content, slug')
     .is('deleted_at', null)
     .eq('id', context.params?.id)
     .single();
@@ -89,6 +89,7 @@ export const getStaticProps: GetStaticProps<NewsContentScreenProps> = async (con
     updatedAtString: `${entity.updated_at}`,
     title: `${entity.title}`,
     content: `${entity.content}`,
+    slug: `${entity.slug}`,
   };
   /* eslint-enable */
 

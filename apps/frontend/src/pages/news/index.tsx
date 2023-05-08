@@ -47,7 +47,9 @@ export const getStaticProps: GetStaticProps<NewsListScreenProps> = async () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data } = await supabase
     .from('news')
-    .select('id, created_at, updated_at, title, content')
+    .select(
+      'id, created_at, updated_at, title, content, assets:cover_image_asset_id(src, file_name, height, width), slug',
+    )
     .is('deleted_at', null)
     .order('created_at', { ascending: false });
 
@@ -60,6 +62,13 @@ export const getStaticProps: GetStaticProps<NewsListScreenProps> = async () => {
         updatedAtString: `${entity.updated_at}`,
         title: `${entity.title}`,
         content: `${entity.content}`,
+        slug: `${entity.slug}`,
+        coverImage: entity.assets && {
+          src: `${entity.assets.src}`,
+          fileName: `${entity.assets.file_name}`,
+          height: entity.assets.height,
+          width: entity.assets.width,
+        },
       };
     }) ?? [];
   /* eslint-enable */
