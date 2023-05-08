@@ -4,10 +4,10 @@ import React from 'react';
 import { TitleHeader } from '@/components/Elements';
 import { ContentLayout, MainLayout } from '@/components/Layout';
 import { PlayersContent } from '@/features/players/components';
-import { StaffCardList } from '@/features/staffs/components';
-import { supabase } from '@/utils';
-import { Staff } from '@/features/staffs/types';
 import { Player } from '@/features/players/types';
+import { StaffCardList } from '@/features/staffs/components';
+import { Staff } from '@/features/staffs/types';
+import { supabase } from '@/utils';
 
 const title = '選手 / スタッフ紹介';
 
