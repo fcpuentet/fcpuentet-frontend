@@ -1,10 +1,10 @@
 import { marked } from 'marked';
 import React from 'react';
-import { News } from '@/features/news';
+import { NewsDetail } from '@/features/news';
 import { formatDateTime } from '@/utils';
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
-  news: News;
+  news: NewsDetail;
 };
 
 export const NewsContent: React.FC<Props> = ({
