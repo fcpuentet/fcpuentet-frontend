@@ -8,7 +8,7 @@ interface StaffCardProps {
 
 export const StaffCard: React.FC<StaffCardProps> = ({ staff }) => {
   return (
-    <div className='w-full h-full overflow-hidden rounded-md relative shadow-md m-auto bg-secondary'>
+    <div className='relative m-auto h-full w-full overflow-hidden rounded-md bg-secondary shadow-md'>
       {staff.profile_image ? (
         <Image
           src={staff.profile_image.src}
@@ -29,7 +29,7 @@ export const StaffCard: React.FC<StaffCardProps> = ({ staff }) => {
         />
       )}
 
-      <div className=' text-white text-center w-full p-2'>
+      <div className=' w-full p-2 text-center text-white'>
         <p className='text-sm'>{staff.position}</p>
         <p className='text-xl'>{staff.name}</p>
         <p className='opacity-70'>{staff.name_en}</p>

@@ -28,16 +28,16 @@ const TeamScreen: NextPage<TeamScreenProps> = ({ staffs, players }) => {
         path='/teams'
         title={title}
       >
-        <ContentLayout className='pt-32 pb-8'>
+        <ContentLayout className='pb-8 pt-32'>
           <TitleHeader title={title} />
 
           <section className='mt-16'>
-            <h3 className='text-5xl font-bold mb-6'>Players</h3>
+            <h3 className='mb-6 text-5xl font-bold'>Players</h3>
             <PlayersContent players={players} />
           </section>
 
           <section className='mt-16'>
-            <h3 className='text-5xl font-bold mb-4'>Staffs & Mascots</h3>
+            <h3 className='mb-4 text-5xl font-bold'>Staffs & Mascots</h3>
             <StaffCardList staffs={staffs} />
           </section>
         </ContentLayout>
