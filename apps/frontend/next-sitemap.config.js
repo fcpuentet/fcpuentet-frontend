@@ -1,23 +1,23 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://fc-puentet.com',
-  generateRobotsTxt: true,
+  generateRobotsTxt: process.env.ALLOW_ROBOT_TXT === 'true',
+  sitemapSize: 7000,
   transform: async (config, path) => {
-    if (isIgnorePath(path)) {
-      return null; // nullを返すとサイトマップから除外できる
+    if (exclude.includes(path)) {
+      // nullを返すとサイトマップから除外できる
+      return null;
     }
 
     return {
-      loc: encodeURI(path), // エンコードしたURLを返す
-      lastmod: customLastmod(path), // パスを元に、ページ毎の最終更新日を返す
+      // エンコードしたURLを返す
+      loc: encodeURI(path),
+      // 現在日時を反映
+      lastmod: new Date().toISOString(),
+      changefreq: 'daily',
+      priority: 0.7,
     };
   },
 };
 
-const isIgnorePath = (path) => {
-  return false;
-};
-
-const customLastmod = (path) => {
-  return '2022-12-05';
-};
+const exclude = [];
