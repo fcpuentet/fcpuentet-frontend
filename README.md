@@ -1,3 +1,6 @@
+[![Staging Deployment](https://github.com/fcpuentet/fcpuentet-frontend/actions/workflows/staging.yml/badge.svg)](https://github.com/fcpuentet/fcpuentet-frontend/actions/workflows/staging.yml)
+[![Production Deployment](https://github.com/fcpuentet/fcpuentet-frontend/actions/workflows/production.yml/badge.svg)](https://github.com/fcpuentet/fcpuentet-frontend/actions/workflows/production.yml)
+
 # FC PUENTET
 
 サッカーチーム 「 FC PUENTET 」 の HP
