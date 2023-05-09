@@ -33,7 +33,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ player }) => {
         <p className='text-xl'>
           {player.uniform_number}. {player.name}
         </p>
-        <p className='opacity-70'>{player.name_en}</p>
+        <p className='opacity-70'>{player.kana}</p>
       </div>
     </div>
   );

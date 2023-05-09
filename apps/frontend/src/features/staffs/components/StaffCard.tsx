@@ -32,7 +32,7 @@ export const StaffCard: React.FC<StaffCardProps> = ({ staff }) => {
       <div className=' w-full p-2 text-center text-white'>
         <p className='text-sm'>{staff.position}</p>
         <p className='text-xl'>{staff.name}</p>
-        <p className='opacity-70'>{staff.name_en}</p>
+        <p className='opacity-70'>{staff.kana}</p>
       </div>
     </div>
   );

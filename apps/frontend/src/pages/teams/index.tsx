@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<TeamScreenProps> = async () => {
   const { data: staffsData } = await supabase
     .from('staffs')
     .select(
-      'id, name, name_en, position, assets:profile_image_asset_id(src, file_name, height, width)',
+      'id, name, kana, name_en, position, assets:profile_image_asset_id(src, file_name, height, width)',
     )
     .is('deleted_at', null)
     .order('sort', { ascending: true });
@@ -65,6 +65,7 @@ export const getStaticProps: GetStaticProps<TeamScreenProps> = async () => {
       return {
         id: staff.id,
         name: staff.name,
+        kana: staff.kana,
         name_en: staff.name_en,
         position: staff.position,
         profile_image: staff.assets && {
@@ -81,7 +82,7 @@ export const getStaticProps: GetStaticProps<TeamScreenProps> = async () => {
   const { data: playersData } = await supabase
     .from('players')
     .select(
-      'id, name, name_en, position, uniform_number, assets:profile_image_asset_id(src, file_name, height, width)',
+      'id, name, kana, name_en, position, uniform_number, assets:profile_image_asset_id(src, file_name, height, width)',
     )
     .is('deleted_at', null)
     .order('uniform_number', { ascending: true });
@@ -92,6 +93,7 @@ export const getStaticProps: GetStaticProps<TeamScreenProps> = async () => {
       return {
         id: player.id,
         name: player.name,
+        kana: player.kana,
         name_en: player.name_en,
         position: player.position,
         uniform_number: player.uniform_number,

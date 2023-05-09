@@ -1,6 +1,7 @@
 export interface Player {
   id: string;
   name: string;
+  kana: string;
   name_en: string;
   position: string;
   uniform_number: number;
