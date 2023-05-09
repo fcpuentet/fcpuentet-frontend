@@ -8,7 +8,7 @@ interface PlayerCardProps {
 
 export const PlayerCard: React.FC<PlayerCardProps> = ({ player }) => {
   return (
-    <div className='w-full h-full overflow-hidden rounded-md relative shadow-md m-auto'>
+    <div className='relative m-auto h-full w-full overflow-hidden rounded-md shadow-md'>
       {player.profile_image ? (
         <Image
           src={player.profile_image.src}
@@ -29,11 +29,11 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ player }) => {
         />
       )}
 
-      <div className='text-white text-center w-full bg-secondary py-2'>
+      <div className='w-full bg-secondary py-2 text-center text-white'>
         <p className='text-xl'>
           {player.uniform_number}. {player.name}
         </p>
-        <p className='opacity-70'>{player.name_en}</p>
+        <p className='opacity-70'>{player.kana}</p>
       </div>
     </div>
   );
