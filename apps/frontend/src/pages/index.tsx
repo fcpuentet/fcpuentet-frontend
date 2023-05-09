@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { GetStaticProps, NextPage } from 'next';
+import Image from 'next/image';
 import { MainLayout } from '@/components/Layout';
 import { Match } from '@/features/matches/types';
 import { News, NewsCardList } from '@/features/news';
@@ -31,6 +32,15 @@ const TopScreen: NextPage<TopScreenProps> = ({ topNewsList, topMatchesList }) =>
 
         <section className='mb-32 mt-8'>
           <NewsCardList newsList={topNewsList} />
+        </section>
+
+        <section className='m-auto mb-32 max-w-[1000px] px-4'>
+          <Image
+            src='/assets/image/matches.webp'
+            width={989}
+            height={539}
+            alt='試合情報'
+          />
         </section>
 
         <section className='m-auto mb-32 max-w-[1000px] px-4'>
