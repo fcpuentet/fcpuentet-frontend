@@ -15,6 +15,7 @@ import {
   SilverSponsors,
   SponsorContact,
 } from '@/features/club';
+import { SupplierSponsors } from '@/features/club/components/SupplierSponsors';
 import { supabase } from '@/utils';
 
 const title = 'スポンサー紹介';
@@ -31,6 +32,7 @@ const SponsorsScreen: NextPage<SponsorsScreenProps> = ({
     silverSponsors,
     bronzeSponsors,
     partnerSponsors,
+    supplierSponsors,
   },
 }) => {
   return (
@@ -43,7 +45,7 @@ const SponsorsScreen: NextPage<SponsorsScreenProps> = ({
         path='/sponsors'
         title={title}
       >
-        <ContentLayout className='pt-32 pb-8'>
+        <ContentLayout className='pb-8 pt-32'>
           <TitleHeader title={title} />
           <div className='my-8 md:my-16'>
             <MainSponsors mainSponsors={mainSponsors} />
@@ -52,6 +54,7 @@ const SponsorsScreen: NextPage<SponsorsScreenProps> = ({
             <SilverSponsors silverSponsors={silverSponsors} />
             <BronzeSponsors bronzeSponsors={bronzeSponsors} />
             <PartnerSponsors partnerSponsors={partnerSponsors} />
+            <SupplierSponsors supplierSponsors={supplierSponsors} />
             <SponsorContact />
           </div>
         </ContentLayout>
@@ -90,6 +93,7 @@ export const getStaticProps: GetStaticProps<SponsorsScreenProps> = async () => {
   const silverSponsors = sponsors.filter((sponsor) => sponsor.rank === 'silver');
   const bronzeSponsors = sponsors.filter((sponsor) => sponsor.rank === 'bronze');
   const partnerSponsors = sponsors.filter((sponsor) => sponsor.rank === 'partner');
+  const supplierSponsors = sponsors.filter((sponsor) => sponsor.rank === 'supplier');
 
   return {
     props: {
@@ -100,6 +104,7 @@ export const getStaticProps: GetStaticProps<SponsorsScreenProps> = async () => {
         silverSponsors,
         bronzeSponsors,
         partnerSponsors,
+        supplierSponsors,
       },
     },
     revalidate: 30,
