@@ -18,4 +18,5 @@ export interface BusinessSponsors {
   silverSponsors: BusinessSponsor[];
   bronzeSponsors: BusinessSponsor[];
   partnerSponsors: BusinessSponsor[];
+  supplierSponsors: BusinessSponsor[];
 }
