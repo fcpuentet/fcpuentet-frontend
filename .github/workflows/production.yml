@@ -7,7 +7,7 @@ on:
 
 jobs:
   Deploy-Production:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     if: startsWith(github.event.release.tag_name, 'v') || github.event_name == 'workflow_dispatch'
 
     env:
